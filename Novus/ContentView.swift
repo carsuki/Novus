@@ -12,7 +12,7 @@ struct ContentView : View {
     var body: some View {
         HStack(spacing: 0){
         SideView().frame(minWidth: 150, maxWidth: 150, minHeight: 500, maxHeight: .infinity,  alignment: .topLeading).background(Color.white.blur(radius: 10))
-        BodyView().frame(minWidth: 300, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity,  alignment: .top).background(Color.white)
+        BodyView().frame(minWidth: 800, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity,  alignment: .top).background(Color.white)
         }
     }
 }
@@ -51,7 +51,7 @@ struct BodyView : View {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        ContentView().frame(minWidth: 800, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity,  alignment: .topLeading)
+        ContentView()
     }
 }
 #endif
