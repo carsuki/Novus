@@ -10,9 +10,13 @@ import SwiftUI
 
 struct ContentView : View {
     var body: some View {
+        
         HStack(spacing: 0){
+            
             SideView().frame(minWidth: 150, maxWidth: 150, minHeight: 500, maxHeight: .infinity,  alignment: .topLeading).background(Color.primary.colorInvert().blur(radius: 10))
+            
             BodyView().frame(minWidth: 300, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity,  alignment: .top).background(Color.primary.colorInvert())
+            
         }
     }
 }
