@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:NovusUI.xcodeproj">
+      location = "self:/Volumes/DiegoDevelopment/Code/GitHub/NovusGUI/Novus.xcodeproj">
    </FileRef>
 </Workspace>

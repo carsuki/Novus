@@ -15,14 +15,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A479B12222BF1CC600853030 /* NovusUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NovusUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A479B12222BF1CC600853030 /* Novus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Novus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A479B12522BF1CC600853030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A479B12722BF1CC600853030 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A479B12922BF1CC700853030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A479B12C22BF1CC700853030 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A479B12F22BF1CC700853030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A479B13122BF1CC700853030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A479B13222BF1CC700853030 /* NovusUI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NovusUI.entitlements; sourceTree = "<group>"; };
+		A479B13222BF1CC700853030 /* Novus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Novus.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,7 +39,7 @@
 		A479B11922BF1CC600853030 = {
 			isa = PBXGroup;
 			children = (
-				A479B12422BF1CC600853030 /* NovusUI */,
+				A479B12422BF1CC600853030 /* Novus */,
 				A479B12322BF1CC600853030 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,12 +47,12 @@
 		A479B12322BF1CC600853030 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A479B12222BF1CC600853030 /* NovusUI.app */,
+				A479B12222BF1CC600853030 /* Novus.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A479B12422BF1CC600853030 /* NovusUI */ = {
+		A479B12422BF1CC600853030 /* Novus */ = {
 			isa = PBXGroup;
 			children = (
 				A479B12522BF1CC600853030 /* AppDelegate.swift */,
@@ -60,10 +60,10 @@
 				A479B12922BF1CC700853030 /* Assets.xcassets */,
 				A479B12E22BF1CC700853030 /* Main.storyboard */,
 				A479B13122BF1CC700853030 /* Info.plist */,
-				A479B13222BF1CC700853030 /* NovusUI.entitlements */,
+				A479B13222BF1CC700853030 /* Novus.entitlements */,
 				A479B12B22BF1CC700853030 /* Preview Content */,
 			);
-			path = NovusUI;
+			path = Novus;
 			sourceTree = "<group>";
 		};
 		A479B12B22BF1CC700853030 /* Preview Content */ = {
@@ -77,9 +77,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A479B12122BF1CC600853030 /* NovusUI */ = {
+		A479B12122BF1CC600853030 /* Novus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A479B13522BF1CC700853030 /* Build configuration list for PBXNativeTarget "NovusUI" */;
+			buildConfigurationList = A479B13522BF1CC700853030 /* Build configuration list for PBXNativeTarget "Novus" */;
 			buildPhases = (
 				A479B11E22BF1CC600853030 /* Sources */,
 				A479B11F22BF1CC600853030 /* Frameworks */,
@@ -89,9 +89,9 @@
 			);
 			dependencies = (
 			);
-			name = NovusUI;
+			name = Novus;
 			productName = NovusUI;
-			productReference = A479B12222BF1CC600853030 /* NovusUI.app */;
+			productReference = A479B12222BF1CC600853030 /* Novus.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,14 +102,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
 				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = "Reuben Catchpole";
+				ORGANIZATIONNAME = PolarTeam;
 				TargetAttributes = {
 					A479B12122BF1CC600853030 = {
 						CreatedOnToolsVersion = 11.0;
 					};
 				};
 			};
-			buildConfigurationList = A479B11D22BF1CC600853030 /* Build configuration list for PBXProject "NovusUI" */;
+			buildConfigurationList = A479B11D22BF1CC600853030 /* Build configuration list for PBXProject "Novus" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -122,7 +122,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A479B12122BF1CC600853030 /* NovusUI */,
+				A479B12122BF1CC600853030 /* Novus */,
 			);
 		};
 /* End PBXProject section */
@@ -284,6 +284,7 @@
 				CODE_SIGN_ENTITLEMENTS = NovusUI/NovusUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = Alpha;
 				DEVELOPMENT_ASSET_PATHS = "NovusUI/Preview\\ Content";
 				DEVELOPMENT_TEAM = 72UM5XF97Y;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -293,7 +294,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = reuben.NovusUI;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polarteam.novus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -306,6 +308,7 @@
 				CODE_SIGN_ENTITLEMENTS = NovusUI/NovusUI.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = Alpha;
 				DEVELOPMENT_ASSET_PATHS = "NovusUI/Preview\\ Content";
 				DEVELOPMENT_TEAM = 72UM5XF97Y;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -315,7 +318,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = reuben.NovusUI;
+				MARKETING_VERSION = 0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.polarteam.novus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -324,7 +328,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A479B11D22BF1CC600853030 /* Build configuration list for PBXProject "NovusUI" */ = {
+		A479B11D22BF1CC600853030 /* Build configuration list for PBXProject "Novus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A479B13322BF1CC700853030 /* Debug */,
@@ -333,7 +337,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A479B13522BF1CC700853030 /* Build configuration list for PBXNativeTarget "NovusUI" */ = {
+		A479B13522BF1CC700853030 /* Build configuration list for PBXNativeTarget "Novus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A479B13622BF1CC700853030 /* Debug */,
