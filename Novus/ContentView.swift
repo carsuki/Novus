@@ -13,7 +13,7 @@ struct ContentView : View {
         
         HStack(spacing: 0){
             
-            SideView().frame(minWidth: 150, maxWidth: 150, minHeight: 500, maxHeight: .infinity,  alignment: .topLeading).background(Color.primary.colorInvert().blur(radius: 10))
+            SideView().frame(minWidth: 150, maxWidth: 150, minHeight: 500, maxHeight: .infinity,  alignment: .topLeading).background(Color.primary.colorInvert().blur(radius: 8))
             
             BodyView().frame(minWidth: 300, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity,  alignment: .top).background(Color.primary.colorInvert())
             
@@ -24,13 +24,14 @@ struct ContentView : View {
 struct SideView : View {
     var body: some View {
         VStack{
-            Text("Test")
-            }.padding(.init(top: 50, leading: 10, bottom: 10, trailing: 10))
+            TextField(.constant(""), placeholder: Text("Search for packages"))
+            }.padding(.init(top: 35, leading: 10, bottom: 10, trailing: 10))
     }
 }
 
 struct BodyView : View {
     var body: some View {
+        VStack{
         HStack(alignment: .top){
             VStack(alignment: .leading) {
                 Text("Monday, 22 June").font(.caption).color(.secondary)
@@ -43,15 +44,35 @@ struct BodyView : View {
                 HStack{
                     Image("icons8-search").resizable().frame(width: 25, height: 25)
                     
-                    Circle().foregroundColor(Color.purple).frame(width: 27, height: 27).overlay(Image("89728389ea0a0201f538832f194ecf0f").resizable().clipShape(Circle()).frame(width: 25, height: 25))
+                    Circle().foregroundColor(Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255)).frame(width: 27, height: 27).overlay(Image("89728389ea0a0201f538832f194ecf0f").resizable().clipShape(Circle()).frame(width: 25, height: 25))
                 }
             }
             
-            }.padding(.all)
+            }
+            
+            
+            Rectangle().fill(LinearGradient(gradient: Gradient(colors: [Color(red: 160.0 / 255, green: 140.0 / 255, blue: 237.0 / 255), Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255)]), startPoint: .leading, endPoint: .trailing)).overlay(
+                HStack{
+                Image("NovusLogo").resizable().frame(width: 200, height: 200, alignment: .leading)
+                    
+                Spacer()
+                    
+                VStack(alignment: .leading){
+                    
+                Text("Welcome to Novus").font(.headline).foregroundColor(.white)
+                Text("A reimagined way of getting everything!").foregroundColor(.white).font(.caption).opacity(0.42)
+                    
+                }
+                    
+                
+                    
+            }.padding(40)).frame(height: 170, alignment: .leading).cornerRadius(8)
+            
+            
+        }.padding(.all)
         
     }
 }
-
 
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
