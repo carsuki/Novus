@@ -17,6 +17,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        
+        
         window = NSWindow(
             contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
             styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
@@ -25,9 +27,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.setFrameAutosaveName("Main Window")
         window.titleVisibility = .hidden
         window.titlebarAppearsTransparent = true
-        
+        window.isOpaque = false
 
         window.contentView = NSHostingView(rootView: ContentView())
+
 
         window.makeKeyAndOrderFront(nil)
     }
