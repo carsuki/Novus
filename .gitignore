@@ -94,3 +94,6 @@ iOSInjectionProject/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 # End of https://www.gitignore.io/api/swift,xcode
+
+##DS_Store should go away
+.DS_Store
