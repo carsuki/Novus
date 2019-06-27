@@ -10,6 +10,8 @@
 		70D96E1E22C5371A0095390A /* NVSRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E1D22C5371A0095390A /* NVSRepo.swift */; };
 		70D96E2022C5377E0095390A /* NVSAddRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E1F22C5377E0095390A /* NVSAddRepo.swift */; };
 		70D96E2222C537CE0095390A /* NVSRepoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E2122C537CE0095390A /* NVSRepoManager.swift */; };
+		70D96E2422C538470095390A /* NVSDependencyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E2322C538470095390A /* NVSDependencyResolver.swift */; };
+		70D96E2622C538700095390A /* NVSDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E2522C538700095390A /* NVSDatabaseManager.swift */; };
 		A479B12622BF1CC600853030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A479B12522BF1CC600853030 /* AppDelegate.swift */; };
 		A479B12822BF1CC600853030 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A479B12722BF1CC600853030 /* ContentView.swift */; };
 		A479B12A22BF1CC700853030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A479B12922BF1CC700853030 /* Assets.xcassets */; };
@@ -21,6 +23,8 @@
 		70D96E1D22C5371A0095390A /* NVSRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSRepo.swift; sourceTree = "<group>"; };
 		70D96E1F22C5377E0095390A /* NVSAddRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSAddRepo.swift; sourceTree = "<group>"; };
 		70D96E2122C537CE0095390A /* NVSRepoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSRepoManager.swift; sourceTree = "<group>"; };
+		70D96E2322C538470095390A /* NVSDependencyResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSDependencyResolver.swift; sourceTree = "<group>"; };
+		70D96E2522C538700095390A /* NVSDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSDatabaseManager.swift; sourceTree = "<group>"; };
 		A479B12222BF1CC600853030 /* Novus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Novus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A479B12522BF1CC600853030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A479B12722BF1CC600853030 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -62,6 +66,8 @@
 		70D96E1B22C5361E0095390A /* Database */ = {
 			isa = PBXGroup;
 			children = (
+				70D96E2322C538470095390A /* NVSDependencyResolver.swift */,
+				70D96E2522C538700095390A /* NVSDatabaseManager.swift */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -186,6 +192,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70D96E2622C538700095390A /* NVSDatabaseManager.swift in Sources */,
+				70D96E2422C538470095390A /* NVSDependencyResolver.swift in Sources */,
 				70D96E1E22C5371A0095390A /* NVSRepo.swift in Sources */,
 				70D96E2022C5377E0095390A /* NVSAddRepo.swift in Sources */,
 				70D96E2222C537CE0095390A /* NVSRepoManager.swift in Sources */,
