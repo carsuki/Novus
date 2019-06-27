@@ -75,7 +75,7 @@ struct ContentView : View {
         
         HStack(alignment: .center){
             
-            Button(action: {}) {Text("Add Source")}
+            Button(action: {runAPT}) {Text("Add Source")}
 
             Spacer()
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70D96E1E22C5371A0095390A /* NVSRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E1D22C5371A0095390A /* NVSRepo.swift */; };
+		70D96E2022C5377E0095390A /* NVSAddRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E1F22C5377E0095390A /* NVSAddRepo.swift */; };
+		70D96E2222C537CE0095390A /* NVSRepoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E2122C537CE0095390A /* NVSRepoManager.swift */; };
 		A479B12622BF1CC600853030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A479B12522BF1CC600853030 /* AppDelegate.swift */; };
 		A479B12822BF1CC600853030 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A479B12722BF1CC600853030 /* ContentView.swift */; };
 		A479B12A22BF1CC700853030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A479B12922BF1CC700853030 /* Assets.xcassets */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70D96E1D22C5371A0095390A /* NVSRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSRepo.swift; sourceTree = "<group>"; };
+		70D96E1F22C5377E0095390A /* NVSAddRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSAddRepo.swift; sourceTree = "<group>"; };
+		70D96E2122C537CE0095390A /* NVSRepoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSRepoManager.swift; sourceTree = "<group>"; };
 		A479B12222BF1CC600853030 /* Novus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Novus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A479B12522BF1CC600853030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A479B12722BF1CC600853030 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +42,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		70D96E1122C51D410095390A /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				70D96E1B22C5361E0095390A /* Database */,
+				70D96E1A22C5360A0095390A /* Repositories */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		70D96E1A22C5360A0095390A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				70D96E1C22C537040095390A /* Helpers */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		70D96E1B22C5361E0095390A /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		70D96E1C22C537040095390A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				70D96E1D22C5371A0095390A /* NVSRepo.swift */,
+				70D96E1F22C5377E0095390A /* NVSAddRepo.swift */,
+				70D96E2122C537CE0095390A /* NVSRepoManager.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		A479B11922BF1CC600853030 = {
 			isa = PBXGroup;
 			children = (
@@ -55,6 +95,7 @@
 		A479B12422BF1CC600853030 /* Novus */ = {
 			isa = PBXGroup;
 			children = (
+				70D96E1122C51D410095390A /* Backend */,
 				A479B12522BF1CC600853030 /* AppDelegate.swift */,
 				A479B12722BF1CC600853030 /* ContentView.swift */,
 				A479B12922BF1CC700853030 /* Assets.xcassets */,
@@ -145,6 +186,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70D96E1E22C5371A0095390A /* NVSRepo.swift in Sources */,
+				70D96E2022C5377E0095390A /* NVSAddRepo.swift in Sources */,
+				70D96E2222C537CE0095390A /* NVSRepoManager.swift in Sources */,
 				A479B12822BF1CC600853030 /* ContentView.swift in Sources */,
 				A479B12622BF1CC600853030 /* AppDelegate.swift in Sources */,
 			);
@@ -286,7 +330,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = Alpha;
 				DEVELOPMENT_ASSET_PATHS = "Novus/Preview\\ Content";
-				DEVELOPMENT_TEAM = 72UM5XF97Y;
+				DEVELOPMENT_TEAM = 9T6493493X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Novus/Info.plist;
@@ -310,7 +354,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = Alpha;
 				DEVELOPMENT_ASSET_PATHS = "Novus/Preview\\ Content";
-				DEVELOPMENT_TEAM = 72UM5XF97Y;
+				DEVELOPMENT_TEAM = 9T6493493X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = Novus/Info.plist;
