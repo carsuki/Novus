@@ -32,7 +32,8 @@ struct ContentView : View {
             Spacer()
             
             Button(action: {}) {Text("Install")}
-        }
+            
+        }.frame(width: 800, height: 500).padding(.all)
             
     }
 }
