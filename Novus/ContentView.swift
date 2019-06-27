@@ -9,31 +9,83 @@
 import SwiftUI
 
 struct ContentView : View {
+    
+    @State var selected = "today"
+    
     var body: some View {
+        
+//        HStack(spacing: 0){
+//
+//            List{
+//                Spacer()
+//                VStack(alignment: .leading){
+//                HStack(spacing: 3){
+//                Image("icons-76").resizable().frame(width: 20, height: 20).colorMultiply(selected == "today" || selected == "news" || selected == "updates" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray)
+//                    Text("Store").font(.body).color(.gray)
+//                }
+//                VStack(alignment: .leading, spacing: 10){
+//                    Text("Today").color(selected == "today" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+//                        self.selected = "today"
+//                    }
+//                    Text("News").color(selected == "news" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+//                        self.selected = "news"
+//                    }
+//                    Text("Updates").color(selected == "updates" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+//                        self.selected = "updates"
+//                    }
+//                Spacer()
+//                }.padding(.leading)
+//                HStack(spacing: 3){
+//                    Image("icons-77").resizable().frame(width: 20, height: 20).colorMultiply(selected == "applications" || selected == "tweaks" || selected == "themes" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray)
+//                    Text("Categories").font(.body).color(.gray)
+//                }
+//                VStack(alignment: .leading, spacing: 10){
+//
+//                    Text("Applications").color(selected == "applications" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+//                        self.selected = "applications"
+//                    }
+//                    Text("Tweaks").color(selected == "tweaks" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+//                        self.selected = "tweaks"
+//                    }
+//                    Text("Themes").color(selected == "themes" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+//                        self.selected = "themes"
+//                    }
+//                Spacer()
+//                }.padding(.leading)
+//
+//                HStack(spacing: 3){
+//                   Image("icons-78").resizable().frame(width: 20, height: 20).colorMultiply(selected == "repositories" || selected == "packages" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray)
+//                    Text("Manage").font(.body).color(.gray)
+//
+//                }
+//                    VStack(alignment: .leading, spacing: 10){ Text("Repositories").color(selected == "repositories" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+//                        self.selected = "repositories"
+//                        }
+//                        Text("Packages").color(selected == "packages" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+//                            self.selected = "packages"
+//                        }
+//                }.padding(.leading)
+//                }
+//
+//            }.listStyle(.sidebar).frame(width: 200)
+//
+//            BodyView().frame(minWidth: 800, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity,  alignment: .top).background(Color.secondary.colorInvert())
+//
+//        }
         
         HStack(alignment: .center){
             
-//            List{
-//
-//                Button(action: {}, label: { Text("Today") })
-//                Button(action: {}, label: { Text("News") })
-//                Button(action: {}, label: { Text("Updates") })
-//            }.listStyle(.sidebar).frame(width: 200).padding(.top)
-//
-//            BodyView().frame(minWidth: 800, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity,  alignment: .top).background(Color.primary.colorInvert())
-
-            
             Button(action: {}) {Text("Add Source")}
-            
+
             Spacer()
-            
+
             Button(action: {}) {Text("Refresh")}
-            
+
             Spacer()
-            
+
             Button(action: {}) {Text("Install")}
-            
-        }.frame(width: 800, height: 500).padding(.all)
+
+        }.frame(width: 300, height: 300).padding(.all)
             
     }
 }
@@ -42,7 +94,7 @@ struct SideView : View {
     var body: some View {
         VStack{
             TextField(.constant(""), placeholder: Text("Search for packages"))
-            }.padding(.init(top: 35, leading: 10, bottom: 10, trailing: 10))
+            }
     }
 }
 
@@ -88,7 +140,7 @@ struct BodyView : View {
             HStack{
                 RoundedRectangle(cornerRadius: 8)
                 RoundedRectangle(cornerRadius: 8)
-            }.foregroundColor(.init(white: 0.95))
+            }.foregroundColor(.init(white: 0.92))
             
             
         }.padding(.all)
