@@ -36,7 +36,7 @@ struct ContentView : View {
                 Spacer()
                }.padding(.leading)
                 HStack(spacing: 3){
-                    Image("icons-77").resizable().frame(width: 20, height: 20).colorMultiply(selected == "applications" || selected == "tweaks" || selected == "themes" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray)
+                    Image("icons-77").resizable().frame(width: 20, height: 20).colorMultiply(selected == "applications" || selected == "addons" || selected == "themes" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray)
                     Text("Categories").font(.body).color(.gray)
                }
                 VStack(alignment: .leading, spacing: 10){
@@ -44,8 +44,8 @@ struct ContentView : View {
                     Text("Applications").color(selected == "applications" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
                        self.selected = "applications"
                     }
-                    Text("Tweaks").color(selected == "tweaks" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
-                       self.selected = "tweaks"
+                    Text("Addons").color(selected == "addons" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+                       self.selected = "addons"
                     }
                     Text("Themes").color(selected == "themes" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
                     self.selected = "themes"
