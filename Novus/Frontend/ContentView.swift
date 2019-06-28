@@ -20,34 +20,34 @@ struct ContentView : View {
                 Spacer()
                 VStack(alignment: .leading){
                     HStack(spacing: 3){
-                        Image("icons-76").resizable().frame(width: 20, height: 20).colorMultiply(selected == "today" || selected == "news" || selected == "updates" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray)
+                        Image("icons-76").resizable().frame(width: 20, height: 20).colorMultiply(selected == "today" || selected == "news" || selected == "updates" ? Color("sideBarColorHighlighting") : .gray)
                         Text("Store").font(.body).color(.gray)
                     }
                     VStack(alignment: .leading, spacing: 10){
-                        Text("Today").color(selected == "today" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+                        Text("Today").color(selected == "today" ? Color("sideBarColorHighlighting") : .gray).tapAction {
                             self.selected = "today"
                         }
-                        Text("News").color(selected == "news" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+                        Text("News").color(selected == "news" ? Color("sideBarColorHighlighting") : .gray).tapAction {
                             self.selected = "news"
                         }
-                        Text("Updates").color(selected == "updates" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+                        Text("Updates").color(selected == "updates" ? Color("sideBarColorHighlighting") : .gray).tapAction {
                             self.selected = "updates"
                         }
                         Spacer()
                         }.padding(.leading)
                     HStack(spacing: 3){
-                        Image("icons-77").resizable().frame(width: 20, height: 20).colorMultiply(selected == "applications" || selected == "addons" || selected == "themes" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray)
+                        Image("icons-77").resizable().frame(width: 20, height: 20).colorMultiply(selected == "applications" || selected == "addons" || selected == "themes" ? Color("sideBarColorHighlighting") : .gray)
                         Text("Categories").font(.body).color(.gray)
                     }
                     VStack(alignment: .leading, spacing: 10){
                         
-                        Text("Applications").color(selected == "applications" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+                        Text("Applications").color(selected == "applications" ? Color("sideBarColorHighlighting") : .gray).tapAction {
                             self.selected = "applications"
                         }
-                        Text("Addons").color(selected == "addons" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+                        Text("Addons").color(selected == "addons" ? Color("sideBarColorHighlighting") : .gray).tapAction {
                             self.selected = "addons"
                         }
-                        Text("Themes").color(selected == "themes" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+                        Text("Themes").color(selected == "themes" ? Color("sideBarColorHighlighting") : .gray).tapAction {
                             self.selected = "themes"
                             
                         }
@@ -55,14 +55,14 @@ struct ContentView : View {
                         }.padding(.leading)
                     
                     HStack(spacing: 3){
-                        Image("icons-78").resizable().frame(width: 20, height: 20).colorMultiply(selected == "repositories" || selected == "packages" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray)
+                        Image("icons-78").resizable().frame(width: 20, height: 20).colorMultiply(selected == "repositories" || selected == "packages" ? Color("sideBarColorHighlighting") : .gray)
                         Text("Manage").font(.body).color(.gray)
                         
                     }
-                    VStack(alignment: .leading, spacing: 10){ Text("Repositories").color(selected == "repositories" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+                    VStack(alignment: .leading, spacing: 10){ Text("Repositories").color(selected == "repositories" ? Color("sideBarColorHighlighting") : .gray).tapAction {
                         self.selected = "repositories"
                         }
-                        Text("Packages").color(selected == "packages" ? Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255) : .gray).tapAction {
+                        Text("Packages").color(selected == "packages" ? Color("sideBarColorHighlighting") : .gray).tapAction {
                             self.selected = "packages"
                         }
                         }.padding(.leading)
