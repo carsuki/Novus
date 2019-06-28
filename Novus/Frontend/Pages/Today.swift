@@ -21,7 +21,7 @@ struct Today : View {
                 
                 VStack(alignment: .trailing) {
                     HStack{
-                        Circle().frame(width: 32, height: 32).overlay(Image("OlympusProfilePicture").resizable().clipShape(Circle()).frame(width: 30, height: 30))
+                        Image("OlympusProfilePicture").resizable().clipShape(Circle()).frame(width: 30, height: 30)
                     }
                 }
                 

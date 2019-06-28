@@ -15,64 +15,80 @@ struct ContentView : View {
     var body: some View {
         
         HStack(spacing: 0){
-
-            List{
+            HStack {
                 Spacer()
-                VStack(alignment: .leading){
-                    HStack(spacing: 3){
-                        Image("Store").resizable().frame(width: 20, height: 20).colorMultiply(selected == "today" || selected == "news" || selected == "updates" ? Color("SideBarColorHighlighting") : .gray)
-                        Text("Store").font(.body).color(.gray)
-                    }
-                    VStack(alignment: .leading, spacing: 10){
-                        Text("Today").color(selected == "today" ? Color("SideBarColorHighlighting") : .gray).tapAction {
-                            self.selected = "today"
-                        }
-                        Text("News").color(selected == "news" ? Color("SideBarColorHighlighting") : .gray).tapAction {
-                            self.selected = "news"
-                        }
-                        Text("Updates").color(selected == "updates" ? Color("SideBarColorHighlighting") : .gray).tapAction {
-                            self.selected = "updates"
-                        }
+                VStack{
+                    Spacer()
+                    VStack(alignment: .leading){
                         Spacer()
-                        }.padding(.leading)
-                    HStack(spacing: 3){
-                        Image("Categories").resizable().frame(width: 20, height: 20).colorMultiply(selected == "applications" || selected == "addons" || selected == "themes" ? Color("SideBarColorHighlighting") : .gray)
-                        Text("Categories").font(.body).color(.gray)
-                    }
-                    VStack(alignment: .leading, spacing: 10){
+                        HStack(spacing: 3){
+                            Image("Store").resizable().frame(width: 20, height: 20).colorMultiply(selected == "today" || selected == "news" || selected == "updates" ? Color("SideBarColorHighlighting") : .gray)
+                            Text("Store").font(.body).color(.gray)
+                        }
+                        VStack(alignment: .leading, spacing: 10){
+                            Text("Today").color(selected == "today" ? Color("SideBarColorHighlighting") : .gray).tapAction {
+                                self.selected = "today"
+                            }
+                            Text("News").color(selected == "news" ? Color("SideBarColorHighlighting") : .gray).tapAction {
+                                self.selected = "news"
+                            }
+                            Text("Updates").color(selected == "updates" ? Color("SideBarColorHighlighting") : .gray).tapAction {
+                                self.selected = "updates"
+                            }
+                            Spacer()
+                            }.padding(.leading)
+                        HStack(spacing: 3){
+                            Image("Categories").resizable().frame(width: 20, height: 20).colorMultiply(selected == "applications" || selected == "addons" || selected == "themes" ? Color("SideBarColorHighlighting") : .gray)
+                            Text("Categories").font(.body).color(.gray)
+                        }
+                        VStack(alignment: .leading, spacing: 10){
+                            
+                            Text("Applications").color(selected == "applications" ? Color("SideBarColorHighlighting") : .gray).tapAction {
+                                self.selected = "applications"
+                            }
+                            Text("Addons").color(selected == "addons" ? Color("SideBarColorHighlighting") : .gray).tapAction {
+                                self.selected = "addons"
+                            }
+                            Text("Themes").color(selected == "themes" ? Color("SideBarColorHighlighting") : .gray).tapAction {
+                                self.selected = "themes"
+                                
+                            }
+                            Spacer()
+                            }.padding(.leading)
                         
-                        Text("Applications").color(selected == "applications" ? Color("SideBarColorHighlighting") : .gray).tapAction {
-                            self.selected = "applications"
-                        }
-                        Text("Addons").color(selected == "addons" ? Color("SideBarColorHighlighting") : .gray).tapAction {
-                            self.selected = "addons"
-                        }
-                        Text("Themes").color(selected == "themes" ? Color("SideBarColorHighlighting") : .gray).tapAction {
-                            self.selected = "themes"
+                        HStack(spacing: 3){
+                            Image("Manage").resizable().frame(width: 20, height: 20).colorMultiply(selected == "repositories" || selected == "packages" ? Color("SideBarColorHighlighting") : .gray)
+                            Text("Manage").font(.body).color(.gray)
                             
                         }
-                        Spacer()
-                        }.padding(.leading)
-                    
-                    HStack(spacing: 3){
-                        Image("Manage").resizable().frame(width: 20, height: 20).colorMultiply(selected == "repositories" || selected == "packages" ? Color("SideBarColorHighlighting") : .gray)
-                        Text("Manage").font(.body).color(.gray)
-                        
+                        VStack(alignment: .leading, spacing: 10){ Text("Repositories").color(selected == "repositories" ? Color("SideBarColorHighlighting") : .gray).tapAction {
+                            self.selected = "repositories"
+                            }
+                            Text("Packages").color(selected == "packages" ? Color("SideBarColorHighlighting") : .gray).tapAction {
+                                self.selected = "packages"
+                            }
+                            }.padding(.leading)
                     }
-                    VStack(alignment: .leading, spacing: 10){ Text("Repositories").color(selected == "repositories" ? Color("SideBarColorHighlighting") : .gray).tapAction {
-                        self.selected = "repositories"
-                        }
-                        Text("Packages").color(selected == "packages" ? Color("SideBarColorHighlighting") : .gray).tapAction {
-                            self.selected = "packages"
-                        }
-                        }.padding(.leading)
+                    Group {
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                        Spacer()
+                    }
                 }
-                
-                }.listStyle(.sidebar).frame(width: 200)
+                Spacer()
+                Spacer()
+                Spacer()
+                }.frame(width: 200, alignment: .top)
             
             if selected == "today"{
-
-            Today().frame(minWidth: 800, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity,  alignment: .top).background(Color.secondary.colorInvert())
+                
+                Today().frame(minWidth: 800, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity,  alignment: .top).background(Color.secondary.colorInvert())
                 
             } else if selected == "news" {
                 
@@ -103,17 +119,17 @@ struct ContentView : View {
                 Packages().frame(minWidth: 800, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity,  alignment: .top).background(Color.secondary.colorInvert())
                 
             }
-
+            
         }
         
         
-}
-
-#if DEBUG
-struct ContentView_Previews : PreviewProvider {
-    static var previews: some View {
-        ContentView().frame(minWidth: 800, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity,  alignment: .topLeading)
     }
-}
-#endif
+    
+    #if DEBUG
+    struct ContentView_Previews : PreviewProvider {
+        static var previews: some View {
+            ContentView().frame(minWidth: 800, maxWidth: .infinity, minHeight: 500, maxHeight: .infinity,  alignment: .topLeading)
+        }
+    }
+    #endif
 }
