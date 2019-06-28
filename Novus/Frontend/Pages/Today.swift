@@ -21,7 +21,7 @@ struct Today : View {
                 
                 VStack(alignment: .trailing) {
                     HStack{
-                        Circle().foregroundColor(Color("sideBarColorHighlighting")).frame(width: 32, height: 32).overlay(Image("89728389ea0a0201f538832f194ecf0f").resizable().clipShape(Circle()).frame(width: 30, height: 30))
+                        Circle().frame(width: 32, height: 32).overlay(Image("89728389ea0a0201f538832f194ecf0f").resizable().clipShape(Circle()).frame(width: 30, height: 30))
                     }
                 }
                 
