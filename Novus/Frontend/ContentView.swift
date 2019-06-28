@@ -15,58 +15,85 @@ struct ContentView : View {
     var body: some View {
         
         HStack(spacing: 0){
+            
                 List{
+                    
                     Spacer()
+                    
                     VStack(alignment: .leading){
                         HStack(spacing: 3){
+                            
                             Image("Store").resizable().frame(width: 20, height: 20).colorMultiply(selected == "today" || selected == "news" || selected == "updates" ? Color("SideBarColorHighlighting") : .gray)
                             Text("Store").font(.body).color(.gray)
+                            
                         }
                         VStack(alignment: .leading, spacing: 10){
+                            
                             Text("Today").color(selected == "today" ? Color("SideBarColorHighlighting") : .gray).tapAction {
                                 self.selected = "today"
                             }
+                            
                             Text("News").color(selected == "news" ? Color("SideBarColorHighlighting") : .gray).tapAction {
                                 self.selected = "news"
                             }
+                            
                             Text("Updates").color(selected == "updates" ? Color("SideBarColorHighlighting") : .gray).tapAction {
                                 self.selected = "updates"
                             }
+                            
                             Spacer()
-                            }.padding(.leading)
+                            
+                        }.padding(.leading)
+                        
                         HStack(spacing: 3){
+                            
                             Image("Categories").resizable().frame(width: 20, height: 20).colorMultiply(selected == "applications" || selected == "addons" || selected == "themes" ? Color("SideBarColorHighlighting") : .gray)
+                            
                             Text("Categories").font(.body).color(.gray)
+                            
                         }
+                        
                         VStack(alignment: .leading, spacing: 10){
                             
                             Text("Applications").color(selected == "applications" ? Color("SideBarColorHighlighting") : .gray).tapAction {
                                 self.selected = "applications"
                             }
+                            
                             Text("Addons").color(selected == "addons" ? Color("SideBarColorHighlighting") : .gray).tapAction {
                                 self.selected = "addons"
                             }
+                            
                             Text("Themes").color(selected == "themes" ? Color("SideBarColorHighlighting") : .gray).tapAction {
                                 self.selected = "themes"
                                 
                             }
+                            
                             Spacer()
-                            }.padding(.leading)
+                            
+                        }.padding(.leading)
                         
                         HStack(spacing: 3){
+                            
                             Image("Manage").resizable().frame(width: 20, height: 20).colorMultiply(selected == "repositories" || selected == "packages" ? Color("SideBarColorHighlighting") : .gray)
                             Text("Manage").font(.body).color(.gray)
                             
                         }
-                        VStack(alignment: .leading, spacing: 10){ Text("Repositories").color(selected == "repositories" ? Color("SideBarColorHighlighting") : .gray).tapAction {
-                            self.selected = "repositories"
+                        
+                        VStack(alignment: .leading, spacing: 10){
+                            
+                            Text("Repositories").color(selected == "repositories" ? Color("SideBarColorHighlighting") : .gray).tapAction {
+                                self.selected = "repositories"
                             }
+                            
                             Text("Packages").color(selected == "packages" ? Color("SideBarColorHighlighting") : .gray).tapAction {
                                 self.selected = "packages"
                             }
-                            }.padding(.leading)
-                    }.listStyle(.sidebar)
-                    }.frame(width: 230, alignment: .top)
+                            
+                        }.padding(.leading)
+                        
+                    }
+                    
+                }.frame(width: 230, alignment: .top).listStyle(.sidebar)
             
             if selected == "today"{
                 
