@@ -21,14 +21,14 @@ struct Today : View {
                 
                 VStack(alignment: .trailing) {
                     HStack{
-                        Circle().frame(width: 32, height: 32).overlay(Image("89728389ea0a0201f538832f194ecf0f").resizable().clipShape(Circle()).frame(width: 30, height: 30))
+                        Circle().frame(width: 32, height: 32).overlay(Image("OlympusProfilePicture").resizable().clipShape(Circle()).frame(width: 30, height: 30))
                     }
                 }
                 
             }
             
             
-            Rectangle().fill(LinearGradient(gradient: Gradient(colors: [Color(red: 160.0 / 255, green: 140.0 / 255, blue: 237.0 / 255), Color(red: 123.0 / 255, green: 94.0 / 255, blue: 191.0 / 255)]), startPoint: .leading, endPoint: .trailing)).overlay(
+            Rectangle().fill(LinearGradient(gradient: Gradient(colors: [Color("GradientColorSetNumberOne"), Color("GradientColorSetNumberTwo")]), startPoint: .leading, endPoint: .trailing)).overlay(
                 HStack{
                     VStack {
                         Image("NovusLogo").resizable().aspectRatio(1, contentMode: .fit)
@@ -50,7 +50,7 @@ struct Today : View {
             HStack{
                 RoundedRectangle(cornerRadius: 8)
                 RoundedRectangle(cornerRadius: 8)
-                }.foregroundColor(.init(white: 0.92))
+                }.foregroundColor(Color("BlankCardColors"))
             
             
             }.padding(.all)
