@@ -15,12 +15,9 @@ struct ContentView : View {
     var body: some View {
         
         HStack(spacing: 0){
-            HStack {
-                Spacer()
-                VStack{
+                List{
                     Spacer()
                     VStack(alignment: .leading){
-                        Spacer()
                         HStack(spacing: 3){
                             Image("Store").resizable().frame(width: 20, height: 20).colorMultiply(selected == "today" || selected == "news" || selected == "updates" ? Color("SideBarColorHighlighting") : .gray)
                             Text("Store").font(.body).color(.gray)
@@ -68,23 +65,8 @@ struct ContentView : View {
                                 self.selected = "packages"
                             }
                             }.padding(.leading)
-                    }
-                    Group {
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                        Spacer()
-                    }
-                }
-                Spacer()
-                Spacer()
-                Spacer()
-                }.frame(width: 200, alignment: .top)
+                    }.listStyle(.sidebar)
+                    }.frame(width: 230, alignment: .top)
             
             if selected == "today"{
                 
