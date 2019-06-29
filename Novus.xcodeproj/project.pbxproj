@@ -25,6 +25,7 @@
 		A479B12A22BF1CC700853030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A479B12922BF1CC700853030 /* Assets.xcassets */; };
 		A479B12D22BF1CC700853030 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A479B12C22BF1CC700853030 /* Preview Assets.xcassets */; };
 		A479B13022BF1CC700853030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A479B12E22BF1CC700853030 /* Main.storyboard */; };
+		A4D9245422C762B000912501 /* BuildScript.command in Resources */ = {isa = PBXBuildFile; fileRef = A4D9245322C762AF00912501 /* BuildScript.command */; };
 		A4EED2FB22C5DDB40044C089 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EED2FA22C5DDB40044C089 /* Card.swift */; };
 /* End PBXBuildFile section */
 
@@ -50,6 +51,7 @@
 		A479B12F22BF1CC700853030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A479B13122BF1CC700853030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A479B13222BF1CC700853030 /* Novus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Novus.entitlements; sourceTree = "<group>"; };
+		A4D9245322C762AF00912501 /* BuildScript.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = BuildScript.command; path = ../../../../../../../Downloads/NSTask/NSTask/BuildScript.command; sourceTree = "<group>"; };
 		A4EED2FA22C5DDB40044C089 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 				A432B62322C56DDB0008F4D7 /* Pages */,
 				A479B12722BF1CC600853030 /* ContentView.swift */,
 				A479B12522BF1CC600853030 /* AppDelegate.swift */,
+				A4D9245322C762AF00912501 /* BuildScript.command */,
 				A479B12922BF1CC700853030 /* Assets.xcassets */,
 				A479B12E22BF1CC700853030 /* Main.storyboard */,
 			);
@@ -180,6 +183,8 @@
 			dependencies = (
 			);
 			name = Novus;
+			packageProductDependencies = (
+			);
 			productName = NovusUI;
 			productReference = A479B12222BF1CC600853030 /* Novus.app */;
 			productType = "com.apple.product-type.application";
@@ -208,6 +213,8 @@
 				Base,
 			);
 			mainGroup = A479B11922BF1CC600853030;
+			packageReferences = (
+			);
 			productRefGroup = A479B12322BF1CC600853030 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -223,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A479B13022BF1CC700853030 /* Main.storyboard in Resources */,
+				A4D9245422C762B000912501 /* BuildScript.command in Resources */,
 				A479B12D22BF1CC700853030 /* Preview Assets.xcassets in Resources */,
 				A479B12A22BF1CC700853030 /* Assets.xcassets in Resources */,
 			);

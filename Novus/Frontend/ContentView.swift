@@ -30,7 +30,9 @@ struct ContentView : View {
                         VStack(alignment: .leading, spacing: 10){
                             
                             Text("Today").color(selected == "today" ? Color("SideBarColorHighlighting") : .gray).tapAction {
+                                
                                 self.selected = "today"
+                                
                             }
                             
                             Text("News").color(selected == "news" ? Color("SideBarColorHighlighting") : .gray).tapAction {

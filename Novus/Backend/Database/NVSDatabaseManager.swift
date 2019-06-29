@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+class NVSDatabaseManager {
+    
+    init(){
+
+
+
+    }
+}
