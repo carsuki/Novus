@@ -177,7 +177,7 @@ struct Today : View {
             HStack{
                 Text("Test")
                 RoundedRectangle(cornerRadius: 8).tapAction {
-                    runProcess(asAdministrator: Bundle.main.path(forResource: "BuildScript", ofType: "command"), withArguments: [""], output: "", errorDescription: "")
+                    runProcess(asAdministrator: Bundle.main.path(forResource: "APT", ofType: "command"), withArguments: [""], output: "", errorDescription: "")
                     
                     }
                 RoundedRectangle(cornerRadius: 8)

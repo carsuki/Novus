@@ -12,6 +12,7 @@
 		70D96E2222C537CE0095390A /* NVSRepoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E2122C537CE0095390A /* NVSRepoManager.swift */; };
 		70D96E2422C538470095390A /* NVSDependencyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E2322C538470095390A /* NVSDependencyResolver.swift */; };
 		70D96E2622C538700095390A /* NVSDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E2522C538700095390A /* NVSDatabaseManager.swift */; };
+		A45FC3FA22C7EFD200204A8D /* APT.command in Resources */ = {isa = PBXBuildFile; fileRef = A45FC3F922C7EFD200204A8D /* APT.command */; };
 		A469146022C56441003A03D4 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469145F22C56441003A03D4 /* News.swift */; };
 		A469146222C564A9003A03D4 /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469146122C564A9003A03D4 /* Today.swift */; };
 		A469146422C564F7003A03D4 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469146322C564F7003A03D4 /* Updates.swift */; };
@@ -25,7 +26,6 @@
 		A479B12A22BF1CC700853030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A479B12922BF1CC700853030 /* Assets.xcassets */; };
 		A479B12D22BF1CC700853030 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A479B12C22BF1CC700853030 /* Preview Assets.xcassets */; };
 		A479B13022BF1CC700853030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A479B12E22BF1CC700853030 /* Main.storyboard */; };
-		A4D9245422C762B000912501 /* BuildScript.command in Resources */ = {isa = PBXBuildFile; fileRef = A4D9245322C762AF00912501 /* BuildScript.command */; };
 		A4EED2FB22C5DDB40044C089 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EED2FA22C5DDB40044C089 /* Card.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +35,7 @@
 		70D96E2122C537CE0095390A /* NVSRepoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSRepoManager.swift; sourceTree = "<group>"; };
 		70D96E2322C538470095390A /* NVSDependencyResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSDependencyResolver.swift; sourceTree = "<group>"; };
 		70D96E2522C538700095390A /* NVSDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSDatabaseManager.swift; sourceTree = "<group>"; };
+		A45FC3F922C7EFD200204A8D /* APT.command */ = {isa = PBXFileReference; lastKnownFileType = file; name = APT.command; path = Novus/APT.command; sourceTree = SOURCE_ROOT; };
 		A469145F22C56441003A03D4 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		A469146122C564A9003A03D4 /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
 		A469146322C564F7003A03D4 /* Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updates.swift; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		A479B12F22BF1CC700853030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A479B13122BF1CC700853030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A479B13222BF1CC700853030 /* Novus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Novus.entitlements; sourceTree = "<group>"; };
-		A4D9245322C762AF00912501 /* BuildScript.command */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; name = BuildScript.command; path = ../../../../../../../Downloads/NSTask/NSTask/BuildScript.command; sourceTree = "<group>"; };
 		A4EED2FA22C5DDB40044C089 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,7 +109,7 @@
 				A432B62322C56DDB0008F4D7 /* Pages */,
 				A479B12722BF1CC600853030 /* ContentView.swift */,
 				A479B12522BF1CC600853030 /* AppDelegate.swift */,
-				A4D9245322C762AF00912501 /* BuildScript.command */,
+				A45FC3F922C7EFD200204A8D /* APT.command */,
 				A479B12922BF1CC700853030 /* Assets.xcassets */,
 				A479B12E22BF1CC700853030 /* Main.storyboard */,
 			);
@@ -230,7 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A479B13022BF1CC700853030 /* Main.storyboard in Resources */,
-				A4D9245422C762B000912501 /* BuildScript.command in Resources */,
+				A45FC3FA22C7EFD200204A8D /* APT.command in Resources */,
 				A479B12D22BF1CC700853030 /* Preview Assets.xcassets in Resources */,
 				A479B12A22BF1CC700853030 /* Assets.xcassets in Resources */,
 			);
