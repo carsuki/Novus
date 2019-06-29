@@ -1,5 +1,1 @@
 # Novus
-
-
-
-REV IS GAE
