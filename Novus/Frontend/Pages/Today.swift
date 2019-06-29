@@ -8,8 +8,135 @@
 
 import SwiftUI
 
+dynamic var isRunning = false
+var outputPipe:Pipe!
+var buildTask:Process!
+
+//  Converted to Swift 5 by Swiftify v5.0.31639 - https://objectivec2swift.com/
+func runProcess(asAdministrator scriptPath: String?, withArguments arguments: [String]?, output: String?, errorDescription: String?) -> Bool {
+    var output = output
+    var errorDescription = errorDescription
+    
+    let allArgs = arguments?.joined(separator: " ")
+    let fullScript = "\(scriptPath ?? "") \(allArgs ?? "")"
+    
+    var errorInfo: NSDictionary?
+    let script = "do shell script \"\(fullScript)\" with administrator privileges"
+    
+    let appleScript = NSAppleScript(source: script)
+    let eventResult = appleScript?.executeAndReturnError(&errorInfo)
+    
+    // Check errorInfo
+    if eventResult == nil {
+        // Describe common errors
+        errorDescription = nil
+        if errorInfo?[NSAppleScript.errorNumber] != nil {
+            let errorNumber = errorInfo?[NSAppleScript.errorNumber] as? NSNumber
+            if errorNumber?.intValue ?? 0 == -128 {
+                errorDescription = "The administrator password is required to do this."
+            }
+        }
+        
+        // Set error message from provided message
+        if errorDescription == nil {
+            if errorInfo?[NSAppleScript.errorMessage] != nil {
+                errorDescription = errorInfo?[NSAppleScript.errorMessage] as? String
+            }
+        }
+        
+        print(errorDescription)
+        
+        return false
+    } else {
+        // Set output to the AppleScript's output
+        output = eventResult?.stringValue
+        
+        print(output)
+        
+        return true
+    }
+}
+
+
+
+func runScript(_ arguments:[String]) {
+    
+    //1.
+    isRunning = true
+    
+    let taskQueue = DispatchQueue.global(qos: DispatchQoS.QoSClass.background)
+    
+    //2.
+    taskQueue.async {
+        
+        //1.
+        guard let path = Bundle.main.path(forResource: "BuildScript",ofType:"command") else {
+            print("Unable to locate BuildScript.command")
+            return
+        }
+        
+        //2.
+        buildTask = Process()
+        buildTask.launchPath = path
+        buildTask.arguments = ["pass"]
+        buildTask.environment = ["path": "/usr/bin"]
+        
+        //3.
+        buildTask.terminationHandler = {
+            
+            task in
+            DispatchQueue.main.async(execute: {
+                isRunning = false
+            })
+            
+        }
+        
+        captureStandardOutputAndRouteToTextView(buildTask)
+        
+        //4.
+        buildTask.launch()
+        
+        //5.
+        buildTask.waitUntilExit()
+        
+    }
+    
+}
+
+
+func captureStandardOutputAndRouteToTextView(_ task:Process) {
+    
+    //1.
+    outputPipe = Pipe()
+    task.standardOutput = outputPipe
+    
+    //2.
+    outputPipe.fileHandleForReading.waitForDataInBackgroundAndNotify()
+    
+    //3.
+    NotificationCenter.default.addObserver(forName: NSNotification.Name.NSFileHandleDataAvailable, object: outputPipe.fileHandleForReading , queue: nil) {
+        notification in
+        
+        //4.
+        let output = outputPipe.fileHandleForReading.availableData
+        let outputString = String(data: output, encoding: String.Encoding.utf8) ?? ""
+            
+        print(outputString)
+
+        
+        //6.
+        outputPipe.fileHandleForReading.waitForDataInBackgroundAndNotify()
+        
+        
+    }
+    
+}
+
+
 struct Today : View {
+    
     var body: some View {
+        
         VStack{
             HStack(alignment: .top){
                 VStack(alignment: .leading) {
@@ -48,7 +175,11 @@ struct Today : View {
                     }.padding(40)).cornerRadius(8)
             
             HStack{
-                RoundedRectangle(cornerRadius: 8)
+                Text("Test")
+                RoundedRectangle(cornerRadius: 8).tapAction {
+                    runProcess(asAdministrator: Bundle.main.path(forResource: "BuildScript", ofType: "command"), withArguments: [""], output: "", errorDescription: "")
+                    
+                    }
                 RoundedRectangle(cornerRadius: 8)
                 }.foregroundColor(Color("BlankCardColors"))
             
