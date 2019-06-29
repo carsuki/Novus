@@ -3,4 +3,4 @@ PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Librar
 
 export PATH
 
-echo Y | apt install wget
+echo Y | apt install $1

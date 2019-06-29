@@ -12,10 +12,9 @@ dynamic var isRunning = false
 var outputPipe:Pipe!
 var buildTask:Process!
 
-//  Converted to Swift 5 by Swiftify v5.0.31639 - https://objectivec2swift.com/
-func runProcess(asAdministrator scriptPath: String?, withArguments arguments: [String]?, output: String?, errorDescription: String?) -> Bool {
-    var output = output
-    var errorDescription = errorDescription
+func runProcess(asAdministrator scriptPath: String?, withArguments arguments: [String]?) -> String {
+    var output: String? = ""
+    var errorDescription: String? = ""
     
     let allArgs = arguments?.joined(separator: " ")
     let fullScript = "\(scriptPath ?? "") \(allArgs ?? "")"
@@ -43,17 +42,13 @@ func runProcess(asAdministrator scriptPath: String?, withArguments arguments: [S
                 errorDescription = errorInfo?[NSAppleScript.errorMessage] as? String
             }
         }
-        
-        print(errorDescription)
-        
-        return false
+
+        return errorDescription!
     } else {
         // Set output to the AppleScript's output
         output = eventResult?.stringValue
         
-        print(output)
-        
-        return true
+        return output!
     }
 }
 
@@ -135,6 +130,8 @@ func captureStandardOutputAndRouteToTextView(_ task:Process) {
 
 struct Today : View {
     
+    @State var text = "Click here to install"
+    
     var body: some View {
         
         VStack{
@@ -175,12 +172,14 @@ struct Today : View {
                     }.padding(40)).cornerRadius(8)
             
             HStack{
-                Text("Test")
-                RoundedRectangle(cornerRadius: 8).tapAction {
-                    runProcess(asAdministrator: Bundle.main.path(forResource: "APT", ofType: "command"), withArguments: [""], output: "", errorDescription: "")
+                Card().tapAction {
                     
-                    }
-                RoundedRectangle(cornerRadius: 8)
+                    let output = runProcess(asAdministrator: Bundle.main.path(forResource: "APT", ofType: "command"), withArguments: ["python3"])
+                    
+                    self.text = output
+                    
+                    }.overlay(Text(text).font(.headline).color(.secondary).lineLimit(nil))
+                Card()
                 }.foregroundColor(Color("BlankCardColors"))
             
             
