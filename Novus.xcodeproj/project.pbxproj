@@ -12,6 +12,8 @@
 		4DA343B622C914500006897E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA343B522C914500006897E /* Assets.xcassets */; };
 		4DA343B922C914500006897E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA343B722C914500006897E /* Main.storyboard */; };
 		4DA343BC22C914500006897E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343BB22C914500006897E /* main.m */; };
+		4DA343CA22C94B9C0006897E /* LMDPKGParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343C722C94B9C0006897E /* LMDPKGParser.m */; };
+		4DA343CB22C94B9C0006897E /* NVSPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343C922C94B9C0006897E /* NVSPackage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,10 @@
 		4DA343BA22C914500006897E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DA343BB22C914500006897E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DA343BD22C914500006897E /* Novus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Novus.entitlements; sourceTree = "<group>"; };
+		4DA343C622C94B9B0006897E /* NVSPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSPackage.h; sourceTree = "<group>"; };
+		4DA343C722C94B9C0006897E /* LMDPKGParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMDPKGParser.m; sourceTree = "<group>"; };
+		4DA343C822C94B9C0006897E /* LMDPKGParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMDPKGParser.h; sourceTree = "<group>"; };
+		4DA343C922C94B9C0006897E /* NVSPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVSPackage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,10 @@
 				4DA343B022C914500006897E /* AppDelegate.m */,
 				4DA343B222C914500006897E /* ViewController.h */,
 				4DA343B322C914500006897E /* ViewController.m */,
+				4DA343C822C94B9C0006897E /* LMDPKGParser.h */,
+				4DA343C722C94B9C0006897E /* LMDPKGParser.m */,
+				4DA343C622C94B9B0006897E /* NVSPackage.h */,
+				4DA343C922C94B9C0006897E /* NVSPackage.m */,
 				4DA343B522C914500006897E /* Assets.xcassets */,
 				4DA343B722C914500006897E /* Main.storyboard */,
 				4DA343BA22C914500006897E /* Info.plist */,
@@ -101,6 +111,11 @@
 				TargetAttributes = {
 					4DA343AB22C914500006897E = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -140,7 +155,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DA343B422C914500006897E /* ViewController.m in Sources */,
+				4DA343CA22C94B9C0006897E /* LMDPKGParser.m in Sources */,
 				4DA343BC22C914500006897E /* main.m in Sources */,
+				4DA343CB22C94B9C0006897E /* NVSPackage.m in Sources */,
 				4DA343B122C914500006897E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,7 +291,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Novus/Novus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9859KQSN8L;
@@ -292,7 +308,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Novus/Novus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 9859KQSN8L;
