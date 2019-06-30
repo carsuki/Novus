@@ -13,15 +13,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    // Do any additional setup after loading the view.
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"EEEE d MMMM"];
+    self.todayDateLabel.stringValue = [[formatter stringFromDate:[NSDate date]] uppercaseString];
 }
 
-
-- (void)setRepresentedObject:(id)representedObject {
-    [super setRepresentedObject:representedObject];
-
-    // Update the view, if already loaded.
-}
 
 -(void)openTab:(NSInteger)index {
     [self.tabView selectTabViewItemAtIndex:index];
