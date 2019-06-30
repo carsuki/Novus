@@ -8,14 +8,40 @@
 
 #import "ViewController.h"
 
+@implementation NVSPackageCellView
+
+@end
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.parser = [[LMDPKGParser alloc] init];
+    
+    // packages view
+    self.packagesTableView.delegate = self;
+    self.packagesTableView.dataSource = self;
 
+    // dates
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"EEEE d MMMM"];
     self.todayDateLabel.stringValue = [[formatter stringFromDate:[NSDate date]] uppercaseString];
+    self.packagesDatelabel.stringValue = [[formatter stringFromDate:[NSDate date]] uppercaseString];
+}
+
+-(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return self.parser.installedPackages.count;
+}
+
+-(NSView*)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    NVSPackageCellView *view = [tableView makeViewWithIdentifier:@"PackageCell" owner:self];
+    NVSPackage *pkg = [self.parser.installedPackages objectAtIndex:row];
+    view.textField.stringValue = pkg.identifier;
+    NSArray *maintainer = [pkg.maintainer componentsSeparatedByString:@"<"];
+    view.maintainerField.stringValue = [maintainer objectAtIndex:0];
+    view.descField.stringValue = pkg.desc;
+    
+    return view;
 }
 
 

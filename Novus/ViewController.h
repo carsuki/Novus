@@ -7,10 +7,19 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "LMDPKGParser.h"
+#import "NVSPackage.h"
 
-@interface ViewController : NSViewController
+@interface NVSPackageCellView : NSTableCellView
+@property (strong) IBOutlet NSTextField *maintainerField;
+@property (strong) IBOutlet NSTextField *descField;
+
+@end
+
+@interface ViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
 @property (strong) IBOutlet NSTabView *tabView;
+@property (nonatomic,retain) LMDPKGParser *parser;
 
 //
 //   TODAY PAGE
@@ -20,6 +29,13 @@
 @property (strong) IBOutlet NSBox *todayNovusCard;
 @property (strong) IBOutlet NSBox *firstEditorCard;
 @property (strong) IBOutlet NSBox *secondEditorCard;
+
+//
+//   PACKAGES PAGE
+//
+
+@property (strong) IBOutlet NSTextField *packagesDatelabel;
+@property (strong) IBOutlet NSTableView *packagesTableView;
 
 //
 //   SIDEBAR
