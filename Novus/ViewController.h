@@ -12,6 +12,19 @@
 
 @property (strong) IBOutlet NSTabView *tabView;
 
+//
+//   TODAY PAGE
+//
+
+@property (strong) IBOutlet NSTextField *todayDateLabel;
+@property (strong) IBOutlet NSBox *todayNovusCard;
+@property (strong) IBOutlet NSBox *firstEditorCard;
+@property (strong) IBOutlet NSBox *secondEditorCard;
+
+//
+//   SIDEBAR
+//
+
 // Store Section
 @property (strong) IBOutlet NSImageView *storeImage;
 @property (strong) IBOutlet NSTextField *storeLabel;
