@@ -12,6 +12,18 @@
 
 @end
 
+@implementation NVSAboutView
+
+-(void)viewDidLoad {
+    [super viewDidLoad];
+    
+    NSString *version = [[NSBundle mainBundle] objectForInfoDictionaryKey: @"CFBundleShortVersionString"];
+    NSString *build = [[NSBundle mainBundle] objectForInfoDictionaryKey: (NSString *)kCFBundleVersionKey];
+    self.infoField.stringValue = [NSString stringWithFormat:@"Version %@ \nCodename SwiftPoop \nBuild %@", version, build];
+}
+
+@end
+
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {

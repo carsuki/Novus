@@ -13,3 +13,9 @@
 
 @end
 
+@interface NVSAboutView : NSViewController
+
+@property (strong) IBOutlet NSTextField *infoField;
+
+@end
+
