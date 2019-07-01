@@ -24,9 +24,9 @@
 
     // dates
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"EEEE d MMMM"];
-    self.todayDateLabel.stringValue = [[formatter stringFromDate:[NSDate date]] uppercaseString];
-    self.packagesDatelabel.stringValue = [[formatter stringFromDate:[NSDate date]] uppercaseString];
+    [formatter setDateFormat:@"EEEE, d MMMM"];
+    self.todayDateLabel.stringValue = [formatter stringFromDate:[NSDate date]];
+                                       self.packagesDatelabel.stringValue = [formatter stringFromDate:[NSDate date]];
 }
 
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
