@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14810.12"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -29,7 +29,7 @@
                 </windowController>
                 <customObject id="F25-O6-gih" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="93" y="-703"/>
+            <point key="canvasLocation" x="22" y="-839"/>
         </scene>
         <!--About View-->
         <scene sceneID="ZoV-Mr-llv">
@@ -989,7 +989,7 @@ Revulate</string>
                                                     <rect key="frame" x="58" y="5" width="43" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Today" id="H6R-Hv-tm8">
-                                                        <font key="font" metaFont="menu" size="14"/>
+                                                        <font key="font" metaFont="system" size="14"/>
                                                         <color key="textColor" red="0.50588235290000005" green="0.40000000000000002" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
@@ -1019,7 +1019,7 @@ Revulate</string>
                                                     <rect key="frame" x="58" y="5" width="40" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="News" id="OWw-kO-4mS">
-                                                        <font key="font" metaFont="menu" size="14"/>
+                                                        <font key="font" metaFont="system" size="14"/>
                                                         <color key="textColor" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
@@ -1049,7 +1049,7 @@ Revulate</string>
                                                     <rect key="frame" x="58" y="5" width="59" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Updates" id="63M-si-9vw">
-                                                        <font key="font" metaFont="menu" size="14"/>
+                                                        <font key="font" metaFont="system" size="14"/>
                                                         <color key="textColor" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
@@ -1114,7 +1114,7 @@ Revulate</string>
                                                     <rect key="frame" x="58" y="5" width="84" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Applications" id="eZq-iF-iw0">
-                                                        <font key="font" metaFont="menu" size="14"/>
+                                                        <font key="font" metaFont="system" size="14"/>
                                                         <color key="textColor" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
@@ -1144,7 +1144,7 @@ Revulate</string>
                                                     <rect key="frame" x="58" y="5" width="53" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Tweaks" id="fJ0-La-Gpo">
-                                                        <font key="font" metaFont="menu" size="14"/>
+                                                        <font key="font" metaFont="system" size="14"/>
                                                         <color key="textColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
@@ -1174,7 +1174,7 @@ Revulate</string>
                                                     <rect key="frame" x="58" y="5" width="56" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Themes" id="0io-QO-NEb">
-                                                        <font key="font" metaFont="menu" size="14"/>
+                                                        <font key="font" metaFont="system" size="14"/>
                                                         <color key="textColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
@@ -1239,7 +1239,7 @@ Revulate</string>
                                                     <rect key="frame" x="58" y="5" width="85" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Repositories" id="reS-QN-9PP">
-                                                        <font key="font" metaFont="menu" size="14"/>
+                                                        <font key="font" metaFont="system" size="14"/>
                                                         <color key="textColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
@@ -1269,7 +1269,7 @@ Revulate</string>
                                                     <rect key="frame" x="58" y="5" width="66" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Packages" id="BuQ-88-LUP">
-                                                        <font key="font" metaFont="menu" size="14"/>
+                                                        <font key="font" metaFont="system" size="14"/>
                                                         <color key="textColor" red="0.4431372549" green="0.4431372549" blue="0.4431372549" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                     </textFieldCell>
@@ -1431,7 +1431,7 @@ Revulate</string>
                                                                                             <subviews>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QA4-1c-VzW">
                                                                                                     <rect key="frame" x="18" y="81" width="218" height="98"/>
-                                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                                                     <textFieldCell key="cell" truncatesLastVisibleLine="YES" title="Manage your projects the way you should." id="K5G-bp-8Vx">
                                                                                                         <font key="font" metaFont="systemBold" size="26"/>
                                                                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -1440,7 +1440,7 @@ Revulate</string>
                                                                                                 </textField>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6gK-d0-iC8">
                                                                                                     <rect key="frame" x="18" y="29" width="218" height="38"/>
-                                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                                                     <textFieldCell key="cell" truncatesLastVisibleLine="YES" title="Meet the best Git client ever!" id="l2o-Qj-Ljh">
                                                                                                         <font key="font" metaFont="system" size="15"/>
                                                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1449,12 +1449,12 @@ Revulate</string>
                                                                                                 </textField>
                                                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K6L-oW-A8W">
                                                                                                     <rect key="frame" x="242" y="42" width="170" height="170"/>
-                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="GitClient" id="PIQ-3U-1zi"/>
                                                                                                 </imageView>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDn-e0-514">
                                                                                                     <rect key="frame" x="18" y="190" width="218" height="19"/>
-                                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                                                     <textFieldCell key="cell" truncatesLastVisibleLine="YES" title="BEST FOR DEVELOPERS" id="LtA-9y-lpd">
                                                                                                         <font key="font" metaFont="system" size="15"/>
                                                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1484,12 +1484,12 @@ Revulate</string>
                                                                                             <subviews>
                                                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFd-gW-l1Z">
                                                                                                     <rect key="frame" x="242" y="42" width="170" height="170"/>
-                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ThemeKit" id="Z3N-Hw-WyR"/>
                                                                                                 </imageView>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="598-DN-SRc">
                                                                                                     <rect key="frame" x="18" y="80" width="218" height="87"/>
-                                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                                                     <textFieldCell key="cell" truncatesLastVisibleLine="YES" title="Give your Mac a fresh look." id="Aof-fJ-cSA">
                                                                                                         <font key="font" metaFont="systemBold" size="26"/>
                                                                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -1498,7 +1498,7 @@ Revulate</string>
                                                                                                 </textField>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="skp-M9-Kld">
                                                                                                     <rect key="frame" x="18" y="29" width="218" height="38"/>
-                                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                                                     <textFieldCell key="cell" truncatesLastVisibleLine="YES" title="Change your icons with ThemeKit" id="hw9-6g-dhg">
                                                                                                         <font key="font" metaFont="system" size="15"/>
                                                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1507,7 +1507,7 @@ Revulate</string>
                                                                                                 </textField>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pb7-ez-uFJ">
                                                                                                     <rect key="frame" x="18" y="190" width="218" height="19"/>
-                                                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                                                                     <textFieldCell key="cell" truncatesLastVisibleLine="YES" title="WE RECOMMEND" id="6gj-fS-gnc">
                                                                                                         <font key="font" metaFont="system" size="15"/>
                                                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1559,9 +1559,12 @@ Revulate</string>
                                             <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ohy-pe-NNa">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ohy-pe-NNa">
                                                     <rect key="frame" x="355" y="292" width="41" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="37" id="7Ly-j0-ebx"/>
+                                                        <constraint firstAttribute="height" constant="17" id="8oR-UM-BPN"/>
+                                                    </constraints>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="News" id="P5n-Rp-mAx">
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1569,6 +1572,10 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Ohy-pe-NNa" firstAttribute="leading" secondItem="euy-AQ-sQL" secondAttribute="leading" constant="357" id="3J6-Gy-mbG"/>
+                                                <constraint firstAttribute="bottom" secondItem="Ohy-pe-NNa" secondAttribute="bottom" constant="292" id="ufu-0M-Ghe"/>
+                                            </constraints>
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Updates" identifier="" id="ayz-5R-fHA">
@@ -1576,9 +1583,12 @@ Revulate</string>
                                             <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9n-39-jvr">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="T9n-39-jvr">
                                                     <rect key="frame" x="355" y="292" width="56" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="52" id="T2h-r4-hZR"/>
+                                                        <constraint firstAttribute="height" constant="17" id="XBu-CY-Qis"/>
+                                                    </constraints>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Updates" id="1gO-Fi-iYW">
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1586,6 +1596,10 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="T9n-39-jvr" secondAttribute="bottom" constant="292" id="Afx-Ks-cHh"/>
+                                                <constraint firstItem="T9n-39-jvr" firstAttribute="leading" secondItem="APG-LK-ndB" secondAttribute="leading" constant="357" id="I9k-qG-CeI"/>
+                                            </constraints>
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Applications" identifier="" id="lLK-J7-fXg">
@@ -1593,9 +1607,11 @@ Revulate</string>
                                             <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DiL-Sr-pym">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="DiL-Sr-pym">
                                                     <rect key="frame" x="355" y="292" width="79" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17" id="SC6-0b-NiY"/>
+                                                    </constraints>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Applications" id="hM7-xp-RhJ">
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1603,6 +1619,10 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DiL-Sr-pym" firstAttribute="leading" secondItem="bAR-0a-734" secondAttribute="leading" constant="357" id="gHi-Fg-V6a"/>
+                                                <constraint firstAttribute="bottom" secondItem="DiL-Sr-pym" secondAttribute="bottom" constant="292" id="gni-X2-hGU"/>
+                                            </constraints>
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Tweaks" identifier="" id="qCV-mc-igu">
@@ -1610,9 +1630,11 @@ Revulate</string>
                                             <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hdD-KJ-b6u">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hdD-KJ-b6u">
                                                     <rect key="frame" x="355" y="292" width="49" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17" id="Iva-hx-wGR"/>
+                                                    </constraints>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Tweaks" id="ZEk-bA-HhR">
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1620,6 +1642,10 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="hdD-KJ-b6u" firstAttribute="leading" secondItem="FTX-H0-cVW" secondAttribute="leading" constant="357" id="XXe-TW-viy"/>
+                                                <constraint firstAttribute="bottom" secondItem="hdD-KJ-b6u" secondAttribute="bottom" constant="292" id="k9j-fn-hCz"/>
+                                            </constraints>
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Themes" identifier="" id="pxf-rj-2hJ">
@@ -1627,9 +1653,11 @@ Revulate</string>
                                             <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tSN-x5-OwA">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tSN-x5-OwA">
                                                     <rect key="frame" x="355" y="292" width="53" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17" id="TQl-vc-mhQ"/>
+                                                    </constraints>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Themes" id="WO3-PU-z88">
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1637,6 +1665,10 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="tSN-x5-OwA" secondAttribute="bottom" constant="292" id="T9B-vQ-lWx"/>
+                                                <constraint firstItem="tSN-x5-OwA" firstAttribute="leading" secondItem="94k-JZ-Jfs" secondAttribute="leading" constant="357" id="cBb-lz-lnr"/>
+                                            </constraints>
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Repositories" identifier="" id="6Qr-xt-OKI">
@@ -1644,9 +1676,11 @@ Revulate</string>
                                             <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8BP-eS-XAM">
+                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="8BP-eS-XAM">
                                                     <rect key="frame" x="355" y="292" width="80" height="17"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="17" id="QaC-uD-Sjq"/>
+                                                    </constraints>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Repositories" id="WmS-8W-W1J">
                                                         <font key="font" usesAppearanceFont="YES"/>
                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1654,6 +1688,10 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="8BP-eS-XAM" secondAttribute="bottom" constant="292" id="Saf-JR-JFH"/>
+                                                <constraint firstItem="8BP-eS-XAM" firstAttribute="leading" secondItem="xFm-SN-mV7" secondAttribute="leading" constant="357" id="jVZ-y4-8JN"/>
+                                            </constraints>
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Packages" identifier="" id="4At-mM-Mph">
@@ -1671,7 +1709,7 @@ Revulate</string>
                                                                 <rect key="frame" x="32" y="0.0" width="888" height="579"/>
                                                                 <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="tPw-Td-Z4N">
                                                                     <rect key="frame" x="0.0" y="0.0" width="888" height="579"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <tableView focusRingType="none" verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="70" viewBased="YES" id="8tQ-kg-Fof">
                                                                             <rect key="frame" x="0.0" y="0.0" width="888" height="579"/>
@@ -1682,7 +1720,7 @@ Revulate</string>
                                                                             <tableColumns>
                                                                                 <tableColumn width="885" minWidth="10" maxWidth="3.4028234663852886e+38" id="Xe6-fp-hPn">
                                                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                                                        <font key="font" metaFont="smallSystem"/>
+                                                                                        <font key="font" metaFont="message" size="11"/>
                                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </tableHeaderCell>
@@ -1738,12 +1776,17 @@ Revulate</string>
                                                                                                         <rect key="frame" x="1" y="1" width="58" height="58"/>
                                                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                                         <subviews>
-                                                                                                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ty5-cJ-iGY">
+                                                                                                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ty5-cJ-iGY">
                                                                                                                 <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="jvP-KU-4yt"/>
                                                                                                             </imageView>
                                                                                                         </subviews>
+                                                                                                        <constraints>
+                                                                                                            <constraint firstAttribute="trailing" secondItem="ty5-cJ-iGY" secondAttribute="trailing" constant="-2" id="Q6r-Wz-N6q"/>
+                                                                                                            <constraint firstItem="ty5-cJ-iGY" firstAttribute="top" secondItem="ce1-TB-Hpg" secondAttribute="top" constant="-2" id="bFe-HW-BRO"/>
+                                                                                                            <constraint firstAttribute="bottom" secondItem="ty5-cJ-iGY" secondAttribute="bottom" id="gWS-wF-t9l"/>
+                                                                                                            <constraint firstItem="ty5-cJ-iGY" firstAttribute="leading" secondItem="ce1-TB-Hpg" secondAttribute="leading" id="hsX-Dm-bsV"/>
+                                                                                                        </constraints>
                                                                                                     </view>
                                                                                                     <constraints>
                                                                                                         <constraint firstAttribute="height" constant="60" id="7gT-sG-L6O"/>
