@@ -63,14 +63,12 @@
 		4DA343AE22C914500006897E /* Novus */ = {
 			isa = PBXGroup;
 			children = (
+				706D2AE822C9961C00E73777 /* Frontend */,
+				706D2AE722C9961100E73777 /* Backend */,
 				4DA343AF22C914500006897E /* AppDelegate.h */,
 				4DA343B022C914500006897E /* AppDelegate.m */,
 				4DA343B222C914500006897E /* ViewController.h */,
 				4DA343B322C914500006897E /* ViewController.m */,
-				4DA343C822C94B9C0006897E /* LMDPKGParser.h */,
-				4DA343C722C94B9C0006897E /* LMDPKGParser.m */,
-				4DA343C622C94B9B0006897E /* NVSPackage.h */,
-				4DA343C922C94B9C0006897E /* NVSPackage.m */,
 				4DA343B522C914500006897E /* Assets.xcassets */,
 				4DA343B722C914500006897E /* Main.storyboard */,
 				4DA343BA22C914500006897E /* Info.plist */,
@@ -78,6 +76,48 @@
 				4DA343BD22C914500006897E /* Novus.entitlements */,
 			);
 			path = Novus;
+			sourceTree = "<group>";
+		};
+		706D2AE722C9961100E73777 /* Backend */ = {
+			isa = PBXGroup;
+			children = (
+				706D2AEB22C9966000E73777 /* Repositories */,
+				706D2AEA22C9965500E73777 /* Database */,
+				706D2AE922C9964600E73777 /* DPKG-Parsers */,
+			);
+			path = Backend;
+			sourceTree = "<group>";
+		};
+		706D2AE822C9961C00E73777 /* Frontend */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Frontend;
+			sourceTree = "<group>";
+		};
+		706D2AE922C9964600E73777 /* DPKG-Parsers */ = {
+			isa = PBXGroup;
+			children = (
+				4DA343C622C94B9B0006897E /* NVSPackage.h */,
+				4DA343C922C94B9C0006897E /* NVSPackage.m */,
+				4DA343C822C94B9C0006897E /* LMDPKGParser.h */,
+				4DA343C722C94B9C0006897E /* LMDPKGParser.m */,
+			);
+			path = "DPKG-Parsers";
+			sourceTree = "<group>";
+		};
+		706D2AEA22C9965500E73777 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		706D2AEB22C9966000E73777 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
