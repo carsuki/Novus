@@ -26,7 +26,7 @@ if(true){
 //End Stack Overflow code.
 ```
 
-#### Mailing Lists
+#### Mailing Lists
 
 Crediting mailing list is almost the same as creding an Stack Overflow post.
 
