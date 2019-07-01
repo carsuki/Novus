@@ -107,7 +107,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1010;
-				ORGANIZATIONNAME = EvenDev;
+				ORGANIZATIONNAME = "Polar Team";
 				TargetAttributes = {
 					4DA343AB22C914500006897E = {
 						CreatedOnToolsVersion = 10.1;
@@ -293,13 +293,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 9859KQSN8L;
+				CURRENT_PROJECT_VERSION = Alpha;
+				DEVELOPMENT_TEAM = 9T6493493X;
 				INFOPLIST_FILE = Novus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.evendev.Novus;
+				PRODUCT_BUNDLE_IDENTIFIER = org.polarteam.novus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -310,13 +311,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 9859KQSN8L;
+				CURRENT_PROJECT_VERSION = Alpha;
+				DEVELOPMENT_TEAM = 9T6493493X;
 				INFOPLIST_FILE = Novus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.evendev.Novus;
+				PRODUCT_BUNDLE_IDENTIFIER = org.polarteam.novus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
