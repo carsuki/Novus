@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14810.12" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14810.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -896,12 +896,11 @@ Revulate</string>
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" hidesOnDeactivate="YES" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="1100" height="600"/>
+                        <rect key="contentRect" x="290" y="240" width="1200" height="675"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="1100" height="600"/>
                         <toolbar key="toolbar" implicitIdentifier="3DCBBA04-8FC7-4D2B-AFA8-B86FC1C69D23" autosavesConfiguration="NO" showsBaselineSeparator="NO" displayMode="iconAndLabel" sizeMode="regular" id="QAV-mq-6yb">
                             <allowedToolbarItems/>
                             <defaultToolbarItems/>
@@ -916,26 +915,26 @@ Revulate</string>
                 </windowController>
                 <customObject id="Oky-zY-oP4" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-136" y="63"/>
+            <point key="canvasLocation" x="-136" y="-29"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="1100" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1200" height="675"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <visualEffectView fixedFrame="YES" blendingMode="behindWindow" material="appearanceBased" state="active" translatesAutoresizingMaskIntoConstraints="NO" id="oB5-eW-n3K">
-                                <rect key="frame" x="0.0" y="0.0" width="250" height="600"/>
+                            <visualEffectView fixedFrame="YES" blendingMode="behindWindow" material="appearanceBased" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="oB5-eW-n3K">
+                                <rect key="frame" x="0.0" y="0.0" width="250" height="675"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
                                 <subviews>
                                     <box horizontalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="jQU-bO-Nx2">
-                                        <rect key="frame" x="245" y="0.0" width="5" height="600"/>
+                                        <rect key="frame" x="245" y="0.0" width="5" height="675"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES"/>
                                     </box>
                                     <searchField wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" textCompletion="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p4S-eX-CTF">
-                                        <rect key="frame" x="20" y="527" width="210" height="22"/>
+                                        <rect key="frame" x="20" y="602" width="210" height="22"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                         <searchFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" borderStyle="bezel" usesSingleLineMode="YES" bezelStyle="round" id="PQL-9r-NCw">
                                             <font key="font" metaFont="system"/>
@@ -944,7 +943,7 @@ Revulate</string>
                                         </searchFieldCell>
                                     </searchField>
                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="StoreBTN" translatesAutoresizingMaskIntoConstraints="NO" id="fQv-pf-doC">
-                                        <rect key="frame" x="0.0" y="468" width="248" height="40"/>
+                                        <rect key="frame" x="0.0" y="543" width="248" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" ambiguous="YES" id="g3q-Uw-ZYG">
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="40"/>
@@ -979,7 +978,7 @@ Revulate</string>
                                         </view>
                                     </box>
                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="TodayBTN" translatesAutoresizingMaskIntoConstraints="NO" id="taY-a8-BGR">
-                                        <rect key="frame" x="0.0" y="438" width="248" height="30"/>
+                                        <rect key="frame" x="0.0" y="513" width="248" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" ambiguous="YES" id="GDd-Ek-ggq">
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
@@ -995,7 +994,7 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gDh-4p-TDZ">
-                                                    <rect key="frame" x="0.0" y="2" width="248" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="1cG-XX-FA8">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1009,7 +1008,7 @@ Revulate</string>
                                         </view>
                                     </box>
                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="NewsBTN" translatesAutoresizingMaskIntoConstraints="NO" id="wH5-aX-xje">
-                                        <rect key="frame" x="0.0" y="408" width="248" height="30"/>
+                                        <rect key="frame" x="0.0" y="483" width="248" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" ambiguous="YES" id="XEj-xE-UwH">
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
@@ -1025,7 +1024,7 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3UG-5H-YSc">
-                                                    <rect key="frame" x="0.0" y="2" width="248" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="vCk-IN-gkE">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1039,7 +1038,7 @@ Revulate</string>
                                         </view>
                                     </box>
                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="UpdatesBTN" translatesAutoresizingMaskIntoConstraints="NO" id="hkX-TR-ZXc">
-                                        <rect key="frame" x="0.0" y="378" width="248" height="30"/>
+                                        <rect key="frame" x="0.0" y="453" width="248" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" ambiguous="YES" id="LBD-Qv-95j">
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
@@ -1055,7 +1054,7 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VAX-Lm-Jf7">
-                                                    <rect key="frame" x="0.0" y="2" width="248" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="T6s-Mf-LrU">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1069,7 +1068,7 @@ Revulate</string>
                                         </view>
                                     </box>
                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="CategoriesBTN" translatesAutoresizingMaskIntoConstraints="NO" id="mF5-Ej-fLd">
-                                        <rect key="frame" x="0.0" y="338" width="248" height="40"/>
+                                        <rect key="frame" x="0.0" y="413" width="248" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" ambiguous="YES" id="izO-rh-OfJ">
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="40"/>
@@ -1104,7 +1103,7 @@ Revulate</string>
                                         </view>
                                     </box>
                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="AppsBTN" translatesAutoresizingMaskIntoConstraints="NO" id="jLq-kL-71E">
-                                        <rect key="frame" x="0.0" y="308" width="248" height="30"/>
+                                        <rect key="frame" x="0.0" y="383" width="248" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" ambiguous="YES" id="Aqs-Ax-Ima">
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
@@ -1120,7 +1119,7 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tcT-a9-qM4">
-                                                    <rect key="frame" x="0.0" y="2" width="248" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="Ag4-BO-pot">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1134,7 +1133,7 @@ Revulate</string>
                                         </view>
                                     </box>
                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="TweaksBTN" translatesAutoresizingMaskIntoConstraints="NO" id="yxJ-CY-v4L">
-                                        <rect key="frame" x="0.0" y="278" width="248" height="30"/>
+                                        <rect key="frame" x="0.0" y="353" width="248" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" ambiguous="YES" id="ZiG-5l-8mQ">
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
@@ -1150,7 +1149,7 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gs5-yW-bdO">
-                                                    <rect key="frame" x="0.0" y="2" width="248" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="bhb-N8-dOO">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1164,7 +1163,7 @@ Revulate</string>
                                         </view>
                                     </box>
                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="ThemesBTN" translatesAutoresizingMaskIntoConstraints="NO" id="Yta-pw-0d9">
-                                        <rect key="frame" x="0.0" y="248" width="248" height="30"/>
+                                        <rect key="frame" x="0.0" y="323" width="248" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" ambiguous="YES" id="yFZ-Mb-JlY">
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
@@ -1180,7 +1179,7 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oC3-dC-cu5">
-                                                    <rect key="frame" x="0.0" y="2" width="248" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="bxI-rH-a4N">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1194,7 +1193,7 @@ Revulate</string>
                                         </view>
                                     </box>
                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="ManageBTN" translatesAutoresizingMaskIntoConstraints="NO" id="807-FQ-vGI">
-                                        <rect key="frame" x="0.0" y="208" width="248" height="40"/>
+                                        <rect key="frame" x="0.0" y="283" width="248" height="40"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" ambiguous="YES" id="75V-uN-soV">
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="40"/>
@@ -1229,7 +1228,7 @@ Revulate</string>
                                         </view>
                                     </box>
                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="RepoBTN" translatesAutoresizingMaskIntoConstraints="NO" id="Pc6-tf-MyD">
-                                        <rect key="frame" x="0.0" y="178" width="248" height="30"/>
+                                        <rect key="frame" x="0.0" y="253" width="248" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" ambiguous="YES" id="rah-J2-oy0">
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
@@ -1245,7 +1244,7 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="or7-84-TTK">
-                                                    <rect key="frame" x="0.0" y="2" width="248" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="vJD-rd-2jz">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1259,7 +1258,7 @@ Revulate</string>
                                         </view>
                                     </box>
                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="PackageBTN" translatesAutoresizingMaskIntoConstraints="NO" id="sak-gE-UaR">
-                                        <rect key="frame" x="0.0" y="148" width="248" height="30"/>
+                                        <rect key="frame" x="0.0" y="223" width="248" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <view key="contentView" ambiguous="YES" id="CHO-0B-huz">
                                             <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
@@ -1275,7 +1274,7 @@ Revulate</string>
                                                     </textFieldCell>
                                                 </textField>
                                                 <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="tFC-AC-c04">
-                                                    <rect key="frame" x="0.0" y="2" width="248" height="30"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="248" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" alignment="center" imageScaling="proportionallyDown" inset="2" id="grL-hD-blg">
                                                         <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -1291,24 +1290,24 @@ Revulate</string>
                                 </subviews>
                             </visualEffectView>
                             <tabView fixedFrame="YES" type="noTabsNoBorder" initialItem="Zow-GX-RyL" translatesAutoresizingMaskIntoConstraints="NO" id="pQk-ZB-MLU">
-                                <rect key="frame" x="248" y="0.0" width="852" height="600"/>
+                                <rect key="frame" x="248" y="0.0" width="952" height="675"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="Today" identifier="" id="Zow-GX-RyL">
-                                        <view key="view" ambiguous="YES" id="m7e-pj-WDw">
-                                            <rect key="frame" x="0.0" y="0.0" width="852" height="600"/>
+                                        <view key="view" id="m7e-pj-WDw">
+                                            <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="rZA-xh-tGm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="852" height="600"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <view key="contentView" ambiguous="YES" id="Mtt-g3-aKO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="852" height="600"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ELZ-Cr-hCm">
-                                                                <rect key="frame" x="30" y="548" width="117" height="17"/>
+                                                                <rect key="frame" x="30" y="623" width="117" height="17"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="SUNDAY 30 JUNE" id="JpV-zy-FZV">
                                                                     <font key="font" metaFont="systemSemibold" size="13"/>
@@ -1317,7 +1316,7 @@ Revulate</string>
                                                                 </textFieldCell>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fX8-kq-T6J">
-                                                                <rect key="frame" x="30" y="510" width="91" height="38"/>
+                                                                <rect key="frame" x="30" y="585" width="91" height="38"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Today" id="M84-Df-0DP">
                                                                     <font key="font" metaFont="systemBold" size="31"/>
@@ -1326,14 +1325,14 @@ Revulate</string>
                                                                 </textFieldCell>
                                                             </textField>
                                                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="15" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="gmI-5m-QTM">
-                                                                <rect key="frame" x="32" y="277" width="788" height="225"/>
+                                                                <rect key="frame" x="32" y="280" width="888" height="297"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                 <view key="contentView" ambiguous="YES" id="9F4-qe-21S">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="788" height="225"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="888" height="297"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RaV-ch-qsx">
-                                                                            <rect key="frame" x="127" y="15" width="534" height="196"/>
+                                                                            <rect key="frame" x="177" y="52" width="534" height="196"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <subviews>
                                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aUL-JK-m1G">
@@ -1372,46 +1371,37 @@ Revulate</string>
                                                                 <color key="fillColor" red="0.50588235290000005" green="0.40000000000000002" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             </box>
                                                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="FRB-v2-xce">
-                                                                <rect key="frame" x="32" y="32" width="788" height="225"/>
+                                                                <rect key="frame" x="32" y="20" width="888" height="240"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                 <view key="contentView" ambiguous="YES" id="kRn-xA-JpS">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="788" height="225"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="888" height="240"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="15" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="ECG-mr-256">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="383" height="225"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="432" height="233"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <view key="contentView" ambiguous="YES" id="aM7-yh-WCJ">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="383" height="225"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="432" height="233"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                 <subviews>
                                                                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="Q21-6K-oPL">
-                                                                                        <rect key="frame" x="1" y="0.0" width="382" height="225"/>
+                                                                                        <rect key="frame" x="0.0" y="4" width="432" height="225"/>
                                                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                         <view key="contentView" ambiguous="YES" id="8tw-qL-CSa">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="225"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="432" height="225"/>
                                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                             <subviews>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QA4-1c-VzW">
-                                                                                                    <rect key="frame" x="15" y="55" width="162" height="116"/>
+                                                                                                    <rect key="frame" x="18" y="73" width="218" height="98"/>
                                                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                                     <textFieldCell key="cell" title="Manage your projects the way you should." id="K5G-bp-8Vx">
-                                                                                                        <font key="font" metaFont="systemBold" size="24"/>
+                                                                                                        <font key="font" metaFont="systemBold" size="26"/>
                                                                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                                     </textFieldCell>
                                                                                                 </textField>
-                                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDn-e0-514">
-                                                                                                    <rect key="frame" x="15" y="180" width="173" height="19"/>
-                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="BEST FOR DEVELOPERS" id="LtA-9y-lpd">
-                                                                                                        <font key="font" metaFont="system" size="15"/>
-                                                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                                                                    </textFieldCell>
-                                                                                                </textField>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6gK-d0-iC8">
-                                                                                                    <rect key="frame" x="15" y="27" width="202" height="19"/>
+                                                                                                    <rect key="frame" x="18" y="27" width="218" height="38"/>
                                                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Meet the best Git client ever!" id="l2o-Qj-Ljh">
                                                                                                         <font key="font" metaFont="system" size="15"/>
@@ -1420,10 +1410,19 @@ Revulate</string>
                                                                                                     </textFieldCell>
                                                                                                 </textField>
                                                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K6L-oW-A8W">
-                                                                                                    <rect key="frame" x="190" y="29" width="170" height="170"/>
+                                                                                                    <rect key="frame" x="242" y="27" width="170" height="170"/>
                                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="GitClient" id="PIQ-3U-1zi"/>
                                                                                                 </imageView>
+                                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDn-e0-514">
+                                                                                                    <rect key="frame" x="18" y="178" width="218" height="19"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                                                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="BEST FOR DEVELOPERS" id="LtA-9y-lpd">
+                                                                                                        <font key="font" metaFont="system" size="15"/>
+                                                                                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                                                    </textFieldCell>
+                                                                                                </textField>
                                                                                             </subviews>
                                                                                         </view>
                                                                                     </box>
@@ -1432,46 +1431,46 @@ Revulate</string>
                                                                             <color key="fillColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.97647058823529409" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         </box>
                                                                         <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="15" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="vvK-ID-aMj">
-                                                                            <rect key="frame" x="405" y="0.0" width="383" height="225"/>
+                                                                            <rect key="frame" x="456" y="0.0" width="432" height="233"/>
                                                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                             <view key="contentView" ambiguous="YES" id="nvH-QZ-tSO">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="383" height="225"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="432" height="233"/>
                                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                 <subviews>
                                                                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="FwN-Dj-FEv">
-                                                                                        <rect key="frame" x="0.0" y="0.0" width="382" height="225"/>
+                                                                                        <rect key="frame" x="0.0" y="4" width="432" height="225"/>
                                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                         <view key="contentView" ambiguous="YES" id="KoS-5x-7BB">
-                                                                                            <rect key="frame" x="0.0" y="0.0" width="382" height="225"/>
+                                                                                            <rect key="frame" x="0.0" y="0.0" width="432" height="225"/>
                                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                             <subviews>
                                                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EFd-gW-l1Z">
-                                                                                                    <rect key="frame" x="190" y="29" width="170" height="170"/>
+                                                                                                    <rect key="frame" x="242" y="27" width="170" height="170"/>
                                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ThemeKit" id="Z3N-Hw-WyR"/>
                                                                                                 </imageView>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="598-DN-SRc">
-                                                                                                    <rect key="frame" x="18" y="79" width="162" height="87"/>
+                                                                                                    <rect key="frame" x="18" y="73" width="218" height="87"/>
                                                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                                                     <textFieldCell key="cell" title="Give your Mac a fresh look." id="Aof-fJ-cSA">
-                                                                                                        <font key="font" metaFont="systemBold" size="24"/>
+                                                                                                        <font key="font" metaFont="systemBold" size="26"/>
                                                                                                         <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                                     </textFieldCell>
                                                                                                 </textField>
-                                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pb7-ez-uFJ">
-                                                                                                    <rect key="frame" x="18" y="175" width="128" height="19"/>
+                                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="skp-M9-Kld">
+                                                                                                    <rect key="frame" x="18" y="27" width="218" height="38"/>
                                                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="WE RECOMMEND" id="6gj-fS-gnc">
+                                                                                                    <textFieldCell key="cell" title="Change your icons with ThemeKit" id="hw9-6g-dhg">
                                                                                                         <font key="font" metaFont="system" size="15"/>
                                                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                                     </textFieldCell>
                                                                                                 </textField>
-                                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="skp-M9-Kld">
-                                                                                                    <rect key="frame" x="18" y="32" width="162" height="39"/>
+                                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pb7-ez-uFJ">
+                                                                                                    <rect key="frame" x="18" y="178" width="218" height="19"/>
                                                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                                                                                    <textFieldCell key="cell" title="Change your icons with ThemeKit" id="hw9-6g-dhg">
+                                                                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="WE RECOMMEND" id="6gj-fS-gnc">
                                                                                                         <font key="font" metaFont="system" size="15"/>
                                                                                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1598,34 +1597,34 @@ Revulate</string>
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="Packages" identifier="" id="4At-mM-Mph">
-                                        <view key="view" id="pmY-9Q-JLe">
-                                            <rect key="frame" x="0.0" y="0.0" width="852" height="600"/>
+                                        <view key="view" ambiguous="YES" id="pmY-9Q-JLe">
+                                            <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="wqq-g9-PxF">
-                                                    <rect key="frame" x="0.0" y="0.0" width="852" height="600"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                     <view key="contentView" ambiguous="YES" id="KQN-Tv-O0h">
-                                                        <rect key="frame" x="0.0" y="0.0" width="852" height="600"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="72" horizontalPageScroll="10" verticalLineScroll="72" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1bO-ba-VNa">
-                                                                <rect key="frame" x="32" y="0.0" width="781" height="504"/>
+                                                                <rect key="frame" x="32" y="0.0" width="881" height="579"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="tPw-Td-Z4N">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="781" height="504"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="881" height="579"/>
+                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <tableView focusRingType="none" verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="70" viewBased="YES" id="8tQ-kg-Fof">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="781" height="504"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="881" height="579"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <size key="intercellSpacing" width="3" height="2"/>
                                                                             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <color key="gridColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                             <tableColumns>
-                                                                                <tableColumn width="778" minWidth="10" maxWidth="3.4028234663852886e+38" id="Xe6-fp-hPn">
+                                                                                <tableColumn width="878" minWidth="10" maxWidth="3.4028234663852886e+38" id="Xe6-fp-hPn">
                                                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                                                        <font key="font" metaFont="message" size="11"/>
+                                                                                        <font key="font" metaFont="smallSystem"/>
                                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                     </tableHeaderCell>
@@ -1633,15 +1632,15 @@ Revulate</string>
                                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                                     <prototypeCellViews>
                                                                                         <tableCellView identifier="PackageCell" id="hYF-MD-b2m" customClass="NVSPackageCellView">
-                                                                                            <rect key="frame" x="1" y="1" width="778" height="70"/>
+                                                                                            <rect key="frame" x="1" y="1" width="878" height="70"/>
                                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                             <subviews>
                                                                                                 <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="NlY-p5-5aO">
-                                                                                                    <rect key="frame" x="83" y="-2" width="695" height="5"/>
+                                                                                                    <rect key="frame" x="83" y="-2" width="795" height="5"/>
                                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                                                                 </box>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mx8-Zr-lx8">
-                                                                                                    <rect key="frame" x="81" y="25" width="593" height="19"/>
+                                                                                                    <rect key="frame" x="81" y="25" width="693" height="19"/>
                                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Maintainer" id="7F1-Qr-7Ph">
                                                                                                         <font key="font" metaFont="system"/>
@@ -1650,7 +1649,7 @@ Revulate</string>
                                                                                                     </textFieldCell>
                                                                                                 </textField>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XJ8-KO-Ukf">
-                                                                                                    <rect key="frame" x="81" y="6" width="593" height="19"/>
+                                                                                                    <rect key="frame" x="81" y="6" width="693" height="19"/>
                                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Description" id="WZF-Cw-Hb5">
                                                                                                         <font key="font" metaFont="system"/>
@@ -1659,7 +1658,7 @@ Revulate</string>
                                                                                                     </textFieldCell>
                                                                                                 </textField>
                                                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iWo-MT-LBl">
-                                                                                                    <rect key="frame" x="81" y="43" width="593" height="24"/>
+                                                                                                    <rect key="frame" x="81" y="43" width="693" height="24"/>
                                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Package " id="PEx-KM-JDR">
                                                                                                         <font key="font" metaFont="systemSemibold" size="18"/>
@@ -1667,8 +1666,25 @@ Revulate</string>
                                                                                                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                                                     </textFieldCell>
                                                                                                 </textField>
+                                                                                                <box fixedFrame="YES" boxType="custom" cornerRadius="30" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="dcM-Uj-BCO">
+                                                                                                    <rect key="frame" x="3" y="5" width="60" height="60"/>
+                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                                    <view key="contentView" ambiguous="YES" id="ce1-TB-Hpg">
+                                                                                                        <rect key="frame" x="1" y="1" width="58" height="58"/>
+                                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                                        <subviews>
+                                                                                                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ty5-cJ-iGY">
+                                                                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="jvP-KU-4yt"/>
+                                                                                                            </imageView>
+                                                                                                        </subviews>
+                                                                                                    </view>
+                                                                                                    <color key="borderColor" white="0.80000000000000004" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                    <color key="fillColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                </box>
                                                                                                 <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="13" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="VFJ-2h-fIP">
-                                                                                                    <rect key="frame" x="680" y="21" width="95" height="27"/>
+                                                                                                    <rect key="frame" x="780" y="21" width="95" height="27"/>
                                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                                     <view key="contentView" ambiguous="YES" id="SP7-cx-QAR">
                                                                                                         <rect key="frame" x="0.0" y="0.0" width="95" height="27"/>
@@ -1686,23 +1702,6 @@ Revulate</string>
                                                                                                         </subviews>
                                                                                                     </view>
                                                                                                     <color key="fillColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
-                                                                                                </box>
-                                                                                                <box fixedFrame="YES" boxType="custom" cornerRadius="30" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="dcM-Uj-BCO">
-                                                                                                    <rect key="frame" x="3" y="5" width="60" height="60"/>
-                                                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                                    <view key="contentView" ambiguous="YES" id="ce1-TB-Hpg">
-                                                                                                        <rect key="frame" x="1" y="1" width="58" height="58"/>
-                                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                                                        <subviews>
-                                                                                                            <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ty5-cJ-iGY">
-                                                                                                                <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
-                                                                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="jvP-KU-4yt"/>
-                                                                                                            </imageView>
-                                                                                                        </subviews>
-                                                                                                    </view>
-                                                                                                    <color key="borderColor" white="0.80000000000000004" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                                    <color key="fillColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                                                 </box>
                                                                                             </subviews>
                                                                                             <connections>
@@ -1731,7 +1730,7 @@ Revulate</string>
                                                                 </scroller>
                                                             </scrollView>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6uI-Yy-R3A">
-                                                                <rect key="frame" x="30" y="548" width="117" height="17"/>
+                                                                <rect key="frame" x="30" y="623" width="117" height="17"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="SUNDAY 30 JUNE" id="TeK-LE-MFY">
                                                                     <font key="font" metaFont="systemSemibold" size="13"/>
@@ -1740,7 +1739,7 @@ Revulate</string>
                                                                 </textFieldCell>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EwI-M6-6wd">
-                                                                <rect key="frame" x="30" y="510" width="144" height="38"/>
+                                                                <rect key="frame" x="30" y="585" width="144" height="38"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Packages" id="65t-37-uzl">
                                                                     <font key="font" metaFont="systemBold" size="31"/>
@@ -1785,7 +1784,7 @@ Revulate</string>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-136" y="772"/>
+            <point key="canvasLocation" x="-136" y="771.5"/>
         </scene>
     </scenes>
     <resources>
