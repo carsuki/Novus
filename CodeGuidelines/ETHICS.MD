@@ -7,7 +7,8 @@ Ethics are are a very important part of Polar Team, we love than every developer
 Please credit in this way when using a file or library:
 
 ```objective-c
-//Special thanks to (Team/Developer name) for this (Code snippet/File/Library) I took the code from (Link to code) and their Twitter is (Twitter link, leave it blank if they don't have one)
+//Special thanks to (Team/Developer name) for this (Code snippet/File/Library) I took the code from (Link to code) 
+and their Twitter is (Twitter link, leave it blank if they don't have one)
 ```
 
 #### Stack OverFlow
