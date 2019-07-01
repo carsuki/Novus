@@ -7,56 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		70D96E1E22C5371A0095390A /* NVSRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E1D22C5371A0095390A /* NVSRepo.swift */; };
-		70D96E2022C5377E0095390A /* NVSAddRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E1F22C5377E0095390A /* NVSAddRepo.swift */; };
-		70D96E2222C537CE0095390A /* NVSRepoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E2122C537CE0095390A /* NVSRepoManager.swift */; };
-		70D96E2422C538470095390A /* NVSDependencyResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E2322C538470095390A /* NVSDependencyResolver.swift */; };
-		70D96E2622C538700095390A /* NVSDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D96E2522C538700095390A /* NVSDatabaseManager.swift */; };
-		A45FC3FA22C7EFD200204A8D /* APT.command in Resources */ = {isa = PBXBuildFile; fileRef = A45FC3F922C7EFD200204A8D /* APT.command */; };
-		A469146022C56441003A03D4 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469145F22C56441003A03D4 /* News.swift */; };
-		A469146222C564A9003A03D4 /* Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469146122C564A9003A03D4 /* Today.swift */; };
-		A469146422C564F7003A03D4 /* Updates.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469146322C564F7003A03D4 /* Updates.swift */; };
-		A469146622C56502003A03D4 /* Addons.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469146522C56502003A03D4 /* Addons.swift */; };
-		A469146822C56537003A03D4 /* Applications.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469146722C56537003A03D4 /* Applications.swift */; };
-		A469146A22C5653F003A03D4 /* Themes.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469146922C5653F003A03D4 /* Themes.swift */; };
-		A469146C22C56555003A03D4 /* Repositories.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469146B22C56555003A03D4 /* Repositories.swift */; };
-		A469146E22C56566003A03D4 /* Packages.swift in Sources */ = {isa = PBXBuildFile; fileRef = A469146D22C56566003A03D4 /* Packages.swift */; };
-		A479B12622BF1CC600853030 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A479B12522BF1CC600853030 /* AppDelegate.swift */; };
-		A479B12822BF1CC600853030 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A479B12722BF1CC600853030 /* ContentView.swift */; };
-		A479B12A22BF1CC700853030 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A479B12922BF1CC700853030 /* Assets.xcassets */; };
-		A479B12D22BF1CC700853030 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A479B12C22BF1CC700853030 /* Preview Assets.xcassets */; };
-		A479B13022BF1CC700853030 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A479B12E22BF1CC700853030 /* Main.storyboard */; };
-		A4EED2FB22C5DDB40044C089 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EED2FA22C5DDB40044C089 /* Card.swift */; };
+		4DA343B122C914500006897E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343B022C914500006897E /* AppDelegate.m */; };
+		4DA343B422C914500006897E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343B322C914500006897E /* ViewController.m */; };
+		4DA343B622C914500006897E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA343B522C914500006897E /* Assets.xcassets */; };
+		4DA343B922C914500006897E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA343B722C914500006897E /* Main.storyboard */; };
+		4DA343BC22C914500006897E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343BB22C914500006897E /* main.m */; };
+		4DA343CA22C94B9C0006897E /* LMDPKGParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343C722C94B9C0006897E /* LMDPKGParser.m */; };
+		4DA343CB22C94B9C0006897E /* NVSPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343C922C94B9C0006897E /* NVSPackage.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		70D96E1D22C5371A0095390A /* NVSRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSRepo.swift; sourceTree = "<group>"; };
-		70D96E1F22C5377E0095390A /* NVSAddRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSAddRepo.swift; sourceTree = "<group>"; };
-		70D96E2122C537CE0095390A /* NVSRepoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSRepoManager.swift; sourceTree = "<group>"; };
-		70D96E2322C538470095390A /* NVSDependencyResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSDependencyResolver.swift; sourceTree = "<group>"; };
-		70D96E2522C538700095390A /* NVSDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NVSDatabaseManager.swift; sourceTree = "<group>"; };
-		A45FC3F922C7EFD200204A8D /* APT.command */ = {isa = PBXFileReference; lastKnownFileType = file; name = APT.command; path = Novus/APT.command; sourceTree = SOURCE_ROOT; };
-		A469145F22C56441003A03D4 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
-		A469146122C564A9003A03D4 /* Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Today.swift; sourceTree = "<group>"; };
-		A469146322C564F7003A03D4 /* Updates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Updates.swift; sourceTree = "<group>"; };
-		A469146522C56502003A03D4 /* Addons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Addons.swift; sourceTree = "<group>"; };
-		A469146722C56537003A03D4 /* Applications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Applications.swift; sourceTree = "<group>"; };
-		A469146922C5653F003A03D4 /* Themes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Themes.swift; sourceTree = "<group>"; };
-		A469146B22C56555003A03D4 /* Repositories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repositories.swift; sourceTree = "<group>"; };
-		A469146D22C56566003A03D4 /* Packages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Packages.swift; sourceTree = "<group>"; };
-		A479B12222BF1CC600853030 /* Novus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Novus.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A479B12522BF1CC600853030 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A479B12722BF1CC600853030 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		A479B12922BF1CC700853030 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		A479B12C22BF1CC700853030 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A479B12F22BF1CC700853030 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		A479B13122BF1CC700853030 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A479B13222BF1CC700853030 /* Novus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Novus.entitlements; sourceTree = "<group>"; };
-		A4EED2FA22C5DDB40044C089 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		4DA343AC22C914500006897E /* Novus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Novus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DA343AF22C914500006897E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4DA343B022C914500006897E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4DA343B222C914500006897E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4DA343B322C914500006897E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		4DA343B522C914500006897E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4DA343B822C914500006897E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4DA343BA22C914500006897E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4DA343BB22C914500006897E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4DA343BD22C914500006897E /* Novus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Novus.entitlements; sourceTree = "<group>"; };
+		4DA343C622C94B9B0006897E /* NVSPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSPackage.h; sourceTree = "<group>"; };
+		4DA343C722C94B9C0006897E /* LMDPKGParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMDPKGParser.m; sourceTree = "<group>"; };
+		4DA343C822C94B9C0006897E /* LMDPKGParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMDPKGParser.h; sourceTree = "<group>"; };
+		4DA343C922C94B9C0006897E /* NVSPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVSPackage.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		A479B11F22BF1CC600853030 /* Frameworks */ = {
+		4DA343A922C914500006897E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -66,145 +44,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		70D96E1122C51D410095390A /* Backend */ = {
+		4DA343A322C914500006897E = {
 			isa = PBXGroup;
 			children = (
-				70D96E1B22C5361E0095390A /* Database */,
-				70D96E1A22C5360A0095390A /* Repositories */,
-			);
-			path = Backend;
-			sourceTree = "<group>";
-		};
-		70D96E1A22C5360A0095390A /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				70D96E1C22C537040095390A /* Helpers */,
-			);
-			path = Repositories;
-			sourceTree = "<group>";
-		};
-		70D96E1B22C5361E0095390A /* Database */ = {
-			isa = PBXGroup;
-			children = (
-				70D96E2322C538470095390A /* NVSDependencyResolver.swift */,
-				70D96E2522C538700095390A /* NVSDatabaseManager.swift */,
-			);
-			path = Database;
-			sourceTree = "<group>";
-		};
-		70D96E1C22C537040095390A /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				70D96E1D22C5371A0095390A /* NVSRepo.swift */,
-				70D96E1F22C5377E0095390A /* NVSAddRepo.swift */,
-				70D96E2122C537CE0095390A /* NVSRepoManager.swift */,
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-		A432B62022C56DA80008F4D7 /* Frontend */ = {
-			isa = PBXGroup;
-			children = (
-				A4EED2FA22C5DDB40044C089 /* Card.swift */,
-				A432B62322C56DDB0008F4D7 /* Pages */,
-				A479B12722BF1CC600853030 /* ContentView.swift */,
-				A479B12522BF1CC600853030 /* AppDelegate.swift */,
-				A45FC3F922C7EFD200204A8D /* APT.command */,
-				A479B12922BF1CC700853030 /* Assets.xcassets */,
-				A479B12E22BF1CC700853030 /* Main.storyboard */,
-			);
-			path = Frontend;
-			sourceTree = "<group>";
-		};
-		A432B62322C56DDB0008F4D7 /* Pages */ = {
-			isa = PBXGroup;
-			children = (
-				A469146122C564A9003A03D4 /* Today.swift */,
-				A469145F22C56441003A03D4 /* News.swift */,
-				A469146322C564F7003A03D4 /* Updates.swift */,
-				A469146722C56537003A03D4 /* Applications.swift */,
-				A469146522C56502003A03D4 /* Addons.swift */,
-				A469146922C5653F003A03D4 /* Themes.swift */,
-				A469146B22C56555003A03D4 /* Repositories.swift */,
-				A469146D22C56566003A03D4 /* Packages.swift */,
-			);
-			path = Pages;
-			sourceTree = "<group>";
-		};
-		A479B11922BF1CC600853030 = {
-			isa = PBXGroup;
-			children = (
-				A479B12422BF1CC600853030 /* Novus */,
-				A479B12322BF1CC600853030 /* Products */,
+				4DA343AE22C914500006897E /* Novus */,
+				4DA343AD22C914500006897E /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		A479B12322BF1CC600853030 /* Products */ = {
+		4DA343AD22C914500006897E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A479B12222BF1CC600853030 /* Novus.app */,
+				4DA343AC22C914500006897E /* Novus.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A479B12422BF1CC600853030 /* Novus */ = {
+		4DA343AE22C914500006897E /* Novus */ = {
 			isa = PBXGroup;
 			children = (
-				70D96E1122C51D410095390A /* Backend */,
-				A432B62022C56DA80008F4D7 /* Frontend */,
-				A479B13122BF1CC700853030 /* Info.plist */,
-				A479B13222BF1CC700853030 /* Novus.entitlements */,
-				A479B12B22BF1CC700853030 /* Preview Content */,
+				4DA343AF22C914500006897E /* AppDelegate.h */,
+				4DA343B022C914500006897E /* AppDelegate.m */,
+				4DA343B222C914500006897E /* ViewController.h */,
+				4DA343B322C914500006897E /* ViewController.m */,
+				4DA343C822C94B9C0006897E /* LMDPKGParser.h */,
+				4DA343C722C94B9C0006897E /* LMDPKGParser.m */,
+				4DA343C622C94B9B0006897E /* NVSPackage.h */,
+				4DA343C922C94B9C0006897E /* NVSPackage.m */,
+				4DA343B522C914500006897E /* Assets.xcassets */,
+				4DA343B722C914500006897E /* Main.storyboard */,
+				4DA343BA22C914500006897E /* Info.plist */,
+				4DA343BB22C914500006897E /* main.m */,
+				4DA343BD22C914500006897E /* Novus.entitlements */,
 			);
 			path = Novus;
-			sourceTree = "<group>";
-		};
-		A479B12B22BF1CC700853030 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				A479B12C22BF1CC700853030 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A479B12122BF1CC600853030 /* Novus */ = {
+		4DA343AB22C914500006897E /* Novus */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A479B13522BF1CC700853030 /* Build configuration list for PBXNativeTarget "Novus" */;
+			buildConfigurationList = 4DA343C022C914500006897E /* Build configuration list for PBXNativeTarget "Novus" */;
 			buildPhases = (
-				A479B11E22BF1CC600853030 /* Sources */,
-				A479B11F22BF1CC600853030 /* Frameworks */,
-				A479B12022BF1CC600853030 /* Resources */,
+				4DA343A822C914500006897E /* Sources */,
+				4DA343A922C914500006897E /* Frameworks */,
+				4DA343AA22C914500006897E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Novus;
-			packageProductDependencies = (
-			);
-			productName = NovusUI;
-			productReference = A479B12222BF1CC600853030 /* Novus.app */;
+			productName = Novus;
+			productReference = 4DA343AC22C914500006897E /* Novus.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		A479B11A22BF1CC600853030 /* Project object */ = {
+		4DA343A422C914500006897E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
-				ORGANIZATIONNAME = PolarTeam;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Polar Team";
 				TargetAttributes = {
-					A479B12122BF1CC600853030 = {
-						CreatedOnToolsVersion = 11.0;
+					4DA343AB22C914500006897E = {
+						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
-			buildConfigurationList = A479B11D22BF1CC600853030 /* Build configuration list for PBXProject "Novus" */;
+			buildConfigurationList = 4DA343A722C914500006897E /* Build configuration list for PBXProject "Novus" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -212,63 +127,48 @@
 				en,
 				Base,
 			);
-			mainGroup = A479B11922BF1CC600853030;
-			packageReferences = (
-			);
-			productRefGroup = A479B12322BF1CC600853030 /* Products */;
+			mainGroup = 4DA343A322C914500006897E;
+			productRefGroup = 4DA343AD22C914500006897E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A479B12122BF1CC600853030 /* Novus */,
+				4DA343AB22C914500006897E /* Novus */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		A479B12022BF1CC600853030 /* Resources */ = {
+		4DA343AA22C914500006897E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A479B13022BF1CC700853030 /* Main.storyboard in Resources */,
-				A45FC3FA22C7EFD200204A8D /* APT.command in Resources */,
-				A479B12D22BF1CC700853030 /* Preview Assets.xcassets in Resources */,
-				A479B12A22BF1CC700853030 /* Assets.xcassets in Resources */,
+				4DA343B622C914500006897E /* Assets.xcassets in Resources */,
+				4DA343B922C914500006897E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		A479B11E22BF1CC600853030 /* Sources */ = {
+		4DA343A822C914500006897E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A469146622C56502003A03D4 /* Addons.swift in Sources */,
-				70D96E2622C538700095390A /* NVSDatabaseManager.swift in Sources */,
-				A469146222C564A9003A03D4 /* Today.swift in Sources */,
-				70D96E2422C538470095390A /* NVSDependencyResolver.swift in Sources */,
-				70D96E1E22C5371A0095390A /* NVSRepo.swift in Sources */,
-				A469146422C564F7003A03D4 /* Updates.swift in Sources */,
-				A469146A22C5653F003A03D4 /* Themes.swift in Sources */,
-				A469146E22C56566003A03D4 /* Packages.swift in Sources */,
-				70D96E2022C5377E0095390A /* NVSAddRepo.swift in Sources */,
-				70D96E2222C537CE0095390A /* NVSRepoManager.swift in Sources */,
-				A479B12822BF1CC600853030 /* ContentView.swift in Sources */,
-				A469146C22C56555003A03D4 /* Repositories.swift in Sources */,
-				A469146822C56537003A03D4 /* Applications.swift in Sources */,
-				A469146022C56441003A03D4 /* News.swift in Sources */,
-				A479B12622BF1CC600853030 /* AppDelegate.swift in Sources */,
-				A4EED2FB22C5DDB40044C089 /* Card.swift in Sources */,
+				4DA343B422C914500006897E /* ViewController.m in Sources */,
+				4DA343CA22C94B9C0006897E /* LMDPKGParser.m in Sources */,
+				4DA343BC22C914500006897E /* main.m in Sources */,
+				4DA343CB22C94B9C0006897E /* NVSPackage.m in Sources */,
+				4DA343B122C914500006897E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A479B12E22BF1CC700853030 /* Main.storyboard */ = {
+		4DA343B722C914500006897E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				A479B12F22BF1CC700853030 /* Base */,
+				4DA343B822C914500006897E /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -276,7 +176,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		A479B13322BF1CC700853030 /* Debug */ = {
+		4DA343BE22C914500006897E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -308,6 +208,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -326,17 +227,15 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		A479B13422BF1CC700853030 /* Release */ = {
+		4DA343BF22C914500006897E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -368,6 +267,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -380,85 +280,71 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		A479B13622BF1CC700853030 /* Debug */ = {
+		4DA343C122C914500006897E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Novus/Novus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = Alpha;
-				DEVELOPMENT_ASSET_PATHS = "Novus/Preview\\ Content";
-				DEVELOPMENT_TEAM = 72UM5XF97Y;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
+				DEVELOPMENT_TEAM = 9T6493493X;
 				INFOPLIST_FILE = Novus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.polarteam.novus;
+				PRODUCT_BUNDLE_IDENTIFIER = org.polarteam.novus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		A479B13722BF1CC700853030 /* Release */ = {
+		4DA343C222C914500006897E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = Novus/Novus.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = Alpha;
-				DEVELOPMENT_ASSET_PATHS = "Novus/Preview\\ Content";
-				DEVELOPMENT_TEAM = 72UM5XF97Y;
-				ENABLE_HARDENED_RUNTIME = YES;
-				ENABLE_PREVIEWS = YES;
+				DEVELOPMENT_TEAM = 9T6493493X;
 				INFOPLIST_FILE = Novus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = com.polarteam.novus;
+				PRODUCT_BUNDLE_IDENTIFIER = org.polarteam.novus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A479B11D22BF1CC600853030 /* Build configuration list for PBXProject "Novus" */ = {
+		4DA343A722C914500006897E /* Build configuration list for PBXProject "Novus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A479B13322BF1CC700853030 /* Debug */,
-				A479B13422BF1CC700853030 /* Release */,
+				4DA343BE22C914500006897E /* Debug */,
+				4DA343BF22C914500006897E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A479B13522BF1CC700853030 /* Build configuration list for PBXNativeTarget "Novus" */ = {
+		4DA343C022C914500006897E /* Build configuration list for PBXNativeTarget "Novus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				A479B13622BF1CC700853030 /* Debug */,
-				A479B13722BF1CC700853030 /* Release */,
+				4DA343C122C914500006897E /* Debug */,
+				4DA343C222C914500006897E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = A479B11A22BF1CC600853030 /* Project object */;
+	rootObject = 4DA343A422C914500006897E /* Project object */;
 }
