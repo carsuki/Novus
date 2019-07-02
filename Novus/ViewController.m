@@ -12,11 +12,36 @@
 
 @end
 
+@implementation RepositoryDelegate
+
+-(instancetype)init {
+    self = [super init];
+    if (self) {
+        self.repoParser = [[RepoParser alloc] init];
+    }
+    return self;
+}
+
+-(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return self.repoParser.addedRepositories.count;
+}
+
+-(NSView*)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    NVSRepoCellView *view = [tableView makeViewWithIdentifier:@"RepoCell" owner:self];
+    NVSRepo *repo = [self.repoParser.addedRepositories objectAtIndex:row];
+    view.textField.stringValue = repo.label;
+    
+    return view;
+}
+
+@end
+
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.parser = [[LMDPKGParser alloc] init];
+    self.repoDelegate = [[RepositoryDelegate alloc] init];
     
     // packages view
     self.packagesTableView.delegate = self;
@@ -25,8 +50,16 @@
     // dates
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"EEEE, d MMMM"];
-    self.todayDateLabel.stringValue = [formatter stringFromDate:[NSDate date]];
-                                       self.packagesDatelabel.stringValue = [formatter stringFromDate:[NSDate date]];
+    NSString *dateString = [formatter stringFromDate:[NSDate date]];
+    self.todayDateLabel.stringValue = dateString;
+    self.packagesDatelabel.stringValue = dateString;
+    self.reposDateLabel.stringValue = dateString;
+    
+    //
+    //  REPOSITORY PAGE
+    //
+    self.reposTableView.delegate = self.repoDelegate;
+    self.reposTableView.dataSource = self.repoDelegate;
 }
 
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {

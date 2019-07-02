@@ -8,11 +8,26 @@
 
 #import <Cocoa/Cocoa.h>
 #import "LMDPKGParser.h"
+#import "Backend/DPKG-Parsers/RepoParser.h"
+#import "Backend/DPKG-Parsers/NVSRepo.h"
 #import "NVSPackage.h"
+
+@interface RepositoryDelegate : NSObject <NSTableViewDelegate, NSTableViewDataSource>
+
+@property (nonatomic, retain) RepoParser *repoParser;
+
+@end
 
 @interface NVSPackageCellView : NSTableCellView
 @property (strong) IBOutlet NSTextField *maintainerField;
 @property (strong) IBOutlet NSTextField *descField;
+
+@end
+
+@interface NVSRepoCellView : NSTableCellView
+
+@property (strong) IBOutlet NSTextField *infoField;
+@property (strong) IBOutlet NSTextField *descriptionField;
 
 @end
 
@@ -36,6 +51,15 @@
 
 @property (strong) IBOutlet NSTextField *packagesDatelabel;
 @property (strong) IBOutlet NSTableView *packagesTableView;
+@property (strong) IBOutlet NSTableView *reposTableView;
+@property (nonatomic, retain) RepositoryDelegate *repoDelegate;
+
+//
+//   REPOSITORIES PAGE
+//
+
+@property (strong) IBOutlet NSTextField *reposDateLabel;
+@property (strong) IBOutlet NSScrollView *reposScrollView;
 
 //
 //   SIDEBAR

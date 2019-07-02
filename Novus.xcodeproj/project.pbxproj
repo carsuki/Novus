@@ -14,6 +14,8 @@
 		4DA343BC22C914500006897E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343BB22C914500006897E /* main.m */; };
 		4DA343CA22C94B9C0006897E /* LMDPKGParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343C722C94B9C0006897E /* LMDPKGParser.m */; };
 		4DA343CB22C94B9C0006897E /* NVSPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343C922C94B9C0006897E /* NVSPackage.m */; };
+		4DFE79C322CBBC8500294F77 /* RepoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE79C122CBBC8500294F77 /* RepoParser.m */; };
+		4DFE79C522CBC79E00294F77 /* NVSRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE79C422CBC79E00294F77 /* NVSRepo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,10 @@
 		4DA343C722C94B9C0006897E /* LMDPKGParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMDPKGParser.m; sourceTree = "<group>"; };
 		4DA343C822C94B9C0006897E /* LMDPKGParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMDPKGParser.h; sourceTree = "<group>"; };
 		4DA343C922C94B9C0006897E /* NVSPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVSPackage.m; sourceTree = "<group>"; };
+		4DFE79C122CBBC8500294F77 /* RepoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepoParser.m; sourceTree = "<group>"; };
+		4DFE79C222CBBC8500294F77 /* RepoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepoParser.h; sourceTree = "<group>"; };
+		4DFE79C422CBC79E00294F77 /* NVSRepo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSRepo.m; sourceTree = "<group>"; };
+		4DFE79C622CBC7A500294F77 /* NVSRepo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSRepo.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,8 +106,12 @@
 			children = (
 				4DA343C622C94B9B0006897E /* NVSPackage.h */,
 				4DA343C922C94B9C0006897E /* NVSPackage.m */,
+				4DFE79C622CBC7A500294F77 /* NVSRepo.h */,
+				4DFE79C422CBC79E00294F77 /* NVSRepo.m */,
 				4DA343C822C94B9C0006897E /* LMDPKGParser.h */,
 				4DA343C722C94B9C0006897E /* LMDPKGParser.m */,
+				4DFE79C222CBBC8500294F77 /* RepoParser.h */,
+				4DFE79C122CBBC8500294F77 /* RepoParser.m */,
 			);
 			path = "DPKG-Parsers";
 			sourceTree = "<group>";
@@ -194,6 +204,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DFE79C522CBC79E00294F77 /* NVSRepo.m in Sources */,
+				4DFE79C322CBBC8500294F77 /* RepoParser.m in Sources */,
 				4DA343B422C914500006897E /* ViewController.m in Sources */,
 				4DA343CA22C94B9C0006897E /* LMDPKGParser.m in Sources */,
 				4DA343BC22C914500006897E /* main.m in Sources */,
@@ -331,10 +343,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = Alpha;
-				DEVELOPMENT_TEAM = 72UM5XF97Y;
+				DEVELOPMENT_TEAM = 9859KQSN8L;
 				INFOPLIST_FILE = Novus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -342,6 +355,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.polarteam.novus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -349,10 +363,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = Alpha;
-				DEVELOPMENT_TEAM = 72UM5XF97Y;
+				DEVELOPMENT_TEAM = 9859KQSN8L;
 				INFOPLIST_FILE = Novus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -360,6 +375,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = org.polarteam.novus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};
