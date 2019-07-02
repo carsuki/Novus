@@ -2,7 +2,7 @@
 //  LMDPKGParser.m
 //  Lime
 //
-//  Created by ArtikusHG on 4/30/19.
+//  Created by ArtikusHG on 4/30/19, Modified by EvenDev on 7/1/19.
 //  Copyright © 2019 Daniel. All rights reserved.
 //
 //  Special thanks to the Lime team for providing the DPKG parser files, Lime team is complety credited and their Twitter can be found here: https://twitter.com/limeinstaller.
