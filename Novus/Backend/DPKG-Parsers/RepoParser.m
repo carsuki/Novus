@@ -29,8 +29,16 @@
     NSMutableArray *contentsOfListDir = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:@"/usr/local/var/lib/apt/lists" error:nil] mutableCopy];
     NSString *novusList = [NSString stringWithContentsOfFile:@"/usr/local/etc/apt/sources.list.d/novus.list" encoding:NSUTF8StringEncoding error:nil];
     NSMutableArray *novusListLines = [NSMutableArray arrayWithArray:[novusList componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]];
+    for(id string in novusListLines) {
+        if([string isEqualToString:@""]) {
+            [novusListLines removeObject:string];
+        }
+    }
     for (id object in novusListLines) {
-        NSMutableArray *separatedStrings = (NSString*)[object componentsSeparatedByString:@" "];
+        NSArray *strArray = [object componentsSeparatedByString:@" "];
+        NSMutableArray *separatedStrings = [NSMutableArray arrayWithCapacity:[strArray count]];
+        [separatedStrings addObjectsFromArray:strArray];
+        //NSMutableArray *separatedStrings = (NSString*)[object componentsSeparatedByString:@" "];
         NSString *filename;
         if (![[separatedStrings objectAtIndex:1] isEqual:@"[trusted=yes]"]) {
             NSString *filenameA = [[[separatedStrings objectAtIndex:1] stringByReplacingOccurrencesOfString:@"/" withString:@"_"] stringByReplacingOccurrencesOfString:@"https:__" withString:@""];

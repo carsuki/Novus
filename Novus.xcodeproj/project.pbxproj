@@ -16,6 +16,9 @@
 		4DA343CB22C94B9C0006897E /* NVSPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343C922C94B9C0006897E /* NVSPackage.m */; };
 		4DFE79C322CBBC8500294F77 /* RepoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE79C122CBBC8500294F77 /* RepoParser.m */; };
 		4DFE79C522CBC79E00294F77 /* NVSRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE79C422CBC79E00294F77 /* NVSRepo.m */; };
+		B189947722D1268300C66B37 /* NVSDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B189947622D1268300C66B37 /* NVSDatabaseManager.m */; };
+		B189947B22D12BD000C66B37 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B189947A22D12BD000C66B37 /* libsqlite3.tbd */; };
+		B192504922D2B6A400D0D77B /* novus.db in Resources */ = {isa = PBXBuildFile; fileRef = B192504822D2B6A400D0D77B /* novus.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +40,10 @@
 		4DFE79C222CBBC8500294F77 /* RepoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepoParser.h; sourceTree = "<group>"; };
 		4DFE79C422CBC79E00294F77 /* NVSRepo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSRepo.m; sourceTree = "<group>"; };
 		4DFE79C622CBC7A500294F77 /* NVSRepo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSRepo.h; sourceTree = "<group>"; };
+		B189947622D1268300C66B37 /* NVSDatabaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSDatabaseManager.m; sourceTree = "<group>"; };
+		B189947822D126AA00C66B37 /* NVSDatabaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSDatabaseManager.h; sourceTree = "<group>"; };
+		B189947A22D12BD000C66B37 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		B192504822D2B6A400D0D77B /* novus.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = novus.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B189947B22D12BD000C66B37 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -55,6 +63,7 @@
 			children = (
 				4DA343AE22C914500006897E /* Novus */,
 				4DA343AD22C914500006897E /* Products */,
+				B189947922D12BD000C66B37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +78,7 @@
 		4DA343AE22C914500006897E /* Novus */ = {
 			isa = PBXGroup;
 			children = (
+				B192504522D2B10400D0D77B /* Resources */,
 				706D2AE822C9961C00E73777 /* Frontend */,
 				706D2AE722C9961100E73777 /* Backend */,
 				4DA343AF22C914500006897E /* AppDelegate.h */,
@@ -87,8 +97,8 @@
 		706D2AE722C9961100E73777 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				B189947522D1266400C66B37 /* Database */,
 				706D2AEB22C9966000E73777 /* Repositories */,
-				706D2AEA22C9965500E73777 /* Database */,
 				706D2AE922C9964600E73777 /* DPKG-Parsers */,
 			);
 			path = Backend;
@@ -116,18 +126,36 @@
 			path = "DPKG-Parsers";
 			sourceTree = "<group>";
 		};
-		706D2AEA22C9965500E73777 /* Database */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Database;
-			sourceTree = "<group>";
-		};
 		706D2AEB22C9966000E73777 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Repositories;
+			sourceTree = "<group>";
+		};
+		B189947522D1266400C66B37 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				B189947622D1268300C66B37 /* NVSDatabaseManager.m */,
+				B189947822D126AA00C66B37 /* NVSDatabaseManager.h */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		B189947922D12BD000C66B37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B189947A22D12BD000C66B37 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B192504522D2B10400D0D77B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B192504822D2B6A400D0D77B /* novus.db */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -192,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B192504922D2B6A400D0D77B /* novus.db in Resources */,
 				4DA343B622C914500006897E /* Assets.xcassets in Resources */,
 				4DA343B922C914500006897E /* Main.storyboard in Resources */,
 			);
@@ -210,6 +239,7 @@
 				4DA343CA22C94B9C0006897E /* LMDPKGParser.m in Sources */,
 				4DA343BC22C914500006897E /* main.m in Sources */,
 				4DA343CB22C94B9C0006897E /* NVSPackage.m in Sources */,
+				B189947722D1268300C66B37 /* NVSDatabaseManager.m in Sources */,
 				4DA343B122C914500006897E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,7 +377,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = Alpha;
-				DEVELOPMENT_TEAM = 9859KQSN8L;
+				DEVELOPMENT_TEAM = C73T9T9ZD4;
 				INFOPLIST_FILE = Novus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -367,7 +397,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = Alpha;
-				DEVELOPMENT_TEAM = 9859KQSN8L;
+				DEVELOPMENT_TEAM = C73T9T9ZD4;
 				INFOPLIST_FILE = Novus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
