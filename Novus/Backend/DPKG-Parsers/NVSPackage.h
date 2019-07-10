@@ -19,5 +19,8 @@
 @property (nonatomic, strong) NSString *author;
 @property (nonatomic, strong) NSString *maintainer;
 @property (nonatomic, strong) NSString *installedSize;
+@property (nonatomic, strong) NSString *repoUrl;
+
+- (id)initWithIdentifier:(NSString *)identifier name:(NSString *)name version:(NSString *)version description:(NSString *)desc section:(NSString *)section architecture:(NSString *)arch author:(NSString *)author maintainer:(NSString *)maintainer installedSize:(NSString *)size repoUrl:(NSString *)repoUrl;
 
 @end

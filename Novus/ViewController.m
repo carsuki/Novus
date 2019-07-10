@@ -7,6 +7,15 @@
 //
 
 #import "ViewController.h"
+#import "Backend/Database/NVSDatabaseManager.h"
+
+@interface ViewController()
+
+@property (nonatomic, strong) NVSDatabaseManager *dbManager;
+
+@end
+
+
 
 @implementation NVSPackageCellView
 
@@ -40,8 +49,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Repo Parser
     self.parser = [[LMDPKGParser alloc] init];
     self.repoDelegate = [[RepositoryDelegate alloc] init];
+    
+    // Database Manager
+    self.dbManager = [NVSDatabaseManager sharedInstance];
     
     // packages view
     self.packagesTableView.delegate = self;
