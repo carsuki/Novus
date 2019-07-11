@@ -29,10 +29,14 @@
     NSMutableArray *contentsOfListDir = [[[NSFileManager defaultManager] contentsOfDirectoryAtPath:@"/usr/local/var/lib/apt/lists" error:nil] mutableCopy];
     NSString *novusList = [NSString stringWithContentsOfFile:@"/usr/local/etc/apt/sources.list.d/novus.list" encoding:NSUTF8StringEncoding error:nil];
     NSMutableArray *novusListLines = [NSMutableArray arrayWithArray:[novusList componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]];
-    for(id string in novusListLines) {
-        if([string isEqualToString:@""]) {
-            [novusListLines removeObject:string];
+    
+    NSInteger count = [novusListLines count];
+    for (NSInteger index = (count - 1); index >= 0; index--) {
+        NSString *string = novusListLines[index];
+        if (![string containsString:@"https://"]) {
+            [novusListLines removeObjectAtIndex:index];
         }
+        //NSLog(@"%@", novusListLines);
     }
     for (id object in novusListLines) {
         NSArray *strArray = [object componentsSeparatedByString:@" "];
