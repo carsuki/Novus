@@ -1,0 +1,53 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <dlfcn.h>
+#include <errno.h>
+#include <sysexits.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/stat.h>
+
+#define PROC_PIDPATHINFO_MAXSIZE  (1024)
+int proc_pidpath(pid_t pid, void *buffer, uint32_t buffersize);
+
+int main(int argc, char *argv[]){
+    
+    struct stat correct;
+    if (lstat("/Applications/Novus.app/Contents/MacOS/Novus", &correct) == -1){
+        fprintf(stderr, "I would like to know more about that legend, if you will.\n");
+        return EX_NOPERM;
+    }
+    
+    pid_t parent = getppid();
+    bool novus = false;
+    
+    char pathbuf[PROC_PIDPATHINFO_MAXSIZE] = {0};
+    int ret = proc_pidpath(parent, pathbuf, sizeof(pathbuf));
+    if (ret > 0){
+        if (strcmp(pathbuf, "/Applications/Novus.app/Contents/MacOS/Novus") == 0){
+            novus = true;
+        }
+    }
+    
+    if (novus == false){
+        fprintf(stderr, "There appears to have been an insignificant struggle here.\n");
+        return EX_NOPERM;
+    }
+    
+    setuid(0);
+    setgid(0);
+    
+    if (getuid() != 0){
+        fprintf(stderr, "What is this pressure I feel...? Something...is enraged?\n");
+        return EX_NOPERM;
+    }
+    
+    if (argc < 2){
+        fprintf(stderr, "Now all will end. And everything will begin. With this Red Chain I will pry open the portal to another dimension.\n");
+        return 0;
+    }
+    
+    char *args[4] = {"/bin/bash", "-c", argv[1], NULL};
+    execv(args[0], args);
+    return EX_UNAVAILABLE;
+}
