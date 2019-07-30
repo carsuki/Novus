@@ -1,0 +1,9 @@
+Package: novusgui
+Name: Novus
+Depends: apt (>= 1.8.0)
+Version:
+Architecture: darwin-amd64
+Description: Novus Package Manager
+Maintainer: Polar Development
+Author: Polar Development
+Section: Packaging
