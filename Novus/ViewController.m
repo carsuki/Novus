@@ -77,6 +77,9 @@
     //
     self.reposTableView.delegate = self.repoDelegate;
     self.reposTableView.dataSource = self.repoDelegate;
+    
+    [self.cmdWrapper runAsUser:@"whoami"];
+    [self.cmdWrapper runAsRoot:@"whoami"];
 }
 
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
