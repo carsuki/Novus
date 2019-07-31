@@ -11,6 +11,7 @@
 #import "Backend/DPKG-Parsers/RepoParser.h"
 #import "Backend/DPKG-Parsers/NVSRepo.h"
 #import "NVSPackage.h"
+#import "Backend/Utilities/NVSCommandWrapper.h"
 
 @interface RepositoryDelegate : NSObject <NSTableViewDelegate, NSTableViewDataSource>
 
@@ -35,6 +36,8 @@
 
 @property (strong) IBOutlet NSTabView *tabView;
 @property (nonatomic,retain) LMDPKGParser *parser;
+
+@property (nonatomic, strong) NVSCommandWrapper *cmdWrapper;
 
 //
 //   TODAY PAGE

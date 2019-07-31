@@ -57,6 +57,9 @@
     // Database Manager
     self.dbManager = [NVSDatabaseManager sharedInstance];
     
+    // Command Wrapper
+    self.cmdWrapper = [NVSCommandWrapper sharedInstance];
+    
     // packages view
     self.packagesTableView.delegate = self;
     self.packagesTableView.dataSource = self;
