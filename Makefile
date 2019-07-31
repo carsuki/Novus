@@ -44,8 +44,8 @@ package:: $(NOVUS_APP_DIR) redchain/bin/redchain
 	fakeroot rm -rf ./.build/install
 	mkdir -p ./.build/install/Applications
 	cp -a ./.build/complete/Applications/Novus.app ./.build/install/Applications
-	cp redchain/bin/redchain $(NOVUS_APP_DIR)/Contents/MacOS
-	fakeroot chmod 4755 $(NOVUS_APP_DIR)/Contents/MacOS/redchain
+	cp redchain/bin/redchain ./.build/install/Contents/MacOS
+	fakeroot chmod 4755 ./.build/install/Contents/MacOS/redchain
 	rm -f ./.build/install/Applications/Novus.app/Contents/PkgInfo
 	gsed -e "s@^\(Version:\).*@\1 $(VERSION)@" Novus.control > ./.build/control
 	echo "Installed-Size: $$(du -sk "./.build/install" | cut -f 1)" >> ./.build/control
