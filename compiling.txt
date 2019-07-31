@@ -1,0 +1,4 @@
+1. Have SIP disabled on your Mac. Fakeroot doesn't work otherwise.
+2. Have APT installed on your system.
+3. Run `sudo apt install fakeroot gsed`
+4. Compile by typing `make` in the root of the git directory, make a debian file by typing `make package`, and install it by typing `make install`.
