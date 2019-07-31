@@ -44,4 +44,9 @@
     
 }
 
+- (void)install {
+    NVSCommandWrapper *cmdWrapper = [NVSCommandWrapper sharedInstance];
+    NSArray *output = [cmdWrapper runAsRoot:[NSString stringWithFormat:@"apt install %@", [self identifier]]];
+}
+
 @end

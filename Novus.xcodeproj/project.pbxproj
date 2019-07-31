@@ -43,6 +43,7 @@
 		4DFE79C622CBC7A500294F77 /* NVSRepo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSRepo.h; sourceTree = "<group>"; };
 		B15744FF22F12BC800609760 /* NVSCommandWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSCommandWrapper.m; sourceTree = "<group>"; };
 		B157450122F12C0F00609760 /* NVSCommandWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSCommandWrapper.h; sourceTree = "<group>"; };
+		B157450222F24D7A00609760 /* debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
 		B189947622D1268300C66B37 /* NVSDatabaseManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSDatabaseManager.m; sourceTree = "<group>"; };
 		B189947822D126AA00C66B37 /* NVSDatabaseManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSDatabaseManager.h; sourceTree = "<group>"; };
 		B189947A22D12BD000C66B37 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -142,6 +143,7 @@
 			children = (
 				B15744FF22F12BC800609760 /* NVSCommandWrapper.m */,
 				B157450122F12C0F00609760 /* NVSCommandWrapper.h */,
+				B157450222F24D7A00609760 /* debug.h */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";

@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "../Utilities/NVSCommandWrapper.h"
 
 @interface NVSPackage : NSObject
 

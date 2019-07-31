@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "NVSCommandWrapper.h"
+#import "debug.h"
 
 @implementation NVSCommandWrapper
 
@@ -26,11 +27,11 @@
 #pragma mark Main methods
 
 // Returns an NSArray with the stdout data at index 0 and the stderr data at index 1
--(NSArray *)runAsUser:(NSString *)commandWithArguments {
+-(NSArray *)runAsUser:(NSString *)commandWithArgs {
     NSString *taskCommand = @"/bin/zsh";
     NSTask *task = [[NSTask alloc] init];
     task.launchPath = taskCommand;
-    NSMutableArray *args = [NSMutableArray arrayWithObjects:commandWithArguments, nil];
+    NSMutableArray *args = [NSMutableArray arrayWithObjects:commandWithArgs, nil];
     [args insertObject:@"-c" atIndex:0];
     task.arguments = args;
     
@@ -50,6 +51,8 @@
     [stderrFile closeFile];
     
     NSArray *ret = [NSArray arrayWithObjects:stdoutData, stderrData, nil];
+    
+    DEBUGLOG("command run as user: %@\nstdout:\n%@\nstderr:\n%@\n", commandWithArgs, [[NSString alloc] initWithData:stdoutData encoding:NSUTF8StringEncoding], [[NSString alloc] initWithData:stderrData encoding:NSUTF8StringEncoding]);
     
     return ret;
 }
@@ -113,6 +116,8 @@
         [stderrFile closeFile];
         
         NSArray *ret = [NSArray arrayWithObjects:stdoutData, stderrData, nil];
+        
+        DEBUGLOG("command run as root: %@\nstdout:\n%@\nstderr:\n%@\n", commandWithArgs, [[NSString alloc] initWithData:stdoutData encoding:NSUTF8StringEncoding], [[NSString alloc] initWithData:stderrData encoding:NSUTF8StringEncoding]);
         
         return ret;
     } else {
