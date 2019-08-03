@@ -60,33 +60,40 @@
 // Returns true if becoming root works, and false otherwise
 -(BOOL)checkRoot {
     NSString *taskCommand = @"/Applications/Novus.app/Contents/MacOS/redchain";
-    NSArray *args = [NSArray arrayWithObjects:@"whoami", nil];
-    NSTask *task = [[NSTask alloc] init];
-    task.launchPath = taskCommand;
-    task.arguments = args;
     
-    NSPipe *stdoutPipe = [NSPipe pipe];
-    task.standardOutput = stdoutPipe;
-    NSPipe *stderrPipe = [NSPipe pipe];
-    task.standardError = stderrPipe;
-    
-    NSFileHandle *stdoutFile = stdoutPipe.fileHandleForReading;
-    NSFileHandle *stderrFile = stderrPipe.fileHandleForReading;
-    
-    [task launch];
-    
-    NSData *stdoutData = [stdoutFile readDataToEndOfFile];
-    [stdoutFile closeFile];
-    NSData *stderrData = [stderrFile readDataToEndOfFile];
-    [stderrFile closeFile];
-    
-    NSString *response = [[NSString alloc] initWithData:stdoutData encoding:NSUTF8StringEncoding];
-    if([response isEqualToString:@"root\n"]) {
-        // NSLog(@"We have root");
-        return true;
+    // Check if binary exists, returned an error before.
+    if ([[NSFileManager defaultManager] fileExistsAtPath:taskCommand]) {
+        NSArray *args = [NSArray arrayWithObjects:@"whoami", nil];
+        NSTask *task = [[NSTask alloc] init];
+        task.launchPath = taskCommand;
+        task.arguments = args;
+        
+        NSPipe *stdoutPipe = [NSPipe pipe];
+        task.standardOutput = stdoutPipe;
+        NSPipe *stderrPipe = [NSPipe pipe];
+        task.standardError = stderrPipe;
+        
+        NSFileHandle *stdoutFile = stdoutPipe.fileHandleForReading;
+        NSFileHandle *stderrFile = stderrPipe.fileHandleForReading;
+        
+        [task launch];
+        
+        NSData *stdoutData = [stdoutFile readDataToEndOfFile];
+        [stdoutFile closeFile];
+        NSData *stderrData = [stderrFile readDataToEndOfFile];
+        [stderrFile closeFile];
+        
+        NSString *response = [[NSString alloc] initWithData:stdoutData encoding:NSUTF8StringEncoding];
+        if([response isEqualToString:@"root\n"]) {
+            // NSLog(@"We have root");
+            return true;
+        } else {
+            NSString *stderrStr = [[NSString alloc] initWithData:stderrData encoding:NSUTF8StringEncoding];
+            NSLog(@"Obtaining root failed\nstdout:\n%@\nstderr:\n%@", response, stderrStr);
+            return false;
+        }
     } else {
-        NSString *stderrStr = [[NSString alloc] initWithData:stderrData encoding:NSUTF8StringEncoding];
-        NSLog(@"Obtaining root failed\nstdout:\n%@\nstderr:\n%@", response, stderrStr);
+        NSLog(@"%@ does not exist. Failed to get root.", taskCommand);
         return false;
     }
 }
