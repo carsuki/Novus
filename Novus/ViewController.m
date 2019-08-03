@@ -22,9 +22,40 @@
 @implementation NVSRepoCellView
 
 -(void)mouseDown:(NSEvent *)event {
-    if (self.tabView) {
+    if (self.controller) {
+        self.controller.repoViewTitleLabel.stringValue = self.repo.label;
+        self.controller.viewRepo = self.repo;
+        [self.controller.repoViewTableView reloadData];
         [self.tabView selectTabViewItemAtIndex:8];
     }
+}
+
+@end
+
+@implementation ViewRepoDelegate
+
+-(instancetype)init {
+    self = [super init];
+    if (self) {
+        self.repoParser = [[RepoParser alloc] init];
+    }
+    return self;
+}
+
+-(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    NVSRepo *repo = [self.repoParser.addedRepositories objectAtIndex:0];
+    return repo.packages.count;
+}
+
+-(NSView*)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
+    NVSPackageCellView *view = [tableView makeViewWithIdentifier:@"PackageCell" owner:self];
+    NVSPackage *pkg = [view.controller.viewRepo.packages objectAtIndex:row];
+    view.textField.stringValue = pkg.identifier;
+    NSArray *maintainer = [pkg.maintainer componentsSeparatedByString:@"<"];
+    view.maintainerField.stringValue = [maintainer objectAtIndex:0];
+    view.descField.stringValue = pkg.desc;
+    
+    return view;
 }
 
 @end
@@ -48,6 +79,7 @@
     NVSRepo *repo = [self.repoParser.addedRepositories objectAtIndex:row];
     view.textField.stringValue = repo.label;
     view.descField.stringValue = repo.desc;
+    view.repo = repo;
     
     return view;
 }
@@ -62,6 +94,7 @@
     // Repo Parser
     self.parser = [[LMDPKGParser alloc] init];
     self.repoDelegate = [[RepositoryDelegate alloc] init];
+    self.viewRepoDelegate = [[ViewRepoDelegate alloc] init];
     
     // Database Manager
     self.dbManager = [NVSDatabaseManager sharedInstance];
@@ -86,6 +119,12 @@
     //
     self.reposTableView.delegate = self.repoDelegate;
     self.reposTableView.dataSource = self.repoDelegate;
+    
+    //
+    //  VIEW REPO PAGE
+    //
+    self.repoViewTableView.delegate = self.viewRepoDelegate;
+    self.repoViewTableView.dataSource = self.viewRepoDelegate;
     
     [self.cmdWrapper runAsUser:@"whoami"];
     [self.cmdWrapper runAsRoot:@"whoami"];

@@ -918,7 +918,7 @@ Revulate</string>
             </objects>
             <point key="canvasLocation" x="-136" y="-29"/>
         </scene>
-        <!--View Controller-->
+        <!--Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" sceneMemberID="viewController">
@@ -1707,6 +1707,7 @@ Last update: x hour ago</string>
                                                                                                                     </textField>
                                                                                                                 </subviews>
                                                                                                                 <connections>
+                                                                                                                    <outlet property="controller" destination="XfG-lQ-9wD" id="qKF-ue-Meu"/>
                                                                                                                     <outlet property="descField" destination="mY4-7X-ZwP" id="tef-0f-Lfo"/>
                                                                                                                     <outlet property="imageView" destination="xab-iw-CVK" id="9Yo-ra-2aZ"/>
                                                                                                                     <outlet property="infoField" destination="0A3-6z-NO6" id="N2T-1j-LOf"/>
@@ -2044,6 +2045,7 @@ Last update: x hour ago</string>
                                                                                                 </box>
                                                                                             </subviews>
                                                                                             <connections>
+                                                                                                <outlet property="controller" destination="XfG-lQ-9wD" id="Qhe-GE-vum"/>
                                                                                                 <outlet property="descField" destination="82T-kn-5vd" id="P5g-6O-VL2"/>
                                                                                                 <outlet property="imageView" destination="qkO-gE-mqw" id="ytx-7N-S27"/>
                                                                                                 <outlet property="maintainerField" destination="a4u-O2-r7m" id="CAa-x5-RGa"/>
@@ -2100,6 +2102,7 @@ Last update: x hour ago</string>
                         <outlet property="packagesTableView" destination="8tQ-kg-Fof" id="tRP-dM-GK5"/>
                         <outlet property="repoLabel" destination="N3p-mX-dPx" id="h5r-Ta-V78"/>
                         <outlet property="repoViewTableView" destination="eYh-qy-dWS" id="Xqo-fh-VCO"/>
+                        <outlet property="repoViewTitleLabel" destination="0AV-wa-J8I" id="me6-BF-kxg"/>
                         <outlet property="reposDateLabel" destination="rGz-fT-Ovx" id="NYd-hl-ASi"/>
                         <outlet property="reposScrollView" destination="USU-fh-EI9" id="qvB-R7-VjP"/>
                         <outlet property="reposTableView" destination="neW-pp-ecO" id="Glm-3n-Llq"/>

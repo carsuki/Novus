@@ -19,19 +19,9 @@
 
 @end
 
-@interface NVSPackageCellView : NSTableCellView
+@interface ViewRepoDelegate : NSObject <NSTableViewDelegate, NSTableViewDataSource>
 
-@property (strong) IBOutlet NSTextField *maintainerField;
-@property (strong) IBOutlet NSTextField *descField;
-
-@end
-
-@interface NVSRepoCellView : NSTableCellView
-
-@property (strong) IBOutlet NSTextField *infoField;
-@property (strong) IBOutlet NSTextField *descField;
-
-@property (strong) IBOutlet NSTabView *tabView;
+@property (nonatomic, retain) RepoParser *repoParser;
 
 @end
 
@@ -72,6 +62,9 @@
 //
 
 @property (strong) IBOutlet NSTableView *repoViewTableView;
+@property (strong) IBOutlet NSTextField *repoViewTitleLabel;
+@property (nonatomic, retain) ViewRepoDelegate *viewRepoDelegate;
+@property (nonatomic, retain) NVSRepo *viewRepo;
 
 //
 //   SIDEBAR
@@ -99,3 +92,20 @@
 
 @end
 
+@interface NVSRepoCellView : NSTableCellView
+
+@property (strong) IBOutlet NSTextField *infoField;
+@property (strong) IBOutlet NSTextField *descField;
+@property (strong) IBOutlet ViewController *controller;
+@property (strong) IBOutlet NSTabView *tabView;
+@property (nonatomic, retain) NVSRepo *repo;
+
+@end
+
+@interface NVSPackageCellView : NSTableCellView
+
+@property (strong) IBOutlet NSTextField *maintainerField;
+@property (strong) IBOutlet NSTextField *descField;
+@property (strong) IBOutlet ViewController *controller;
+
+@end
