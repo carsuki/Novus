@@ -21,6 +21,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) NSMutableArray *addedRepositories;
 @property (strong, nonatomic) NSMutableArray *tempRepo;
 
+- (NSMutableArray*)packagesFromPath:(const char *)path;
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -20,6 +20,7 @@
 @end
 
 @interface NVSPackageCellView : NSTableCellView
+
 @property (strong) IBOutlet NSTextField *maintainerField;
 @property (strong) IBOutlet NSTextField *descField;
 
@@ -28,7 +29,9 @@
 @interface NVSRepoCellView : NSTableCellView
 
 @property (strong) IBOutlet NSTextField *infoField;
-@property (strong) IBOutlet NSTextField *descriptionField;
+@property (strong) IBOutlet NSTextField *descField;
+
+@property (strong) IBOutlet NSTabView *tabView;
 
 @end
 

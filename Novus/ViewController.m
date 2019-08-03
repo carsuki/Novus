@@ -15,9 +15,17 @@
 
 @end
 
-
-
 @implementation NVSPackageCellView
+
+@end
+
+@implementation NVSRepoCellView
+
+-(void)mouseDown:(NSEvent *)event {
+    if (self.tabView) {
+        [self.tabView selectTabViewItemAtIndex:8];
+    }
+}
 
 @end
 
@@ -39,6 +47,7 @@
     NVSRepoCellView *view = [tableView makeViewWithIdentifier:@"RepoCell" owner:self];
     NVSRepo *repo = [self.repoParser.addedRepositories objectAtIndex:row];
     view.textField.stringValue = repo.label;
+    view.descField.stringValue = repo.desc;
     
     return view;
 }
