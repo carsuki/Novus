@@ -19,7 +19,7 @@
 - (NSMutableArray*)packagesFromPath:(const char *)path {
     NSMutableArray *finishedPackages = [[NSMutableArray alloc] init];
     
-    NSLog(@"init repo package parser");
+    NSLog(@"parsing packages");
     
     NSMutableArray *packages = [[NSMutableArray alloc] init];
     FILE *file = fopen(path, "r");
