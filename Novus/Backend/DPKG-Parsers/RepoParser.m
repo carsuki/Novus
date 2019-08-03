@@ -165,7 +165,9 @@
             }
         }];
         NSString *packagesPath = [[repositoriesFilenames objectAtIndex:idx] stringByReplacingOccurrencesOfString:@"_Release" withString:@""];
-        repo.packages = [self packagesFromPath:[[NSString stringWithFormat:@"%@_%@_binary-%@_Packages", packagesPath, repo.components, repo.architectures] cStringUsingEncoding:NSASCIIStringEncoding]];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:@"%@_%@_binary-%@_Packages", packagesPath, repo.components, repo.architectures]]) {
+            repo.packages = [self packagesFromPath:[[NSString stringWithFormat:@"%@_%@_binary-%@_Packages", packagesPath, repo.components, repo.architectures] cStringUsingEncoding:NSASCIIStringEncoding]];
+        }
         [self.addedRepositories insertObject:repo atIndex:idx];
     }];
     

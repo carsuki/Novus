@@ -68,6 +68,12 @@
 @property (strong) IBOutlet NSScrollView *reposScrollView;
 
 //
+//   VIEW REPO PAGE
+//
+
+@property (strong) IBOutlet NSTableView *repoViewTableView;
+
+//
 //   SIDEBAR
 //
 

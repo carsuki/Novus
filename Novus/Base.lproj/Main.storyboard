@@ -2099,6 +2099,7 @@ Last update: x hour ago</string>
                         <outlet property="packagesDatelabel" destination="6uI-Yy-R3A" id="Wqi-Bs-Lrg"/>
                         <outlet property="packagesTableView" destination="8tQ-kg-Fof" id="tRP-dM-GK5"/>
                         <outlet property="repoLabel" destination="N3p-mX-dPx" id="h5r-Ta-V78"/>
+                        <outlet property="repoViewTableView" destination="eYh-qy-dWS" id="Xqo-fh-VCO"/>
                         <outlet property="reposDateLabel" destination="rGz-fT-Ovx" id="NYd-hl-ASi"/>
                         <outlet property="reposScrollView" destination="USU-fh-EI9" id="qvB-R7-VjP"/>
                         <outlet property="reposTableView" destination="neW-pp-ecO" id="Glm-3n-Llq"/>
