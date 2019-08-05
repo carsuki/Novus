@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -956,7 +956,7 @@ Revulate</string>
                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="StoreSelected" id="oVM-yp-2XV"/>
                                                 </imageView>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3DK-wh-EjI">
-                                                    <rect key="frame" x="56" y="9" width="45" height="21"/>
+                                                    <rect key="frame" x="59" y="10" width="45" height="21"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Store" id="RYA-bM-8ue">
                                                         <font key="font" metaFont="system" size="17"/>
@@ -978,6 +978,10 @@ Revulate</string>
                                             </subviews>
                                         </view>
                                     </box>
+                                    <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" fixedFrame="YES" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ayU-f4-Dg2">
+                                        <rect key="frame" x="70" y="238" width="110" height="200"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </stackView>
                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="TodayBTN" translatesAutoresizingMaskIntoConstraints="NO" id="taY-a8-BGR">
                                         <rect key="frame" x="0.0" y="513" width="248" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -986,7 +990,7 @@ Revulate</string>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6GO-Og-hB7">
-                                                    <rect key="frame" x="58" y="5" width="43" height="18"/>
+                                                    <rect key="frame" x="59" y="10" width="43" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Today" id="H6R-Hv-tm8">
                                                         <font key="font" metaFont="system" size="14"/>
@@ -1016,7 +1020,7 @@ Revulate</string>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Bdc-Yw-QvN">
-                                                    <rect key="frame" x="58" y="5" width="40" height="18"/>
+                                                    <rect key="frame" x="59" y="9" width="40" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="News" id="OWw-kO-4mS">
                                                         <font key="font" metaFont="system" size="14"/>
@@ -1046,7 +1050,7 @@ Revulate</string>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yIK-r3-RzG">
-                                                    <rect key="frame" x="58" y="5" width="59" height="18"/>
+                                                    <rect key="frame" x="58" y="8" width="59" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Updates" id="63M-si-9vw">
                                                         <font key="font" metaFont="system" size="14"/>
@@ -1111,7 +1115,7 @@ Revulate</string>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ag0-kd-I34">
-                                                    <rect key="frame" x="58" y="5" width="84" height="18"/>
+                                                    <rect key="frame" x="57" y="9" width="84" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Applications" id="eZq-iF-iw0">
                                                         <font key="font" metaFont="system" size="14"/>
@@ -1141,7 +1145,7 @@ Revulate</string>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oEW-97-V9N">
-                                                    <rect key="frame" x="58" y="5" width="53" height="18"/>
+                                                    <rect key="frame" x="56" y="8" width="53" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Tweaks" id="fJ0-La-Gpo">
                                                         <font key="font" metaFont="system" size="14"/>
@@ -1171,7 +1175,7 @@ Revulate</string>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DLv-lm-ChX">
-                                                    <rect key="frame" x="58" y="5" width="56" height="18"/>
+                                                    <rect key="frame" x="56" y="7" width="56" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Themes" id="0io-QO-NEb">
                                                         <font key="font" metaFont="system" size="14"/>
@@ -1236,7 +1240,7 @@ Revulate</string>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="N3p-mX-dPx">
-                                                    <rect key="frame" x="58" y="5" width="85" height="18"/>
+                                                    <rect key="frame" x="57" y="8" width="85" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Repositories" id="reS-QN-9PP">
                                                         <font key="font" metaFont="system" size="14"/>
@@ -1266,7 +1270,7 @@ Revulate</string>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IMd-Ja-s9G">
-                                                    <rect key="frame" x="58" y="5" width="66" height="18"/>
+                                                    <rect key="frame" x="56" y="7" width="66" height="18"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Packages" id="BuQ-88-LUP">
                                                         <font key="font" metaFont="system" size="14"/>
@@ -1296,7 +1300,7 @@ Revulate</string>
                                 <font key="font" metaFont="system"/>
                                 <tabViewItems>
                                     <tabViewItem label="Today" identifier="" id="Zow-GX-RyL">
-                                        <view key="view" id="m7e-pj-WDw">
+                                        <view key="view" ambiguous="YES" id="m7e-pj-WDw">
                                             <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -1597,7 +1601,7 @@ Revulate</string>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="pCJ-YI-cNk">
                                                                     <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCQ-x9-s36">
                                                                             <rect key="frame" x="0.0" y="0.0" width="953" height="676"/>
@@ -1626,7 +1630,7 @@ Revulate</string>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                     <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="hoC-tY-hnQ">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="888" height="533"/>
-                                                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                                        <autoresizingMask key="autoresizingMask"/>
                                                                                         <subviews>
                                                                                             <tableView focusRingType="none" verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="200" viewBased="YES" id="neW-pp-ecO">
                                                                                                 <rect key="frame" x="0.0" y="0.0" width="888" height="533"/>
@@ -1767,7 +1771,7 @@ Last update: x hour ago</string>
                                                                     <rect key="frame" x="-100" y="-100" width="937" height="15"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </scroller>
-                                                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="wnQ-i5-d4c">
+                                                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="wnQ-i5-d4c">
                                                                     <rect key="frame" x="-100" y="-100" width="15" height="675"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </scroller>
@@ -1796,7 +1800,7 @@ Last update: x hour ago</string>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="tPw-Td-Z4N">
                                                                     <rect key="frame" x="0.0" y="0.0" width="888" height="579"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <tableView focusRingType="none" verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="70" viewBased="YES" id="8tQ-kg-Fof">
                                                                             <rect key="frame" x="0.0" y="0.0" width="888" height="579"/>
@@ -1937,7 +1941,7 @@ Last update: x hour ago</string>
                                         </view>
                                     </tabViewItem>
                                     <tabViewItem label="ViewRepo" identifier="" id="Vpm-g0-MHj">
-                                        <view key="view" ambiguous="YES" id="rN9-Ni-9Bk">
+                                        <view key="view" id="rN9-Ni-9Bk">
                                             <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -1953,7 +1957,7 @@ Last update: x hour ago</string>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="z6x-zs-An3">
                                                                     <rect key="frame" x="0.0" y="0.0" width="888" height="594"/>
-                                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
                                                                     <subviews>
                                                                         <tableView focusRingType="none" verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="70" viewBased="YES" id="eYh-qy-dWS">
                                                                             <rect key="frame" x="0.0" y="0.0" width="888" height="594"/>
