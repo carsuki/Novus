@@ -1,9 +1,9 @@
 //
 //  main.m
-//  NovusParsingBackend
+//  Novus
 //
-//  Created by EvenDev on 16/08/2019.
-//  Copyright © 2019 EvenDev. All rights reserved.
+//  Created by EvenDev on 30/06/2019.
+//  Copyright © 2019 Polar Team. All rights reserved.
 //
 
 #import <Cocoa/Cocoa.h>
