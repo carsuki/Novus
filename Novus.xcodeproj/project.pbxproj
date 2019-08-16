@@ -65,7 +65,7 @@
 		4D829B652306CEF8008E07FD = {
 			isa = PBXGroup;
 			children = (
-				4D829B702306CEF8008E07FD /* NovusParsingBackend */,
+				4D829B702306CEF8008E07FD /* Novus */,
 				4D829B6F2306CEF8008E07FD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -78,7 +78,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		4D829B702306CEF8008E07FD /* NovusParsingBackend */ = {
+		4D829B702306CEF8008E07FD /* Novus */ = {
 			isa = PBXGroup;
 			children = (
 				7019560E230756DC00FC3F11 /* Backend */,
@@ -108,7 +108,7 @@
 				4D829B7D2306CEF9008E07FD /* main.m */,
 				4D829B7F2306CEF9008E07FD /* NovusParsingBackend.entitlements */,
 			);
-			path = NovusParsingBackend;
+			path = Novus;
 			sourceTree = "<group>";
 		};
 		7019560E230756DC00FC3F11 /* Backend */ = {
@@ -339,7 +339,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = Alpha;
 				DEVELOPMENT_TEAM = 9T6493493X;
-				INFOPLIST_FILE = NovusParsingBackend/Info.plist;
+				INFOPLIST_FILE = Novus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -358,7 +358,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = Alpha;
 				DEVELOPMENT_TEAM = 9T6493493X;
-				INFOPLIST_FILE = NovusParsingBackend/Info.plist;
+				INFOPLIST_FILE = Novus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
