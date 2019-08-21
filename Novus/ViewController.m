@@ -15,139 +15,24 @@
 
 @end
 
-@implementation NVSPackageCellView
-
-@end
-
-@implementation NVSRepoCellView
-
--(void)mouseDown:(NSEvent *)event {
-    if (self.controller) {
-        self.controller.repoViewTitleLabel.stringValue = self.repo.label;
-        self.controller.viewRepo = self.repo;
-        [self.controller.repoViewTableView reloadData];
-        [self.tabView selectTabViewItemAtIndex:8];
-    }
-}
-
-@end
-
-@implementation ViewRepoDelegate
-
--(instancetype)init {
-    self = [super init];
-    if (self) {
-        self.repoParser = [[RepoParser alloc] init];
-    }
-    return self;
-}
-
--(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    NVSRepo *repo = [self.repoParser.addedRepositories objectAtIndex:0];
-    return repo.packages.count;
-}
-
--(NSView*)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NVSPackageCellView *view = [tableView makeViewWithIdentifier:@"PackageCell" owner:self];
-    NVSPackage *pkg = [view.controller.viewRepo.packages objectAtIndex:row];
-    view.textField.stringValue = pkg.identifier;
-    NSArray *maintainer = [pkg.maintainer componentsSeparatedByString:@"<"];
-    view.maintainerField.stringValue = [maintainer objectAtIndex:0];
-    view.descField.stringValue = pkg.desc;
-    
-    return view;
-}
-
-@end
-
-@implementation RepositoryDelegate
-
--(instancetype)init {
-    self = [super init];
-    if (self) {
-        self.repoParser = [[RepoParser alloc] init];
-    }
-    return self;
-}
-
--(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return self.repoParser.addedRepositories.count;
-}
-
--(NSView*)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NVSRepoCellView *view = [tableView makeViewWithIdentifier:@"RepoCell" owner:self];
-    NVSRepo *repo = [self.repoParser.addedRepositories objectAtIndex:row];
-    view.textField.stringValue = repo.label;
-    view.descField.stringValue = repo.desc;
-    view.repo = repo;
-    
-    return view;
-}
-
-@end
-
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Repo Parser
-    self.parser = [[LMDPKGParser alloc] init];
-    self.repoDelegate = [[RepositoryDelegate alloc] init];
-    self.viewRepoDelegate = [[ViewRepoDelegate alloc] init];
-    
-    // Database Manager
-    self.dbManager = [NVSDatabaseManager sharedInstance];
-    
-    // Command Wrapper
-    self.cmdWrapper = [NVSCommandWrapper sharedInstance];
-    
-    // packages view
-    self.packagesTableView.delegate = self;
-    self.packagesTableView.dataSource = self;
-
-    // dates
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"EEEE, d MMMM"];
-    NSString *dateString = [formatter stringFromDate:[NSDate date]];
-    self.todayDateLabel.stringValue = dateString;
-    self.packagesDatelabel.stringValue = dateString;
-    self.reposDateLabel.stringValue = dateString;
-    
-    //
-    //  REPOSITORY PAGE
-    //
-    self.reposTableView.delegate = self.repoDelegate;
-    self.reposTableView.dataSource = self.repoDelegate;
-    
-    //
-    //  VIEW REPO PAGE
-    //
-    self.repoViewTableView.delegate = self.viewRepoDelegate;
-    self.repoViewTableView.dataSource = self.viewRepoDelegate;
-    
     [self.cmdWrapper runAsUser:@"whoami"];
     [self.cmdWrapper runAsRoot:@"whoami"];
 }
 
--(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return self.parser.installedPackages.count;
-}
-
--(NSView*)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
-    NVSPackageCellView *view = [tableView makeViewWithIdentifier:@"PackageCell" owner:self];
-    NVSPackage *pkg = [self.parser.installedPackages objectAtIndex:row];
-    view.textField.stringValue = pkg.identifier;
-    NSArray *maintainer = [pkg.maintainer componentsSeparatedByString:@"<"];
-    view.maintainerField.stringValue = [maintainer objectAtIndex:0];
-    view.descField.stringValue = pkg.desc;
-    
-    return view;
-}
-
 
 -(void)openTab:(NSInteger)index {
-    [self.tabView selectTabViewItemAtIndex:index];
+    
+    NSLog(@"Open view%ld", (long)index);
+    NSViewController *controller = [self.storyboard instantiateControllerWithIdentifier:[NSString stringWithFormat:@"view%ld", (long)index]];
+    [self addChildViewController:controller];
+    [self.containerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    [self.containerView addSubview:controller.view];
+    
     NSColor *gray = [NSColor colorWithWhite:0.443137254901961 alpha:1];
     NSColor *grayer = [NSColor colorWithRed:0.552941176470588 green:0.588235294117647 blue:0.623529411764706 alpha:1];
     NSColor *purple = [NSColor colorWithRed:0.505882352941176 green:0.4 blue:0.776470588235294 alpha:1];

@@ -20,4 +20,9 @@
 @property (nonatomic, retain) NSString *desc;
 @property (nonatomic, retain) NSMutableArray *packages;
 
+@property (nonatomic, retain) NSString *releaseURL;
+@property (nonatomic, retain) NSString *packagesURL;
+@property (nonatomic, retain) NSString *releasePath;
+@property (nonatomic, retain) NSString *packagesPath;
+
 @end

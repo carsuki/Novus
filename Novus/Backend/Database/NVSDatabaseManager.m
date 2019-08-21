@@ -191,7 +191,7 @@
 
 
 - (int)addPackageToDatabase:(NVSPackage *)package {
-    NSString *query = [NSString stringWithFormat:@"INSERT INTO packages (identifier, name, version, description, section, architecture, author, maintainer, installedSize, repoUrl) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')", [package identifier], [package name], [package version], [package desc], [package section], [package architecture], [package author], [package maintainer], [package installedSize], [package repoUrl]];
+    NSString *query = [NSString stringWithFormat:@"INSERT INTO packages (identifier, name, version, description, section, architecture, author, maintainer, installedSize) VALUES ('%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@', '%@')", [package identifier], [package name], [package version], [package desc], [package section], [package architecture], [package author], [package maintainer], [package installedSize]];
         
     int result = [self executeUpdate:query];
     if(result == SQLITE_OK) {
@@ -246,7 +246,16 @@
     NSMutableArray *results = [self executeQuery:query];
     if(results != NULL) {
         NSMutableArray *packageAsArray = [results objectAtIndex:0];
-        NVSPackage *package = [[NVSPackage alloc] initWithIdentifier:[packageAsArray objectAtIndex:0] name:[packageAsArray objectAtIndex:1] version:[packageAsArray objectAtIndex:2] description:[packageAsArray objectAtIndex:3] section:[packageAsArray objectAtIndex:4] architecture:[packageAsArray objectAtIndex:5] author:[packageAsArray objectAtIndex:6] maintainer:[packageAsArray objectAtIndex:7] installedSize:[packageAsArray objectAtIndex:8] repoUrl:[packageAsArray objectAtIndex:9]];
+        NVSPackage *package = [[NVSPackage alloc] init];
+        package.identifier = [packageAsArray objectAtIndex:0];
+        package.name = [packageAsArray objectAtIndex:1];
+        package.version = [packageAsArray objectAtIndex:2];
+        package.desc = [packageAsArray objectAtIndex:3];
+        package.section = [packageAsArray objectAtIndex:4];
+        package.architecture = [packageAsArray objectAtIndex:5];
+        package.author = [packageAsArray objectAtIndex:6];
+        package.maintainer = [packageAsArray objectAtIndex:7];
+        package.installedSize = [packageAsArray objectAtIndex:8];
         return package;
     } else {
         NSLog(@"Could not get package from database by identifier: %@ - There was an error, or the package does not exist.", identifier);

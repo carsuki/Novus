@@ -7,15 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D0845E2230DA7BA00BDFAAE /* NVSInstalledPackagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0845E0230DA7BA00BDFAAE /* NVSInstalledPackagesViewController.m */; };
+		4D0845E8230DA92800BDFAAE /* NVSRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0845E4230DA92800BDFAAE /* NVSRepo.m */; };
+		4D0845E9230DA92800BDFAAE /* NVSPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0845E5230DA92800BDFAAE /* NVSPackage.m */; };
+		4D0845EC230DA93000BDFAAE /* LMPackageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0845EA230DA93000BDFAAE /* LMPackageParser.m */; };
+		4D0845F2230DAB7600BDFAAE /* NVSPackageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0845F1230DAB7600BDFAAE /* NVSPackageCellView.m */; };
 		4DA343B122C914500006897E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343B022C914500006897E /* AppDelegate.m */; };
 		4DA343B422C914500006897E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343B322C914500006897E /* ViewController.m */; };
 		4DA343B622C914500006897E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA343B522C914500006897E /* Assets.xcassets */; };
 		4DA343B922C914500006897E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA343B722C914500006897E /* Main.storyboard */; };
 		4DA343BC22C914500006897E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343BB22C914500006897E /* main.m */; };
-		4DA343CA22C94B9C0006897E /* LMDPKGParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343C722C94B9C0006897E /* LMDPKGParser.m */; };
-		4DA343CB22C94B9C0006897E /* NVSPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343C922C94B9C0006897E /* NVSPackage.m */; };
-		4DFE79C322CBBC8500294F77 /* RepoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE79C122CBBC8500294F77 /* RepoParser.m */; };
-		4DFE79C522CBC79E00294F77 /* NVSRepo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DFE79C422CBC79E00294F77 /* NVSRepo.m */; };
 		B157450022F12BC800609760 /* NVSCommandWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B15744FF22F12BC800609760 /* NVSCommandWrapper.m */; };
 		B189947722D1268300C66B37 /* NVSDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B189947622D1268300C66B37 /* NVSDatabaseManager.m */; };
 		B189947B22D12BD000C66B37 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B189947A22D12BD000C66B37 /* libsqlite3.tbd */; };
@@ -23,6 +24,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D0845DF230DA7BA00BDFAAE /* NVSInstalledPackagesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSInstalledPackagesViewController.h; sourceTree = "<group>"; };
+		4D0845E0230DA7BA00BDFAAE /* NVSInstalledPackagesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSInstalledPackagesViewController.m; sourceTree = "<group>"; };
+		4D0845E4230DA92800BDFAAE /* NVSRepo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVSRepo.m; sourceTree = "<group>"; };
+		4D0845E5230DA92800BDFAAE /* NVSPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVSPackage.m; sourceTree = "<group>"; };
+		4D0845E6230DA92800BDFAAE /* NVSRepo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSRepo.h; sourceTree = "<group>"; };
+		4D0845E7230DA92800BDFAAE /* NVSPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSPackage.h; sourceTree = "<group>"; };
+		4D0845EA230DA93000BDFAAE /* LMPackageParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMPackageParser.m; sourceTree = "<group>"; };
+		4D0845EB230DA93000BDFAAE /* LMPackageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMPackageParser.h; sourceTree = "<group>"; };
+		4D0845F0230DAB7600BDFAAE /* NVSPackageCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSPackageCellView.h; sourceTree = "<group>"; };
+		4D0845F1230DAB7600BDFAAE /* NVSPackageCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSPackageCellView.m; sourceTree = "<group>"; };
 		4DA343AC22C914500006897E /* Novus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Novus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA343AF22C914500006897E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4DA343B022C914500006897E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,14 +44,6 @@
 		4DA343BA22C914500006897E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DA343BB22C914500006897E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DA343BD22C914500006897E /* Novus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Novus.entitlements; sourceTree = "<group>"; };
-		4DA343C622C94B9B0006897E /* NVSPackage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NVSPackage.h; sourceTree = "<group>"; };
-		4DA343C722C94B9C0006897E /* LMDPKGParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LMDPKGParser.m; sourceTree = "<group>"; };
-		4DA343C822C94B9C0006897E /* LMDPKGParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMDPKGParser.h; sourceTree = "<group>"; };
-		4DA343C922C94B9C0006897E /* NVSPackage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NVSPackage.m; sourceTree = "<group>"; };
-		4DFE79C122CBBC8500294F77 /* RepoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepoParser.m; sourceTree = "<group>"; };
-		4DFE79C222CBBC8500294F77 /* RepoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepoParser.h; sourceTree = "<group>"; };
-		4DFE79C422CBC79E00294F77 /* NVSRepo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSRepo.m; sourceTree = "<group>"; };
-		4DFE79C622CBC7A500294F77 /* NVSRepo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSRepo.h; sourceTree = "<group>"; };
 		B15744FF22F12BC800609760 /* NVSCommandWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSCommandWrapper.m; sourceTree = "<group>"; };
 		B157450122F12C0F00609760 /* NVSCommandWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSCommandWrapper.h; sourceTree = "<group>"; };
 		B157450222F24D7A00609760 /* debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
@@ -62,6 +65,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D0845DE230DA7A200BDFAAE /* Frontend */ = {
+			isa = PBXGroup;
+			children = (
+				4D0845DF230DA7BA00BDFAAE /* NVSInstalledPackagesViewController.h */,
+				4D0845E0230DA7BA00BDFAAE /* NVSInstalledPackagesViewController.m */,
+				4D0845F0230DAB7600BDFAAE /* NVSPackageCellView.h */,
+				4D0845F1230DAB7600BDFAAE /* NVSPackageCellView.m */,
+			);
+			path = Frontend;
+			sourceTree = "<group>";
+		};
 		4DA343A322C914500006897E = {
 			isa = PBXGroup;
 			children = (
@@ -83,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				B192504522D2B10400D0D77B /* Resources */,
-				706D2AE822C9961C00E73777 /* Frontend */,
+				4D0845DE230DA7A200BDFAAE /* Frontend */,
 				706D2AE722C9961100E73777 /* Backend */,
 				4DA343AF22C914500006897E /* AppDelegate.h */,
 				4DA343B022C914500006897E /* AppDelegate.m */,
@@ -109,24 +123,15 @@
 			path = Backend;
 			sourceTree = "<group>";
 		};
-		706D2AE822C9961C00E73777 /* Frontend */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Frontend;
-			sourceTree = "<group>";
-		};
 		706D2AE922C9964600E73777 /* DPKG-Parsers */ = {
 			isa = PBXGroup;
 			children = (
-				4DA343C622C94B9B0006897E /* NVSPackage.h */,
-				4DA343C922C94B9C0006897E /* NVSPackage.m */,
-				4DFE79C622CBC7A500294F77 /* NVSRepo.h */,
-				4DFE79C422CBC79E00294F77 /* NVSRepo.m */,
-				4DA343C822C94B9C0006897E /* LMDPKGParser.h */,
-				4DA343C722C94B9C0006897E /* LMDPKGParser.m */,
-				4DFE79C222CBBC8500294F77 /* RepoParser.h */,
-				4DFE79C122CBBC8500294F77 /* RepoParser.m */,
+				4D0845E7230DA92800BDFAAE /* NVSPackage.h */,
+				4D0845E5230DA92800BDFAAE /* NVSPackage.m */,
+				4D0845E6230DA92800BDFAAE /* NVSRepo.h */,
+				4D0845E4230DA92800BDFAAE /* NVSRepo.m */,
+				4D0845EB230DA93000BDFAAE /* LMPackageParser.h */,
+				4D0845EA230DA93000BDFAAE /* LMPackageParser.m */,
 			);
 			path = "DPKG-Parsers";
 			sourceTree = "<group>";
@@ -248,14 +253,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DFE79C522CBC79E00294F77 /* NVSRepo.m in Sources */,
+				4D0845E8230DA92800BDFAAE /* NVSRepo.m in Sources */,
 				B157450022F12BC800609760 /* NVSCommandWrapper.m in Sources */,
-				4DFE79C322CBBC8500294F77 /* RepoParser.m in Sources */,
+				4D0845E9230DA92800BDFAAE /* NVSPackage.m in Sources */,
+				4D0845F2230DAB7600BDFAAE /* NVSPackageCellView.m in Sources */,
 				4DA343B422C914500006897E /* ViewController.m in Sources */,
-				4DA343CA22C94B9C0006897E /* LMDPKGParser.m in Sources */,
 				4DA343BC22C914500006897E /* main.m in Sources */,
-				4DA343CB22C94B9C0006897E /* NVSPackage.m in Sources */,
 				B189947722D1268300C66B37 /* NVSDatabaseManager.m in Sources */,
+				4D0845E2230DA7BA00BDFAAE /* NVSInstalledPackagesViewController.m in Sources */,
+				4D0845EC230DA93000BDFAAE /* LMPackageParser.m in Sources */,
 				4DA343B122C914500006897E /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
