@@ -93,12 +93,12 @@ Build BUILD</string>
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bDU-4i-otA">
-                                            <rect key="frame" x="340" y="315" width="142" height="68"/>
+                                            <rect key="frame" x="340" y="315" width="140" height="68"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" id="kJa-eU-WWL">
                                                 <font key="font" metaFont="system"/>
                                                 <string key="title">Diego Magdaleno
-Theo Fortin (Pwn4dra)
+Theo Fortin (Topiga)
 Hayden Seay (Diatrus)
 EvenDev</string>
                                                 <color key="textColor" red="0.44313725490196076" green="0.44313725490196076" blue="0.44313725490196076" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -119,7 +119,7 @@ EvenDev</string>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" id="nBq-UD-9Rt">
                                                 <font key="font" metaFont="system"/>
-                                                <string key="title">Theo Fortin (Pwn4dra)
+                                                <string key="title">Theo Fortin (Topiga)
 EvenDev
 Revulate
 Jamie Bishop (NullPixel)
@@ -1914,7 +1914,7 @@ Last update: x hour ago</string>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="m7w-ub-7lR">
                                     <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yPW-Do-dIw">
                                             <rect key="frame" x="0.0" y="0.0" width="953" height="676"/>
@@ -1943,7 +1943,7 @@ Last update: x hour ago</string>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="rtd-1o-CNF">
                                                         <rect key="frame" x="0.0" y="0.0" width="888" height="533"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <tableView focusRingType="none" verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="200" viewBased="YES" id="E51-d1-AUZ">
                                                                 <rect key="frame" x="0.0" y="0.0" width="888" height="533"/>
@@ -2260,7 +2260,7 @@ Last update: x hour ago</string>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="57u-Bt-stV">
                                     <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6DP-lx-KCc">
                                             <rect key="frame" x="0.0" y="0.0" width="953" height="676"/>
@@ -2289,7 +2289,7 @@ Last update: x hour ago</string>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="9mg-Ay-BJI">
                                                         <rect key="frame" x="0.0" y="0.0" width="888" height="533"/>
-                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
                                                         <subviews>
                                                             <tableView focusRingType="none" verticalHuggingPriority="750" ambiguous="YES" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" selectionHighlightStyle="none" columnReordering="NO" columnResizing="NO" multipleSelection="NO" autosaveColumns="NO" rowHeight="200" viewBased="YES" id="nMW-fb-tE6">
                                                                 <rect key="frame" x="0.0" y="0.0" width="888" height="533"/>
@@ -2452,6 +2452,7 @@ Last update: x hour ago</string>
                 </viewController>
                 <customObject id="02W-C5-HMc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-731" y="1319"/>
         </scene>
     </scenes>
     <resources>
