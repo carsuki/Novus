@@ -38,10 +38,13 @@
     } else {
         view.textField.stringValue = pkg.identifier;
     }
-    NSArray *maintainer = [pkg.maintainer componentsSeparatedByString:@"<"];
-    view.maintainerField.stringValue = [maintainer objectAtIndex:0];
-    view.descField.stringValue = pkg.desc;
-    //view.descField.stringValue = pkg.desc;
+    if (pkg.maintainer) {
+        NSArray *maintainer = [pkg.maintainer componentsSeparatedByString:@"<"];
+        view.maintainerField.stringValue = [maintainer objectAtIndex:0];
+    }
+    if (pkg.desc) {
+        view.descField.stringValue = pkg.desc;
+    }
     
     return view;
 }

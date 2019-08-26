@@ -41,13 +41,3 @@
 @property (strong) IBOutlet NSTextField *packageLabel;
 
 @end
-
-@interface NVSRepoCellView : NSTableCellView
-
-@property (strong) IBOutlet NSTextField *infoField;
-@property (strong) IBOutlet NSTextField *descField;
-@property (strong) IBOutlet ViewController *controller;
-@property (strong) IBOutlet NSTabView *tabView;
-@property (nonatomic, retain) NVSRepo *repo;
-
-@end

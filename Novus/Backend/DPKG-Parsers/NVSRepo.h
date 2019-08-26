@@ -19,6 +19,7 @@
 @property (nonatomic, retain) NSString *components;
 @property (nonatomic, retain) NSString *desc;
 @property (nonatomic, retain) NSMutableArray *packages;
+@property (nonatomic, retain) NSDate *lastUpdated;
 
 @property (nonatomic, retain) NSString *releaseURL;
 @property (nonatomic, retain) NSString *packagesURL;
