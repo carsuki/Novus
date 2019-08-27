@@ -20,6 +20,7 @@
 		4DCF82992314137E00E9A55D /* NVSRepositoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCF82982314137E00E9A55D /* NVSRepositoriesViewController.m */; };
 		4DCF829C2314149200E9A55D /* NVSRepoCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCF829B2314149200E9A55D /* NVSRepoCellView.m */; };
 		4DCF829F2314265200E9A55D /* NVSTransparentScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCF829E2314265200E9A55D /* NVSTransparentScroller.m */; };
+		4DF7D8AB23158B0B005C6263 /* NVSAddRepositoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DF7D8AA23158B0B005C6263 /* NVSAddRepositoryViewController.m */; };
 		B157450022F12BC800609760 /* NVSCommandWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = B15744FF22F12BC800609760 /* NVSCommandWrapper.m */; };
 		B189947722D1268300C66B37 /* NVSDatabaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B189947622D1268300C66B37 /* NVSDatabaseManager.m */; };
 		B189947B22D12BD000C66B37 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B189947A22D12BD000C66B37 /* libsqlite3.tbd */; };
@@ -53,6 +54,8 @@
 		4DCF829B2314149200E9A55D /* NVSRepoCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSRepoCellView.m; sourceTree = "<group>"; };
 		4DCF829D2314265200E9A55D /* NVSTransparentScroller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSTransparentScroller.h; sourceTree = "<group>"; };
 		4DCF829E2314265200E9A55D /* NVSTransparentScroller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSTransparentScroller.m; sourceTree = "<group>"; };
+		4DF7D8A923158B0B005C6263 /* NVSAddRepositoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSAddRepositoryViewController.h; sourceTree = "<group>"; };
+		4DF7D8AA23158B0B005C6263 /* NVSAddRepositoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSAddRepositoryViewController.m; sourceTree = "<group>"; };
 		B15744FF22F12BC800609760 /* NVSCommandWrapper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSCommandWrapper.m; sourceTree = "<group>"; };
 		B157450122F12C0F00609760 /* NVSCommandWrapper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSCommandWrapper.h; sourceTree = "<group>"; };
 		B157450222F24D7A00609760 /* debug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = debug.h; sourceTree = "<group>"; };
@@ -87,6 +90,8 @@
 				4DCF829B2314149200E9A55D /* NVSRepoCellView.m */,
 				4DCF829D2314265200E9A55D /* NVSTransparentScroller.h */,
 				4DCF829E2314265200E9A55D /* NVSTransparentScroller.m */,
+				4DF7D8A923158B0B005C6263 /* NVSAddRepositoryViewController.h */,
+				4DF7D8AA23158B0B005C6263 /* NVSAddRepositoryViewController.m */,
 			);
 			path = Frontend;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 				4DCF829C2314149200E9A55D /* NVSRepoCellView.m in Sources */,
 				4DA343B422C914500006897E /* ViewController.m in Sources */,
 				4DA343BC22C914500006897E /* main.m in Sources */,
+				4DF7D8AB23158B0B005C6263 /* NVSAddRepositoryViewController.m in Sources */,
 				4DCF82992314137E00E9A55D /* NVSRepositoriesViewController.m in Sources */,
 				B189947722D1268300C66B37 /* NVSDatabaseManager.m in Sources */,
 				4D0845E2230DA7BA00BDFAAE /* NVSInstalledPackagesViewController.m in Sources */,

@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong) IBOutlet NSTextField *infoField;
 @property (strong) IBOutlet NSTextField *descField;
 @property (nonatomic, retain) NVSRepo *repo;
+@property (strong) IBOutlet NSImageView *imageView;
 
 @end
 

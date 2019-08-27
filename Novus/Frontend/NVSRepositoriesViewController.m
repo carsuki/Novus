@@ -64,6 +64,7 @@
         NSString *repoURL = [strippedFileLine substringToIndex:locationOfSpace];
         // either the "./" or "stable main" etc at the end
         NSString *repoDirectory = [strippedFileLine substringFromIndex:locationOfSpace + 1];
+        repo.repoURL = repoURL;
         if(![repoDirectory isEqualToString:@"./"]) {
             NSArray *repoComponents = [repoDirectory componentsSeparatedByString:@" "];
             NSString *releaseURL = [NSString stringWithFormat:@"%@/dists/%@/Release",repoURL,[repoComponents objectAtIndex:0]];
@@ -72,8 +73,6 @@
             NSString *packagesURL = [NSString stringWithFormat:@"%@/dists/%@/%@/binary-darwin-amd64/Packages",repoURL,[repoComponents objectAtIndex:0],[repoComponents objectAtIndex:1]];
             repo.packagesURL = packagesURL;
             repo.packagesPath = [NSString stringWithFormat:@"/usr/local/var/lib/apt/lists/%@", [[packagesURL stringByReplacingOccurrencesOfString:@"https://" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@"_"]];
-            NSLog(@"\n%@", repo.packagesPath);
-            NSLog(@"\n%@", repo.releasePath);
         } else {
             if (![[repoURL substringFromIndex:[repoURL length] - 1] isEqualToString:@"/"]) {
                 repoURL = [repoURL stringByAppendingString:@"/"];
@@ -83,11 +82,10 @@
             repo.releasePath = [NSString stringWithFormat:@"/usr/local/var/lib/apt/lists/%@", [[repo.releaseURL stringByReplacingOccurrencesOfString:@"https://" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@"_"]];
             repo.packagesURL = [NSString stringWithFormat:@"%@Packages", repoURL];
             repo.packagesPath = [NSString stringWithFormat:@"/usr/local/var/lib/apt/lists/%@", [[repo.packagesURL stringByReplacingOccurrencesOfString:@"https://" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@"_"]];
-            NSLog(@"\n%@", repo.packagesPath);
-            NSLog(@"\n%@", repo.releasePath);
         }
         [self.sources addObject:repo];
     }];
+    NSLog(@"Got %ld repositories", (long)self.sources.count);
 }
 
 -(void)parseRepos {
@@ -125,6 +123,22 @@
                 repo.lastUpdated = [self.dateFormatter dateFromString:[[[obj componentsSeparatedByString:@"Date: "] mutableCopy] objectAtIndex:1]];
             }
         }];
+        // Grab repo icons
+        repo.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/RepoIcon.png", repo.repoURL]];
+        NSString *localImagePath = [repo.releasePath stringByReplacingOccurrencesOfString:@"Release" withString:@".png"];
+        NSImage *repoIcon = [[NSImage alloc] initWithContentsOfURL:repo.imageURL];
+        repo.imagePath = localImagePath;
+        if (repoIcon) {
+            if (![[NSFileManager defaultManager] fileExistsAtPath:localImagePath]) {
+                CGImageRef cgRef = [repoIcon CGImageForProposedRect:NULL context:nil hints:nil];
+                NSBitmapImageRep *newRep = [[NSBitmapImageRep alloc] initWithCGImage:cgRef];
+                [newRep setSize:repoIcon.size];
+                NSData *pngData = [newRep representationUsingType:NSPNGFileType properties:nil];
+                [pngData writeToFile:localImagePath atomically:YES];
+                NSLog(@"did grab icon");
+            }
+            repo.image = repoIcon;
+        }
         [self.sources removeObjectAtIndex:idx];
         [self.sources insertObject:repo atIndex:idx];
     }];
@@ -142,8 +156,24 @@
     view.descField.stringValue = repo.desc;
     view.infoField.stringValue = [NSString stringWithFormat:@"Packages: %ld \nLast update: %@", (long)repo.packages.count, [self.lastDateFormatter stringFromDate:repo.lastUpdated]];
     view.repo = repo;
+    view.imageView.image = repo.image;
     
     return view;
+}
+
+- (IBAction)refreshRepos:(id)sender {
+    self.titleField.stringValue = @"Refreshing...";
+    NSString *output;
+    NSString *error;
+    BOOL success = [[NVSCommandWrapper sharedInstance] runProcessAsAdministrator:@"/usr/local/bin/apt" withArguments:[NSArray arrayWithObject:@"update"] output:&output errorDescription:&error];
+    if (!success) {
+        NSLog(@"Failed to refresh: %@", error);
+    }
+    [self grabSourcesInLists];
+    [self grabFilenames];
+    [self parseRepos];
+    [self.tableView reloadData];
+    self.titleField.stringValue = @"Repositories";
 }
 
 @end

@@ -20,8 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self.cmdWrapper runAsUser:@"whoami"];
-    [self.cmdWrapper runAsRoot:@"whoami"];
+    [[NVSCommandWrapper sharedInstance] runAsUser:@"whoami"];
+    [[NVSCommandWrapper sharedInstance] runAsRoot:@"whoami"];
 }
 
 
@@ -31,7 +31,9 @@
     NSViewController *controller = [self.storyboard instantiateControllerWithIdentifier:[NSString stringWithFormat:@"view%ld", (long)index]];
     [self addChildViewController:controller];
     [self.containerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+    controller.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self.containerView addSubview:controller.view];
+    [NSLayoutConstraint activateConstraints:@[[controller.view.leadingAnchor constraintEqualToAnchor:self.containerView.leadingAnchor], [controller.view.trailingAnchor constraintEqualToAnchor:self.containerView.trailingAnchor], [controller.view.topAnchor constraintEqualToAnchor:self.containerView.topAnchor], [controller.view.bottomAnchor constraintEqualToAnchor:self.containerView.bottomAnchor]]];
     
     NSColor *gray = [NSColor colorWithWhite:0.443137254901961 alpha:1];
     NSColor *grayer = [NSColor colorWithRed:0.552941176470588 green:0.588235294117647 blue:0.623529411764706 alpha:1];

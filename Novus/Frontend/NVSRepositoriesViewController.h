@@ -10,11 +10,13 @@
 #import "../Backend/DPKG-Parsers/NVSRepo.h"
 #import "NVSRepoCellView.h"
 #import "../Backend/DPKG-Parsers/LMPackageParser.h"
+#import "../Backend/Utilities/NVSCommandWrapper.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface NVSRepositoriesViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
+@property (strong) IBOutlet NSTextField *titleField;
 @property (strong) IBOutlet NSTableView *tableView;
 @property (nonatomic, retain) NSMutableArray *sourcesInList;
 @property (nonatomic, retain) NSMutableArray *sources;

@@ -25,5 +25,9 @@
 @property (nonatomic, retain) NSString *packagesURL;
 @property (nonatomic, retain) NSString *releasePath;
 @property (nonatomic, retain) NSString *packagesPath;
+@property (nonatomic, retain) NSURL *imageURL;
+@property (nonatomic, retain) NSImage *image;
+@property (nonatomic, retain) NSString *imagePath;
+@property (nonatomic, retain) NSString *repoURL;
 
 @end
