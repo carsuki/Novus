@@ -163,12 +163,7 @@
 
 - (IBAction)refreshRepos:(id)sender {
     self.titleField.stringValue = @"Refreshing...";
-    NSString *output;
-    NSString *error;
-    BOOL success = [[NVSCommandWrapper sharedInstance] runProcessAsAdministrator:@"/usr/local/bin/apt" withArguments:[NSArray arrayWithObject:@"update"] output:&output errorDescription:&error];
-    if (!success) {
-        NSLog(@"Failed to refresh: %@", error);
-    }
+    [[NVSCommandWrapper sharedInstance] runAsRoot:@"apt-get update"];
     [self grabSourcesInLists];
     [self grabFilenames];
     [self parseRepos];
