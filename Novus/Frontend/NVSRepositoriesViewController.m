@@ -83,7 +83,11 @@
             repo.packagesURL = [NSString stringWithFormat:@"%@Packages", repoURL];
             repo.packagesPath = [NSString stringWithFormat:@"/usr/local/var/lib/apt/lists/%@", [[repo.packagesURL stringByReplacingOccurrencesOfString:@"https://" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@"_"]];
         }
-        [self.sources addObject:repo];
+        if ([[NSFileManager defaultManager] fileExistsAtPath:repo.releasePath] && [[NSFileManager defaultManager] fileExistsAtPath:repo.packagesPath]) {
+            [self.sources addObject:repo];
+        } else {
+            NSLog(@"Failed to add %@, does not exist.", repo.releasePath);
+        }
     }];
     NSLog(@"Got %ld repositories", (long)self.sources.count);
 }
