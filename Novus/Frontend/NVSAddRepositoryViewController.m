@@ -36,8 +36,8 @@
                     } else {
                         newLine = [NSString stringWithFormat:@"https://%@", newLine];
                     }
-                    newLine = [NSString stringWithFormat:@"deb %@ ./", newLine];
                 }
+                newLine = [NSString stringWithFormat:@"deb %@ ./", newLine];
                 [repositories addObject:newLine];
             }
         }];
