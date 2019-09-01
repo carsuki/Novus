@@ -2669,7 +2669,7 @@ Last update: x hour ago</string>
         <scene sceneID="eO6-BG-AWG">
             <objects>
                 <customObject id="JkX-Mp-9Xp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="view7" id="KRV-5i-6XP" customClass="NVSInstalledPackagesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewRepo" id="KRV-5i-6XP" customClass="NVSInstalledPackagesViewController" sceneMemberID="viewController">
                     <view key="view" id="d6L-5E-ocj">
                         <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                         <autoresizingMask key="autoresizingMask"/>
