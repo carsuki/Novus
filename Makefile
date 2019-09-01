@@ -1,4 +1,4 @@
-DEBUG ?= 0
+DEBUG ?= 1
 ifeq ($(DEBUG), 1)
     BUILD_CONFIG := Debug 
 else
