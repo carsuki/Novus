@@ -1806,7 +1806,7 @@ Revulate</string>
                                                                                                         </subviews>
                                                                                                     </view>
                                                                                                     <color key="borderColor" white="0.80000000000000004" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                                    <color key="fillColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                                                    <color key="fillColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                                                                                 </box>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VvP-1x-irx">
                                                                                                     <rect key="frame" x="170" y="100" width="885" height="18"/>
@@ -1919,7 +1919,7 @@ Last update: x hour ago</string>
                                                                         </button>
                                                                     </subviews>
                                                                 </view>
-                                                                <color key="fillColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="fillColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                                             </box>
                                                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="dSc-dG-2vu">
                                                                 <rect key="frame" x="779" y="556" width="60" height="24"/>
@@ -1950,7 +1950,7 @@ Last update: x hour ago</string>
                                                                         </button>
                                                                     </subviews>
                                                                 </view>
-                                                                <color key="fillColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                                                <color key="fillColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                                             </box>
                                                         </subviews>
                                                     </view>
