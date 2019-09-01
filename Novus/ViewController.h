@@ -10,6 +10,8 @@
 #import "Backend/DPKG-Parsers/NVSRepo.h"
 #import "NVSPackage.h"
 #import "Backend/Utilities/NVSCommandWrapper.h"
+#import "Frontend/NVSRepositoriesViewController.h"
+#import "Frontend/NVSBrowseRepoViewController.h"
 
 @interface ViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
@@ -39,5 +41,8 @@
 @property (strong) IBOutlet NSTextField *manageLabel;
 @property (strong) IBOutlet NSTextField *repoLabel;
 @property (strong) IBOutlet NSTextField *packageLabel;
+
+-(void)openTab:(NSInteger)index;
+-(void)browseRepo:(NVSRepo *)repo;
 
 @end

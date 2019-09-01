@@ -175,4 +175,11 @@
     self.titleField.stringValue = @"Repositories";
 }
 
+-(BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
+    ViewController *preController = self.parentViewController;
+    [preController browseRepo:[self.sources objectAtIndex:row]];
+    
+    return NO;
+}
+
 @end

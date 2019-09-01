@@ -11,6 +11,7 @@
 #import "NVSRepoCellView.h"
 #import "../Backend/DPKG-Parsers/LMPackageParser.h"
 #import "../Backend/Utilities/NVSCommandWrapper.h"
+#import "../ViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

@@ -1809,7 +1809,7 @@ Revulate</string>
                                                                                                     <color key="fillColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                                                                                 </box>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VvP-1x-irx">
-                                                                                                    <rect key="frame" x="170" y="100" width="885" height="18"/>
+                                                                                                    <rect key="frame" x="170" y="100" width="714" height="18"/>
                                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" title="Description" id="JV3-Ub-7SW">
                                                                                                         <font key="font" metaFont="system" size="14"/>
@@ -1818,7 +1818,7 @@ Revulate</string>
                                                                                                     </textFieldCell>
                                                                                                 </textField>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r6e-qw-iXr">
-                                                                                                    <rect key="frame" x="170" y="60" width="885" height="38"/>
+                                                                                                    <rect key="frame" x="170" y="60" width="714" height="38"/>
                                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" id="OtO-bN-Mcc">
                                                                                                         <font key="font" metaFont="system" size="14"/>
@@ -1829,7 +1829,7 @@ Last update: x hour ago</string>
                                                                                                     </textFieldCell>
                                                                                                 </textField>
                                                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bLB-EZ-5Mf">
-                                                                                                    <rect key="frame" x="170" y="120" width="885" height="36"/>
+                                                                                                    <rect key="frame" x="170" y="120" width="714" height="36"/>
                                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Repo" id="8WJ-b1-v95">
                                                                                                         <font key="font" metaFont="systemSemibold" size="30"/>
@@ -1892,7 +1892,7 @@ Last update: x hour ago</string>
                                                             </textField>
                                                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="XDn-y6-Ru0">
                                                                 <rect key="frame" x="844" y="556" width="72" height="24"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                 <view key="contentView" ambiguous="YES" id="FW5-Xe-45Z">
                                                                     <rect key="frame" x="0.0" y="0.0" width="72" height="24"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1923,7 +1923,7 @@ Last update: x hour ago</string>
                                                             </box>
                                                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="4" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="dSc-dG-2vu">
                                                                 <rect key="frame" x="779" y="556" width="60" height="24"/>
-                                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                 <view key="contentView" ambiguous="YES" id="mQB-8S-MZn">
                                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="24"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2664,11 +2664,11 @@ Last update: x hour ago</string>
             </objects>
             <point key="canvasLocation" x="-12" y="2296.5"/>
         </scene>
-        <!--Installed Packages View Controller-->
+        <!--Browse Repo View Controller-->
         <scene sceneID="eO6-BG-AWG">
             <objects>
                 <customObject id="JkX-Mp-9Xp" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="viewRepo" id="KRV-5i-6XP" customClass="NVSInstalledPackagesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="viewRepo" id="KRV-5i-6XP" customClass="NVSBrowseRepoViewController" sceneMemberID="viewController">
                     <view key="view" id="d6L-5E-ocj">
                         <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -2834,12 +2834,13 @@ Last update: x hour ago</string>
                         </subviews>
                     </view>
                     <connections>
-                        <outlet property="dateLabel" destination="U6U-xu-NEb" id="QXo-b5-aTh"/>
-                        <outlet property="tableView" destination="JEV-Ye-vEz" id="m8L-AJ-Wza"/>
+                        <outlet property="dateLabel" destination="U6U-xu-NEb" id="m79-LP-k65"/>
+                        <outlet property="tableView" destination="JEV-Ye-vEz" id="uBd-nj-K4J"/>
+                        <outlet property="titleField" destination="nvl-9h-V1O" id="ISX-EA-37U"/>
                     </connections>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="1973" y="1507"/>
+            <point key="canvasLocation" x="1975" y="1507"/>
         </scene>
     </scenes>
     <resources>
