@@ -1502,10 +1502,10 @@ Revulate</string>
             </objects>
             <point key="canvasLocation" x="-12" y="1506.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Today View Controller-->
         <scene sceneID="hII-Ja-Ece">
             <objects>
-                <viewController storyboardIdentifier="view0" id="wtx-FE-1JY" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="view0" id="wtx-FE-1JY" customClass="NVSTodayViewController" sceneMemberID="viewController">
                     <view key="view" id="GtI-49-bgd">
                         <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1518,7 +1518,7 @@ Revulate</string>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rp5-it-LNY">
-                                            <rect key="frame" x="30" y="623" width="117" height="17"/>
+                                            <rect key="frame" x="30" y="623" width="892" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" lineBreakMode="clipping" title="SUNDAY 30 JUNE" id="9Ec-gN-Nfg">
                                                 <font key="font" metaFont="systemSemibold" size="13"/>
@@ -1704,6 +1704,9 @@ Revulate</string>
                             </box>
                         </subviews>
                     </view>
+                    <connections>
+                        <outlet property="dateField" destination="Rp5-it-LNY" id="sZt-6g-skF"/>
+                    </connections>
                 </viewController>
                 <customObject id="pi4-q4-5iL" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1736,7 +1739,7 @@ Revulate</string>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="c8v-Vp-wEe">
-                                                                <rect key="frame" x="30" y="623" width="117" height="17"/>
+                                                                <rect key="frame" x="30" y="623" width="888" height="17"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="SUNDAY 30 JUNE" id="2PK-iY-i0j">
                                                                     <font key="font" metaFont="systemSemibold" size="13"/>
@@ -1972,6 +1975,7 @@ Last update: x hour ago</string>
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="dateLabel" destination="c8v-Vp-wEe" id="7hL-MV-KBC"/>
                         <outlet property="tableView" destination="zhf-t5-9VN" id="85k-ro-fa5"/>
                         <outlet property="titleField" destination="Yvu-vU-Nhc" id="2U2-tj-Prf"/>
                     </connections>

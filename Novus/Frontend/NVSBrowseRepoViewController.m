@@ -20,6 +20,10 @@
     self.titleField.stringValue = self.repo.label;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"EEEE, d MMMM"];
+    self.dateLabel.stringValue = [formatter stringFromDate:[NSDate date]];
 }
 
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {

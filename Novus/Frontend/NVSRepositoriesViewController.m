@@ -27,6 +27,11 @@
     [self grabSourcesInLists];
     [self grabFilenames];
     [self parseRepos];
+    
+    
+    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"EEEE, d MMMM"];
+    self.dateLabel.stringValue = [formatter stringFromDate:[NSDate date]];
 }
 
 -(void)grabSourcesInLists {
