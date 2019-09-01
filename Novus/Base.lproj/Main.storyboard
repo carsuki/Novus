@@ -1740,7 +1740,7 @@ Revulate</string>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="SUNDAY 30 JUNE" id="2PK-iY-i0j">
                                                                     <font key="font" metaFont="systemSemibold" size="13"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
@@ -1801,19 +1801,19 @@ Revulate</string>
                                                                                                                         </imageView>
                                                                                                                     </subviews>
                                                                                                                 </view>
-                                                                                                                <color key="fillColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                                <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                                             </box>
                                                                                                         </subviews>
                                                                                                     </view>
                                                                                                     <color key="borderColor" white="0.80000000000000004" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                                    <color key="fillColor" white="0.0" alpha="0.10000000000000001" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                                                    <color key="fillColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                                                                                 </box>
                                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VvP-1x-irx">
                                                                                                     <rect key="frame" x="170" y="100" width="885" height="18"/>
                                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" title="Description" id="JV3-Ub-7SW">
                                                                                                         <font key="font" metaFont="system" size="14"/>
-                                                                                                        <color key="textColor" red="0.35681488410000001" green="0.35761901569999999" blue="0.36988995470000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                        <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                                     </textFieldCell>
                                                                                                 </textField>
@@ -1824,7 +1824,7 @@ Revulate</string>
                                                                                                         <font key="font" metaFont="system" size="14"/>
                                                                                                         <string key="title">Packages: 0
 Last update: x hour ago</string>
-                                                                                                        <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.61568627450000002" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                        <color key="textColor" name="controlShadowColor" catalog="System" colorSpace="catalog"/>
                                                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                                     </textFieldCell>
                                                                                                 </textField>
@@ -1868,7 +1868,7 @@ Last update: x hour ago</string>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="here." id="efe-65-dz5">
                                                                     <font key="font" metaFont="system"/>
-                                                                    <color key="textColor" red="0.50588235290000005" green="0.40000000000000002" blue="0.77647058820000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="1" green="0.40784313729999999" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
@@ -1877,7 +1877,7 @@ Last update: x hour ago</string>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="This are repositories you add, if you would like to learn more about repositories, you can click" id="I9f-3e-DbL">
                                                                     <font key="font" metaFont="system"/>
-                                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" name="disabledControlTextColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
@@ -1967,7 +1967,7 @@ Last update: x hour ago</string>
                                         </scrollView>
                                     </subviews>
                                 </view>
-                                <color key="fillColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="fillColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                             </box>
                         </subviews>
                     </view>
