@@ -1689,7 +1689,6 @@ Revulate</string>
                                                                             </textField>
                                                                         </subviews>
                                                                     </view>
-                                                                    <color key="fillColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                                                 </box>
                                                             </subviews>
                                                         </view>
