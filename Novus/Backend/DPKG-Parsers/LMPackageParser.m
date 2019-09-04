@@ -45,6 +45,9 @@
             // reset it
             package = nil;
             package = [[NVSPackage alloc] init];
+            if ([filePath isEqual:@"/usr/local/var/lib/dpkg/status"]) {
+                package.installed = YES;
+            }
             lastKey = nil;
             //break;
         } else {

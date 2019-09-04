@@ -23,5 +23,6 @@
 @property (nonatomic, strong) NSString *section;
 @property (nonatomic, strong) NSString *filename;
 @property (nonatomic, strong) NSString *homepage;
+@property (nonatomic) BOOL installed;
 
 @end

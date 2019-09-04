@@ -12,6 +12,7 @@
 		4D0845E9230DA92800BDFAAE /* NVSPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0845E5230DA92800BDFAAE /* NVSPackage.m */; };
 		4D0845EC230DA93000BDFAAE /* LMPackageParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0845EA230DA93000BDFAAE /* LMPackageParser.m */; };
 		4D0845F2230DAB7600BDFAAE /* NVSPackageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0845F1230DAB7600BDFAAE /* NVSPackageCellView.m */; };
+		4D0BA9FA231FF59D000525E4 /* NVSPackageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BA9F9231FF59D000525E4 /* NVSPackageManager.m */; };
 		4DA343B122C914500006897E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343B022C914500006897E /* AppDelegate.m */; };
 		4DA343B422C914500006897E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343B322C914500006897E /* ViewController.m */; };
 		4DA343B622C914500006897E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA343B522C914500006897E /* Assets.xcassets */; };
@@ -40,6 +41,8 @@
 		4D0845EB230DA93000BDFAAE /* LMPackageParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LMPackageParser.h; sourceTree = "<group>"; };
 		4D0845F0230DAB7600BDFAAE /* NVSPackageCellView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSPackageCellView.h; sourceTree = "<group>"; };
 		4D0845F1230DAB7600BDFAAE /* NVSPackageCellView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSPackageCellView.m; sourceTree = "<group>"; };
+		4D0BA9F8231FF59D000525E4 /* NVSPackageManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSPackageManager.h; sourceTree = "<group>"; };
+		4D0BA9F9231FF59D000525E4 /* NVSPackageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSPackageManager.m; sourceTree = "<group>"; };
 		4DA343AC22C914500006897E /* Novus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Novus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA343AF22C914500006897E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4DA343B022C914500006897E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -186,8 +189,10 @@
 		B189947522D1266400C66B37 /* Database */ = {
 			isa = PBXGroup;
 			children = (
-				B189947622D1268300C66B37 /* NVSDatabaseManager.m */,
 				B189947822D126AA00C66B37 /* NVSDatabaseManager.h */,
+				B189947622D1268300C66B37 /* NVSDatabaseManager.m */,
+				4D0BA9F8231FF59D000525E4 /* NVSPackageManager.h */,
+				4D0BA9F9231FF59D000525E4 /* NVSPackageManager.m */,
 			);
 			path = Database;
 			sourceTree = "<group>";
@@ -286,6 +291,7 @@
 				4D0845E8230DA92800BDFAAE /* NVSRepo.m in Sources */,
 				4DCF829F2314265200E9A55D /* NVSTransparentScroller.m in Sources */,
 				B157450022F12BC800609760 /* NVSCommandWrapper.m in Sources */,
+				4D0BA9FA231FF59D000525E4 /* NVSPackageManager.m in Sources */,
 				4D0845E9230DA92800BDFAAE /* NVSPackage.m in Sources */,
 				4D0845F2230DAB7600BDFAAE /* NVSPackageCellView.m in Sources */,
 				4DCF829C2314149200E9A55D /* NVSRepoCellView.m in Sources */,

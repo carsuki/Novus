@@ -10,6 +10,7 @@
 #import "../Backend/DPKG-Parsers/NVSPackage.h"
 #import "../Backend/DPKG-Parsers/LMPackageParser.h"
 #import "NVSPackageCellView.h"
+#import "../Backend/Database/NVSPackageManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -17,7 +18,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (strong) IBOutlet NSTextField *dateLabel;
 @property (strong) IBOutlet NSTableView *tableView;
-@property (nonatomic, retain) LMPackageParser *parser;
 
 @end
 

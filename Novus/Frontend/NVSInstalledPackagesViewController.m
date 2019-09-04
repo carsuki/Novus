@@ -21,18 +21,17 @@
     [formatter setDateFormat:@"EEEE, d MMMM"];
     self.dateLabel.stringValue = [formatter stringFromDate:[NSDate date]];
     
-    self.parser = [[LMPackageParser alloc] initWithFilePath:@"/usr/local/var/lib/dpkg/status"];
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 }
 
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return self.parser.packages.count;
+    return [[NVSPackageManager sharedInstance] packagesArray].count;
 }
 
 -(NSView*)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NVSPackageCellView *view = [tableView makeViewWithIdentifier:@"PackageCell" owner:self];
-    NVSPackage *pkg = [self.parser.packages objectAtIndex:row];
+    NVSPackage *pkg = [[[NVSPackageManager sharedInstance] packagesArray] objectAtIndex:row];
     if (pkg.name) {
         view.textField.stringValue = pkg.name;
     } else {

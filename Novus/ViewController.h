@@ -12,6 +12,7 @@
 #import "Backend/Utilities/NVSCommandWrapper.h"
 #import "Frontend/NVSRepositoriesViewController.h"
 #import "Frontend/NVSBrowseRepoViewController.h"
+#import "Backend/Database/NVSPackageManager.h"
 
 @interface ViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 

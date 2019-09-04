@@ -24,6 +24,12 @@
     [[NVSCommandWrapper sharedInstance] runAsRoot:@"whoami"];
 }
 
+-(void)viewWillAppear {
+    [super viewWillAppear];
+    
+    [NVSPackageManager sharedInstance];
+}
+
 -(void)browseRepo:(NVSRepo *)repo {
     NVSBrowseRepoViewController *controller = [self.storyboard instantiateControllerWithIdentifier:@"viewRepo"];
     controller.repo = repo;
