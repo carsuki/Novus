@@ -37,7 +37,12 @@
                         newLine = [NSString stringWithFormat:@"https://%@", newLine];
                     }
                 }
-                newLine = [NSString stringWithFormat:@"deb %@ ./", newLine];
+                NSArray *distros = [newLine componentsSeparatedByString:@" "];
+                if (distros.count > 1) {
+                    newLine = [NSString stringWithFormat:@"deb %@", newLine];
+                } else {
+                    newLine = [NSString stringWithFormat:@"deb %@ ./", newLine];
+                }
                 [repositories addObject:newLine];
             }
         }];

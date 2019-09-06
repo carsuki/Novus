@@ -50,4 +50,10 @@
     return view;
 }
 
+-(BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
+    NVSPackage *pkg = [self.results objectAtIndex:row];
+    NSLog(@"%@", pkg.repository.label);
+    return NO;
+}
+
 @end
