@@ -75,7 +75,7 @@
     }
     
     fclose(f);
-    self.packages = [mutablePackages copy];
+    self.packages = mutablePackages;
     //UIAlertView *a = [[UIAlertView alloc] initWithTitle:@"a" message:[NSString stringWithFormat:@"%@",self.packages] delegate:nil cancelButtonTitle:@"a" otherButtonTitles:nil];
     //[a show];
     NSLog(@"Got %ld package(s) from %@", (long)self.packages.count, filePath);

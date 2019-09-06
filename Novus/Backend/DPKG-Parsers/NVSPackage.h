@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "../Utilities/NVSCommandWrapper.h"
+#import "NVSRepo.h"
 
 @interface NVSPackage : NSObject
 
@@ -23,6 +24,7 @@
 @property (nonatomic, strong) NSString *section;
 @property (nonatomic, strong) NSString *filename;
 @property (nonatomic, strong) NSString *homepage;
+@property (nonatomic, strong) NVSRepo *repository;
 @property (nonatomic) BOOL installed;
 
 @end

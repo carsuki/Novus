@@ -12,6 +12,7 @@
 #import "../Backend/DPKG-Parsers/LMPackageParser.h"
 #import "../Backend/Utilities/NVSCommandWrapper.h"
 #import "../ViewController.h"
+#import "../Backend/Database/NVSPackageManager.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -20,9 +21,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong) IBOutlet NSTextField *titleField;
 @property (strong) IBOutlet NSTableView *tableView;
 @property (strong) IBOutlet NSTextField *dateLabel;
-@property (nonatomic, retain) NSMutableArray *sourcesInList;
-@property (nonatomic, retain) NSMutableArray *sources;
-@property (nonatomic, retain) NSDateFormatter *dateFormatter;
 @property (nonatomic, retain) NSDateFormatter *lastDateFormatter;
 
 @end

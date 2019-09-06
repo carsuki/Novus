@@ -19,14 +19,8 @@
     // Do view setup here.
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    self.dateFormatter = [[NSDateFormatter alloc] init];
     self.lastDateFormatter = [[NSDateFormatter alloc] init];
     [self.lastDateFormatter setDateFormat:@"MMM d, h:mm a"];
-    [self.dateFormatter setDateFormat:@"E, d MMM yyyy HH:mm:ss Z"];
-    self.sources = [[NSMutableArray alloc] init];
-    [self grabSourcesInLists];
-    [self grabFilenames];
-    [self parseRepos];
     
     
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -34,133 +28,13 @@
     self.dateLabel.stringValue = [formatter stringFromDate:[NSDate date]];
 }
 
--(void)grabSourcesInLists {
-    self.sourcesInList = [[NSMutableArray alloc] init];
-    
-    // /usr/local/etc/apt/SOURCES.LIST
-    NSMutableArray *sourcesListLines = [NSMutableArray arrayWithArray:[[NSString stringWithContentsOfFile:@"/usr/local/etc/apt/sources.list" encoding:NSUTF8StringEncoding error:nil] componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]];
-    
-    [sourcesListLines enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSString *line = obj;
-        if (line.length > 4 && [line containsString:@"deb"]) {
-            [self.sourcesInList addObject:line];
-        }
-    }];
-    
-    // /usr/local/etc/apt/sources.list.d/NOVUS.LIST
-    NSMutableArray *novusListLines = [NSMutableArray arrayWithArray:[[NSString stringWithContentsOfFile:@"/usr/local/etc/apt/sources.list.d/NOVUS.LIST" encoding:NSUTF8StringEncoding error:nil] componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]];
-    
-    [novusListLines enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NSString *line = obj;
-        if (line.length > 4 && [line containsString:@"deb"]) {
-            [self.sourcesInList addObject:line];
-        }
-    }];
-}
-
--(void)grabFilenames {
-    [self.sourcesInList enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NVSRepo *repo = [[NVSRepo alloc] init];
-        NSString *fileLine = obj;
-        NSString *strippedFileLine = [fileLine substringFromIndex:4]; // removes "deb "
-        // i separate the string into two parts: "https://an.example.repourl/" and "./" (or some kinda "stable main" like bigboss and modmyi do)
-        NSInteger locationOfSpace = [strippedFileLine rangeOfString:@" "].location;
-        // the actual url
-        NSString *repoURL = [strippedFileLine substringToIndex:locationOfSpace];
-        // either the "./" or "stable main" etc at the end
-        NSString *repoDirectory = [strippedFileLine substringFromIndex:locationOfSpace + 1];
-        repo.repoURL = repoURL;
-        if(![repoDirectory isEqualToString:@"./"]) {
-            NSArray *repoComponents = [repoDirectory componentsSeparatedByString:@" "];
-            NSString *releaseURL = [NSString stringWithFormat:@"%@/dists/%@/Release",repoURL,[repoComponents objectAtIndex:0]];
-            repo.releaseURL = releaseURL;
-            repo.releasePath = [NSString stringWithFormat:@"/usr/local/var/lib/apt/lists/%@", [[releaseURL stringByReplacingOccurrencesOfString:@"https://" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@"_"]];
-            NSString *packagesURL = [NSString stringWithFormat:@"%@/dists/%@/%@/binary-darwin-amd64/Packages",repoURL,[repoComponents objectAtIndex:0],[repoComponents objectAtIndex:1]];
-            repo.packagesURL = packagesURL;
-            repo.packagesPath = [NSString stringWithFormat:@"/usr/local/var/lib/apt/lists/%@", [[packagesURL stringByReplacingOccurrencesOfString:@"https://" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@"_"]];
-        } else {
-            if (![[repoURL substringFromIndex:[repoURL length] - 1] isEqualToString:@"/"]) {
-                repoURL = [repoURL stringByAppendingString:@"/"];
-            }
-            repoURL = [repoURL stringByAppendingString:repoDirectory];
-            repo.releaseURL = [NSString stringWithFormat:@"%@Release", repoURL];
-            repo.releasePath = [NSString stringWithFormat:@"/usr/local/var/lib/apt/lists/%@", [[repo.releaseURL stringByReplacingOccurrencesOfString:@"https://" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@"_"]];
-            repo.packagesURL = [NSString stringWithFormat:@"%@Packages", repoURL];
-            repo.packagesPath = [NSString stringWithFormat:@"/usr/local/var/lib/apt/lists/%@", [[repo.packagesURL stringByReplacingOccurrencesOfString:@"https://" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@"_"]];
-        }
-        if ([[NSFileManager defaultManager] fileExistsAtPath:repo.releasePath] && [[NSFileManager defaultManager] fileExistsAtPath:repo.packagesPath]) {
-            [self.sources addObject:repo];
-        } else {
-            NSLog(@"Failed to add %@, does not exist.", repo.releasePath);
-        }
-    }];
-    NSLog(@"Got %ld repositories", (long)self.sources.count);
-}
-
--(void)parseRepos {
-    [self.sources enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        NVSRepo *repo = obj;
-        LMPackageParser *parser = [[LMPackageParser alloc] initWithFilePath:repo.packagesPath];
-        repo.packages = parser.packages;
-        NSMutableArray *releaseFileLines = [NSMutableArray arrayWithArray:[[NSString stringWithContentsOfFile:repo.releasePath encoding:NSUTF8StringEncoding error:nil] componentsSeparatedByCharactersInSet:[NSCharacterSet newlineCharacterSet]]];
-        [releaseFileLines enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            if ([obj containsString:@"Origin:"]) {
-                repo.origin = [[[obj componentsSeparatedByString:@"Origin: "] mutableCopy] objectAtIndex:1];
-            }
-            if ([obj containsString:@"Label:"]) {
-                repo.label = [[[obj componentsSeparatedByString:@"Label: "] mutableCopy] objectAtIndex:1];
-            }
-            if ([obj containsString:@"Suite:"]) {
-                repo.suite = [[[obj componentsSeparatedByString:@"Suite: "] mutableCopy] objectAtIndex:1];
-            }
-            if ([obj containsString:@"Version:"]) {
-                repo.version = [[[obj componentsSeparatedByString:@"Version: "] mutableCopy] objectAtIndex:1];
-            }
-            if ([obj containsString:@"Codename:"]) {
-                repo.codename = [[[obj componentsSeparatedByString:@"Codename: "] mutableCopy] objectAtIndex:1];
-            }
-            if ([obj containsString:@"Architectures:"]) {
-                repo.architectures = [[[obj componentsSeparatedByString:@"Architectures: "] mutableCopy] objectAtIndex:1];
-            }
-            if ([obj containsString:@"Components:"]) {
-                repo.components = [[[obj componentsSeparatedByString:@"Components: "] mutableCopy] objectAtIndex:1];
-            }
-            if ([obj containsString:@"Description:"]) {
-                repo.desc = [[[obj componentsSeparatedByString:@"Description: "] mutableCopy] objectAtIndex:1];
-            }
-            if ([obj containsString:@"Date:"]) {
-                repo.lastUpdated = [self.dateFormatter dateFromString:[[[obj componentsSeparatedByString:@"Date: "] mutableCopy] objectAtIndex:1]];
-            }
-        }];
-        // Grab repo icons
-        repo.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/RepoIcon.png", repo.repoURL]];
-        NSString *localImagePath = [repo.releasePath stringByReplacingOccurrencesOfString:@"Release" withString:@".png"];
-        NSImage *repoIcon = [[NSImage alloc] initWithContentsOfURL:repo.imageURL];
-        repo.imagePath = localImagePath;
-        if (repoIcon) {
-            if (![[NSFileManager defaultManager] fileExistsAtPath:localImagePath]) {
-                CGImageRef cgRef = [repoIcon CGImageForProposedRect:NULL context:nil hints:nil];
-                NSBitmapImageRep *newRep = [[NSBitmapImageRep alloc] initWithCGImage:cgRef];
-                [newRep setSize:repoIcon.size];
-                NSData *pngData = [newRep representationUsingType:NSPNGFileType properties:nil];
-                [pngData writeToFile:localImagePath atomically:YES];
-                NSLog(@"did grab icon");
-            }
-            repo.image = repoIcon;
-        }
-        [self.sources removeObjectAtIndex:idx];
-        [self.sources insertObject:repo atIndex:idx];
-    }];
-    [self.tableView reloadData];
-}
-
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return self.sourcesInList.count;
+    return [[NVSPackageManager sharedInstance] sources].count;
 }
 
 -(NSView*)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NVSRepoCellView *view = [tableView makeViewWithIdentifier:@"RepoCell" owner:self];
-    NVSRepo *repo = [self.sources objectAtIndex:row];
+    NVSRepo *repo = [[[NVSPackageManager sharedInstance] sources] objectAtIndex:row];
     view.textField.stringValue = repo.label;
     view.descField.stringValue = repo.desc;
     view.infoField.stringValue = [NSString stringWithFormat:@"Packages: %ld \nLast update: %@", (long)repo.packages.count, [self.lastDateFormatter stringFromDate:repo.lastUpdated]];
@@ -173,16 +47,13 @@
 - (IBAction)refreshRepos:(id)sender {
     self.titleField.stringValue = @"Refreshing...";
     [[NVSCommandWrapper sharedInstance] runAsRoot:@"apt-get update"];
-    [self grabSourcesInLists];
-    [self grabFilenames];
-    [self parseRepos];
     [self.tableView reloadData];
     self.titleField.stringValue = @"Repositories";
 }
 
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
     ViewController *preController = self.parentViewController;
-    [preController browseRepo:[self.sources objectAtIndex:row]];
+    [preController browseRepo:[[[NVSPackageManager sharedInstance] sources] objectAtIndex:row]];
     
     return NO;
 }

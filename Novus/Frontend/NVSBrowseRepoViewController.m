@@ -42,8 +42,8 @@
         NSArray *maintainer = [pkg.maintainer componentsSeparatedByString:@"<"];
         view.maintainerField.stringValue = [maintainer objectAtIndex:0];
     }
-    if (pkg.desc) {
-        view.descField.stringValue = pkg.desc;
+    if (pkg.repository) {
+        view.descField.stringValue = pkg.repository.label;
     }
     
     return view;
