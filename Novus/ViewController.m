@@ -30,6 +30,18 @@
     [NVSPackageManager sharedInstance];
 }
 
+-(IBAction)search:(id)sender {
+    if (self.searchField.stringValue.length > 0) {
+        NVSSearchViewController *controller = [self.storyboard instantiateControllerWithIdentifier:@"search"];
+        controller.searchQuery = self.searchField.stringValue;
+        [self addChildViewController:controller];
+        [self.containerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+        controller.view.translatesAutoresizingMaskIntoConstraints = NO;
+        [self.containerView addSubview:controller.view];
+        [NSLayoutConstraint activateConstraints:@[[controller.view.leadingAnchor constraintEqualToAnchor:self.containerView.leadingAnchor], [controller.view.trailingAnchor constraintEqualToAnchor:self.containerView.trailingAnchor], [controller.view.topAnchor constraintEqualToAnchor:self.containerView.topAnchor], [controller.view.bottomAnchor constraintEqualToAnchor:self.containerView.bottomAnchor]]];
+    }
+}
+
 -(void)browseRepo:(NVSRepo *)repo {
     NVSBrowseRepoViewController *controller = [self.storyboard instantiateControllerWithIdentifier:@"viewRepo"];
     controller.repo = repo;

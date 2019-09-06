@@ -47,7 +47,6 @@
         [self.installedPackagesDict setObject:pkg forKey:pkg.identifier];
         [self.packagesDict setObject:pkg forKey:pkg.identifier];
     }];
-    NSLog(@"Installed Packages before anything: %ld", (long)self.installedPackagesDict.count);
 }
 
 -(void)grabSourcesInLists {
@@ -179,8 +178,6 @@
 }
 
 -(void)addPackagesFromDictToAray {
-    NSLog(@"Installed Packages before enumerate: %ld", (long)self.installedPackagesDict.count);
-    NSLog(@"Total Packages before enumerate: %ld", (long)self.packagesDict.count);
     [self.packagesDict enumerateKeysAndObjectsUsingBlock:^(id  _Nonnull key, id  _Nonnull obj, BOOL * _Nonnull stop) {
         NVSPackage *pkg = obj;
         [self.packagesArray addObject:pkg];
@@ -189,8 +186,8 @@
         NVSPackage *pkg = obj;
         [self.installedPackagesArray addObject:pkg];
     }];
-    NSLog(@"Installed Packages: %ld", (long)self.installedPackagesDict.count);
-    NSLog(@"Total Packages: %ld", (long)self.packagesDict.count);
+    NSLog(@"[NVSPackageManager] Installed Packages: %ld", (long)self.installedPackagesDict.count);
+    NSLog(@"[NVSPackageManager] Total Packages: %ld", (long)self.packagesDict.count);
 }
 
 @end

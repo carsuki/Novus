@@ -13,6 +13,7 @@
 #import "Frontend/NVSRepositoriesViewController.h"
 #import "Frontend/NVSBrowseRepoViewController.h"
 #import "Backend/Database/NVSPackageManager.h"
+#import "Frontend/NVSSearchViewController.h"
 
 @interface ViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
@@ -22,6 +23,8 @@
 //
 //  SIDEBAR
 //
+
+@property (strong) IBOutlet NSSearchField *searchField;
 
 // Store Section
 @property (strong) IBOutlet NSImageView *storeImage;
@@ -45,5 +48,6 @@
 
 -(void)openTab:(NSInteger)index;
 -(void)browseRepo:(NVSRepo *)repo;
+-(IBAction)search:(id)sender;
 
 @end

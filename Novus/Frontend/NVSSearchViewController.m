@@ -1,38 +1,35 @@
 //
-//  NVSBrowseRepoViewController.m
+//  NVSSearchViewController.m
 //  Novus
 //
-//  Created by EvenDev on 01/09/2019.
+//  Created by EvenDev on 06/09/2019.
 //  Copyright © 2019 Polar Team. All rights reserved.
 //
 
-#import "NVSBrowseRepoViewController.h"
+#import "NVSSearchViewController.h"
 
-@interface NVSBrowseRepoViewController ()
+@interface NVSSearchViewController ()
 
 @end
 
-@implementation NVSBrowseRepoViewController
+@implementation NVSSearchViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-    self.titleField.stringValue = self.repo.label;
+    self.results = [NSMutableArray arrayWithArray:[[[NVSPackageManager sharedInstance] packagesArray] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"identifier contains[cd] %@", self.searchQuery]]];
+    self.titleField.stringValue = self.searchQuery;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"EEEE, d MMMM"];
-    self.dateLabel.stringValue = [formatter stringFromDate:[NSDate date]];
 }
 
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return self.repo.packages.count;
+    return self.results.count;
 }
 
 -(NSView*)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NVSPackageCellView *view = [tableView makeViewWithIdentifier:@"PackageCell" owner:self];
-    NVSPackage *pkg = [self.repo.packages objectAtIndex:row];
+    NVSPackage *pkg = [self.results objectAtIndex:row];
     if (pkg.name) {
         view.textField.stringValue = pkg.name;
     } else {
