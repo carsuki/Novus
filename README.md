@@ -20,6 +20,15 @@
     <br> 
 </p>
 
+## What's left before i say Novus GUI is ready for beta:
+- Dynamic today page
+- News page
+- Categories (should be easy with NVSPackageManager)
+- New Sidebar
+- Depiction (being designed) @comrade 
+- design revamp
+- bit optimization
+
 ## 📝 Table of Contents
 - [About](#about)
 - [Getting Started](#getting_started)
