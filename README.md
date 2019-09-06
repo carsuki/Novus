@@ -20,6 +20,9 @@
     <br> 
 </p>
 
+## TODO
+- Separate repo icons for distros
+
 ## What's left before i say Novus GUI is ready for beta:
 - Dynamic today page
 - News page
