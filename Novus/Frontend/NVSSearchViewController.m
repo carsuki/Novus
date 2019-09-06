@@ -17,7 +17,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do view setup here.
-    self.results = [NSMutableArray arrayWithArray:[[[NVSPackageManager sharedInstance] packagesArray] filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"identifier contains[cd] %@", self.searchQuery]]];
+    NSPredicate *identifierPredicate = [NSPredicate predicateWithFormat:@"identifier contains [cd] %@", self.searchQuery];
+    NSPredicate *maintainerPredicate = [NSPredicate predicateWithFormat:@"maintainer contains [cd] %@", self.searchQuery];
+    NSPredicate *authorPredicate = [NSPredicate predicateWithFormat:@"author contains [cd] %@", self.searchQuery];
+    NSPredicate *namePredicate = [NSPredicate predicateWithFormat:@"name contains [cd] %@", self.searchQuery];
+    self.results = [NSMutableArray arrayWithArray:[[[NVSPackageManager sharedInstance] packagesArray] filteredArrayUsingPredicate:[NSCompoundPredicate orPredicateWithSubpredicates:[NSArray arrayWithObjects:identifierPredicate, maintainerPredicate, authorPredicate, namePredicate, nil]]]];
     self.titleField.stringValue = self.searchQuery;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
