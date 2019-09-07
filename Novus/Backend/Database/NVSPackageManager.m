@@ -82,9 +82,11 @@
         NSString *repoURL = [strippedFileLine substringToIndex:locationOfSpace];
         // either the "./" or "stable main" etc at the end
         NSString *repoDirectory = [strippedFileLine substringFromIndex:locationOfSpace + 1];
+        repo.repoDirectory = repoDirectory;
         repo.repoURL = repoURL;
         if(![repoDirectory isEqualToString:@"./"]) {
             NSArray *repoComponents = [repoDirectory componentsSeparatedByString:@" "];
+            repo.repoComponents = repoComponents;
             NSString *releaseURL = [NSString stringWithFormat:@"%@/dists/%@/Release",repoURL,[repoComponents objectAtIndex:0]];
             repo.releaseURL = releaseURL;
             repo.releasePath = [NSString stringWithFormat:@"/usr/local/var/lib/apt/lists/%@", [[releaseURL stringByReplacingOccurrencesOfString:@"https://" withString:@""] stringByReplacingOccurrencesOfString:@"/" withString:@"_"]];
@@ -156,7 +158,11 @@
         }];
         
         // Grab repo icons
-        repo.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/RepoIcon.png", repo.repoURL]];
+        if(![repo.repoDirectory isEqualToString:@"./"]) {
+            repo.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/dists/%@/%@/RepoIcon.png", repo.repoURL, [repo.repoComponents objectAtIndex:0], [repo.repoComponents objectAtIndex:1]]];
+        } else {
+            repo.imageURL = [NSURL URLWithString:[NSString stringWithFormat:@"%@/RepoIcon.png", repo.repoURL]];
+        }
         NSString *localImagePath = [repo.releasePath stringByReplacingOccurrencesOfString:@"Release" withString:@".png"];
         NSImage *repoIcon = [[NSImage alloc] initWithContentsOfURL:repo.imageURL];
         repo.imagePath = localImagePath;
@@ -165,7 +171,7 @@
                 CGImageRef cgRef = [repoIcon CGImageForProposedRect:NULL context:nil hints:nil];
                 NSBitmapImageRep *newRep = [[NSBitmapImageRep alloc] initWithCGImage:cgRef];
                 [newRep setSize:repoIcon.size];
-                NSData *pngData = [newRep representationUsingType:NSPNGFileType properties:nil];
+                NSData *pngData = [newRep representationUsingType:NSPNGFileType properties:@{}];
                 [pngData writeToFile:localImagePath atomically:YES];
                 NSLog(@"did grab icon");
             }

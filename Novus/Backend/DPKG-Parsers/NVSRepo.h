@@ -29,5 +29,7 @@
 @property (nonatomic, retain) NSImage *image;
 @property (nonatomic, retain) NSString *imagePath;
 @property (nonatomic, retain) NSString *repoURL;
+@property (nonatomic, retain) NSString *repoDirectory;
+@property (nonatomic, retain) NSArray *repoComponents;
 
 @end
