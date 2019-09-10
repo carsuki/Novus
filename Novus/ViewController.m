@@ -46,7 +46,6 @@
     NVSBrowseRepoViewController *controller = [self.storyboard instantiateControllerWithIdentifier:@"viewRepo"];
     controller.repo = repo;
     [self addChildViewController:controller];
-    [self.containerView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     controller.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self.containerView addSubview:controller.view];
     [NSLayoutConstraint activateConstraints:@[[controller.view.leadingAnchor constraintEqualToAnchor:self.containerView.leadingAnchor], [controller.view.trailingAnchor constraintEqualToAnchor:self.containerView.trailingAnchor], [controller.view.topAnchor constraintEqualToAnchor:self.containerView.topAnchor], [controller.view.bottomAnchor constraintEqualToAnchor:self.containerView.bottomAnchor]]];
