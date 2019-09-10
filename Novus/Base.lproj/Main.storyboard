@@ -1418,7 +1418,7 @@ Revulate</string>
                                                                                     </subviews>
                                                                                 </view>
                                                                                 <color key="borderColor" white="0.80000000000000004" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <color key="fillColor" red="1" green="0.40784313729999999" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <color key="fillColor" red="0.52941176470588236" green="0.38823529411764707" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             </box>
                                                                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="13" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="ZED-o9-lUg">
                                                                                 <rect key="frame" x="762" y="21" width="95" height="27"/>
@@ -1432,7 +1432,7 @@ Revulate</string>
                                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                             <textFieldCell key="cell" lineBreakMode="clipping" title="MANAGE" id="LVe-Kd-zcZ">
                                                                                                 <font key="font" metaFont="systemBold" size="12"/>
-                                                                                                <color key="textColor" red="1" green="0.40784313729999999" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                <color key="textColor" red="0.52941176470588236" green="0.38823529411764707" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                             </textFieldCell>
                                                                                         </textField>
@@ -1875,7 +1875,7 @@ Last update: x hour ago</string>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="here." id="efe-65-dz5">
                                                                     <font key="font" metaFont="system"/>
-                                                                    <color key="textColor" red="1" green="0.40784313729999999" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <color key="textColor" red="0.52941176470588236" green="0.38823529411764707" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
@@ -1889,11 +1889,11 @@ Last update: x hour ago</string>
                                                                 </textFieldCell>
                                                             </textField>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="92A-B2-JkY">
-                                                                <rect key="frame" x="30" y="558" width="158" height="19"/>
+                                                                <rect key="frame" x="30" y="558" width="161" height="19"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" lineBreakMode="clipping" title="YOUR REPOSITORIES" id="suW-6f-SkY">
-                                                                    <font key="font" metaFont="systemSemibold" size="15"/>
-                                                                    <color key="textColor" red="1" green="0.40784313729999999" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <font key="font" metaFont="systemBold" size="15"/>
+                                                                    <color key="textColor" red="0.52941176470588236" green="0.38823529411764707" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                 </textFieldCell>
                                                             </textField>
@@ -1909,7 +1909,7 @@ Last update: x hour ago</string>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Add Repo" id="ngj-WY-9dX">
                                                                                 <font key="font" metaFont="system"/>
-                                                                                <color key="textColor" red="1" green="0.40784313729999999" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <color key="textColor" red="0.52941176470588236" green="0.38823529411764707" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
@@ -1940,7 +1940,7 @@ Last update: x hour ago</string>
                                                                             <autoresizingMask key="autoresizingMask"/>
                                                                             <textFieldCell key="cell" lineBreakMode="clipping" title="Refresh" id="a7i-Ph-kbF">
                                                                                 <font key="font" metaFont="system"/>
-                                                                                <color key="textColor" red="1" green="0.40784313729999999" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <color key="textColor" red="0.52941176470588236" green="0.38823529411764707" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                         </textField>
@@ -2672,7 +2672,7 @@ Version 1.0</string>
                                                 <rect key="frame" x="-100" y="-100" width="952" height="15"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="C56-73-pgl" customClass="NVSTransparentScroller">
+                                            <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="C56-73-pgl" customClass="NVSTransparentScroller">
                                                 <rect key="frame" x="937" y="0.0" width="15" height="675"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
@@ -2778,7 +2778,7 @@ Version 1.0</string>
                                                                                     </subviews>
                                                                                 </view>
                                                                                 <color key="borderColor" white="0.80000000000000004" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <color key="fillColor" red="1" green="0.40784313729999999" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                <color key="fillColor" red="0.52941176470588236" green="0.38823529411764707" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             </box>
                                                                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="13" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="svc-x0-moZ">
                                                                                 <rect key="frame" x="762" y="21" width="95" height="27"/>
@@ -2792,7 +2792,7 @@ Version 1.0</string>
                                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                             <textFieldCell key="cell" lineBreakMode="clipping" title="MANAGE" id="a5I-Vg-ycw">
                                                                                                 <font key="font" metaFont="systemBold" size="12"/>
-                                                                                                <color key="textColor" red="1" green="0.40784313729999999" blue="0.078431372550000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                                                <color key="textColor" red="0.52941176470588236" green="0.38823529411764707" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                             </textFieldCell>
                                                                                         </textField>
