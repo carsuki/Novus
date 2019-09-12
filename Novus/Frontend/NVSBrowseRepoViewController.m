@@ -65,4 +65,10 @@
     return view;
 }
 
+-(BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
+    ViewController *parent = self.parentViewController;
+    [parent viewPackage:[self.repo.packages objectAtIndex:row]];
+    return NO;
+}
+
 @end

@@ -10,6 +10,7 @@
 #import "../Backend/DPKG-Parsers/NVSRepo.h"
 #import "../Backend/DPKG-Parsers/NVSPackage.h"
 #import "NVSPackageCellView.h"
+#import "../ViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

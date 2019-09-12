@@ -9,6 +9,7 @@
 #import <Cocoa/Cocoa.h>
 #import "../Backend/Database/NVSPackageManager.h"
 #import "NVSPackageCellView.h"
+#import "../ViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

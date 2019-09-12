@@ -14,6 +14,7 @@
 #import "Frontend/NVSBrowseRepoViewController.h"
 #import "Backend/Database/NVSPackageManager.h"
 #import "Frontend/NVSSearchViewController.h"
+#import "Frontend/NVSDepictionViewController.h"
 
 @interface ViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
@@ -48,6 +49,7 @@
 
 -(void)openTab:(NSInteger)index;
 -(void)browseRepo:(NVSRepo *)repo;
+-(void)viewPackage:(NVSPackage *)pkg;
 -(IBAction)search:(id)sender;
 
 @end

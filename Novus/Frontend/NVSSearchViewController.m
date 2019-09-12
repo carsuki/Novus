@@ -51,8 +51,8 @@
 }
 
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
-    NVSPackage *pkg = [self.results objectAtIndex:row];
-    NSLog(@"%@", pkg.repository.label);
+    ViewController *parent = self.parentViewController;
+    [parent viewPackage:[self.results objectAtIndex:row]];
     return NO;
 }
 

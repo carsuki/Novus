@@ -51,6 +51,15 @@
     [NSLayoutConstraint activateConstraints:@[[controller.view.leadingAnchor constraintEqualToAnchor:self.containerView.leadingAnchor], [controller.view.trailingAnchor constraintEqualToAnchor:self.containerView.trailingAnchor], [controller.view.topAnchor constraintEqualToAnchor:self.containerView.topAnchor], [controller.view.bottomAnchor constraintEqualToAnchor:self.containerView.bottomAnchor]]];
 }
 
+-(void)viewPackage:(NVSPackage *)pkg {
+    NVSDepictionViewController *controller = [self.storyboard instantiateControllerWithIdentifier:@"depiction"];
+    controller.package = pkg;
+    [self addChildViewController:controller];
+    controller.view.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.containerView addSubview:controller.view];
+    [NSLayoutConstraint activateConstraints:@[[controller.view.leadingAnchor constraintEqualToAnchor:self.containerView.leadingAnchor], [controller.view.trailingAnchor constraintEqualToAnchor:self.containerView.trailingAnchor], [controller.view.topAnchor constraintEqualToAnchor:self.containerView.topAnchor], [controller.view.bottomAnchor constraintEqualToAnchor:self.containerView.bottomAnchor]]];
+}
+
 -(void)openTab:(NSInteger)index {
     NSLog(@"Open view%ld", (long)index);
     NSViewController *controller = [self.storyboard instantiateControllerWithIdentifier:[NSString stringWithFormat:@"view%ld", (long)index]];

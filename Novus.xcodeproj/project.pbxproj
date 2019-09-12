@@ -19,6 +19,8 @@
 		4DA343B622C914500006897E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA343B522C914500006897E /* Assets.xcassets */; };
 		4DA343B922C914500006897E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA343B722C914500006897E /* Main.storyboard */; };
 		4DA343BC22C914500006897E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343BB22C914500006897E /* main.m */; };
+		4DBE333D232A70CB0094DEC5 /* NVSDepictionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE333C232A70CB0094DEC5 /* NVSDepictionViewController.m */; };
+		4DBE3341232A73FD0094DEC5 /* NVSDepiction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE3340232A73FD0094DEC5 /* NVSDepiction.m */; };
 		4DC5974A231C52CD001CE702 /* NVSBrowseRepoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC59749231C52CD001CE702 /* NVSBrowseRepoViewController.m */; };
 		4DC5974D231C5953001CE702 /* NVSTodayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DC5974C231C5953001CE702 /* NVSTodayViewController.m */; };
 		4DCF82992314137E00E9A55D /* NVSRepositoriesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DCF82982314137E00E9A55D /* NVSRepositoriesViewController.m */; };
@@ -56,6 +58,10 @@
 		4DA343BA22C914500006897E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DA343BB22C914500006897E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DA343BD22C914500006897E /* Novus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Novus.entitlements; sourceTree = "<group>"; };
+		4DBE333B232A70CB0094DEC5 /* NVSDepictionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSDepictionViewController.h; sourceTree = "<group>"; };
+		4DBE333C232A70CB0094DEC5 /* NVSDepictionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSDepictionViewController.m; sourceTree = "<group>"; };
+		4DBE333F232A73FD0094DEC5 /* NVSDepiction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSDepiction.h; sourceTree = "<group>"; };
+		4DBE3340232A73FD0094DEC5 /* NVSDepiction.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSDepiction.m; sourceTree = "<group>"; };
 		4DC59748231C52CD001CE702 /* NVSBrowseRepoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSBrowseRepoViewController.h; sourceTree = "<group>"; };
 		4DC59749231C52CD001CE702 /* NVSBrowseRepoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSBrowseRepoViewController.m; sourceTree = "<group>"; };
 		4DC5974B231C5953001CE702 /* NVSTodayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSTodayViewController.h; sourceTree = "<group>"; };
@@ -110,6 +116,8 @@
 				4DC59749231C52CD001CE702 /* NVSBrowseRepoViewController.m */,
 				4DC5974B231C5953001CE702 /* NVSTodayViewController.h */,
 				4DC5974C231C5953001CE702 /* NVSTodayViewController.m */,
+				4DBE333B232A70CB0094DEC5 /* NVSDepictionViewController.h */,
+				4DBE333C232A70CB0094DEC5 /* NVSDepictionViewController.m */,
 			);
 			path = Frontend;
 			sourceTree = "<group>";
@@ -150,9 +158,19 @@
 			path = Novus;
 			sourceTree = "<group>";
 		};
+		4DBE333E232A73EC0094DEC5 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				4DBE333F232A73FD0094DEC5 /* NVSDepiction.h */,
+				4DBE3340232A73FD0094DEC5 /* NVSDepiction.m */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
 		706D2AE722C9961100E73777 /* Backend */ = {
 			isa = PBXGroup;
 			children = (
+				4DBE333E232A73EC0094DEC5 /* Objects */,
 				B15744FE22F12B8B00609760 /* Utilities */,
 				B189947522D1266400C66B37 /* Database */,
 				706D2AEB22C9966000E73777 /* Repositories */,
@@ -294,11 +312,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D0845E8230DA92800BDFAAE /* NVSRepo.m in Sources */,
+				4DBE333D232A70CB0094DEC5 /* NVSDepictionViewController.m in Sources */,
 				4DCF829F2314265200E9A55D /* NVSTransparentScroller.m in Sources */,
 				B157450022F12BC800609760 /* NVSCommandWrapper.m in Sources */,
 				4D0BA9FA231FF59D000525E4 /* NVSPackageManager.m in Sources */,
 				4D0845E9230DA92800BDFAAE /* NVSPackage.m in Sources */,
 				4D0845F2230DAB7600BDFAAE /* NVSPackageCellView.m in Sources */,
+				4DBE3341232A73FD0094DEC5 /* NVSDepiction.m in Sources */,
 				4DCF829C2314149200E9A55D /* NVSRepoCellView.m in Sources */,
 				4DA343B422C914500006897E /* ViewController.m in Sources */,
 				4DA343BC22C914500006897E /* main.m in Sources */,

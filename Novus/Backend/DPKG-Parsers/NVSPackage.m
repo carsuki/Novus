@@ -35,6 +35,28 @@
     
 }
 
+- (int)remove {
+    NVSCommandWrapper *cmdWrapper = [NVSCommandWrapper sharedInstance];
+    NSArray *output = [cmdWrapper runAsRoot:[NSString stringWithFormat:@"apt remove %@", [self identifier]]];
+    
+    if(output == NULL) {
+        NSLog([NSString stringWithFormat:@"Error getting root while removing package: %@", [self identifier]]);
+        return -1;
+    }
+    
+    NSString *stdout = [output objectAtIndex:0];
+    NSString *stderr = [output objectAtIndex:1];
+    
+    if(![stderr isEqualToString:@""]) {
+        NSLog([NSString stringWithFormat:@"APT error while removing package %@\nstderr:%@", [self identifier], stdout]);
+        return -2;
+    }
+    
+    NSLog([NSString stringWithFormat:@"Removing package %@...", [self identifier]]);
+    NSLog(stdout);
+    return 0;
+}
+
 - (int)install {
     NVSCommandWrapper *cmdWrapper = [NVSCommandWrapper sharedInstance];
     NSArray *output = [cmdWrapper runAsRoot:[NSString stringWithFormat:@"apt install %@", [self identifier]]];

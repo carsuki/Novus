@@ -26,12 +26,12 @@
 }
 
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [[NVSPackageManager sharedInstance] packagesArray].count;
+    return [[NVSPackageManager sharedInstance] installedPackagesArray].count;
 }
 
 -(NSView*)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NVSPackageCellView *view = [tableView makeViewWithIdentifier:@"PackageCell" owner:self];
-    NVSPackage *pkg = [[[NVSPackageManager sharedInstance] packagesArray] objectAtIndex:row];
+    NVSPackage *pkg = [[[NVSPackageManager sharedInstance] installedPackagesArray] objectAtIndex:row];
     if (pkg.name) {
         view.textField.stringValue = pkg.name;
     } else {
@@ -46,6 +46,13 @@
     }
     
     return view;
+}
+
+-(BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
+    ViewController *parent = self.parentViewController;
+    NVSPackage *selPkg = [[[NVSPackageManager sharedInstance] installedPackagesArray] objectAtIndex:row];
+    [parent viewPackage:[[[NVSPackageManager sharedInstance] packagesDict] objectForKey:selPkg.identifier]];
+    return NO;
 }
 
 @end
