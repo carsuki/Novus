@@ -37,7 +37,7 @@
 
 - (int)remove {
     NVSCommandWrapper *cmdWrapper = [NVSCommandWrapper sharedInstance];
-    NSArray *output = [cmdWrapper runAsRoot:[NSString stringWithFormat:@"apt remove %@", [self identifier]]];
+    NSArray *output = [cmdWrapper runAsRoot:[NSString stringWithFormat:@"apt-get -yqf -oquiet::NoStatistic=true -oquiet::NoUpdate=true -oquiet::NoProgress=true -oApt::Get::HideAutoRemove=true --allow-remove-essential --allow-downgrades --reinstall install %@-", [self identifier]]];
     
     if(output == NULL) {
         NSLog([NSString stringWithFormat:@"Error getting root while removing package: %@", [self identifier]]);
@@ -59,7 +59,7 @@
 
 - (int)install {
     NVSCommandWrapper *cmdWrapper = [NVSCommandWrapper sharedInstance];
-    NSArray *output = [cmdWrapper runAsRoot:[NSString stringWithFormat:@"apt install %@", [self identifier]]];
+    NSArray *output = [cmdWrapper runAsRoot:[NSString stringWithFormat:@"apt-get -yqf -oquiet::NoStatistic=true -oquiet::NoUpdate=true -oquiet::NoProgress=true -oApt::Get::HideAutoRemove=true --allow-remove-essential --allow-downgrades --reinstall install %@", [self identifier]]];
     
     if(output == NULL) {
         NSLog([NSString stringWithFormat:@"Error getting root while installing package: %@", [self identifier]]);
