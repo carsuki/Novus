@@ -36,11 +36,12 @@
 }
 
 - (int)remove {
+    NSLog(@"Trying to remove %@", self.identifier);
     NVSCommandWrapper *cmdWrapper = [NVSCommandWrapper sharedInstance];
-    NSArray *output = [cmdWrapper runAsRoot:[NSString stringWithFormat:@"apt-get -yqf -oquiet::NoStatistic=true -oquiet::NoUpdate=true -oquiet::NoProgress=true -oApt::Get::HideAutoRemove=true --allow-remove-essential --allow-downgrades --reinstall install %@-", [self identifier]]];
+    NSArray *output = [cmdWrapper runAsRoot:[NSString stringWithFormat:@"sudo /usr/local/bin/dpkg -y remove %@", [self identifier]]];
     
     if(output == NULL) {
-        NSLog([NSString stringWithFormat:@"Error getting root while removing package: %@", [self identifier]]);
+        NSLog(@"Error getting root while removing package: %@", [self identifier]);
         return -1;
     }
     
@@ -48,35 +49,52 @@
     NSString *stderr = [output objectAtIndex:1];
     
     if(![stderr isEqualToString:@""]) {
-        NSLog([NSString stringWithFormat:@"APT error while removing package %@\nstderr:%@", [self identifier], stdout]);
+        NSLog(@"APT error while removing package %@\nstderr:%@", [self identifier], stdout);
         return -2;
     }
     
-    NSLog([NSString stringWithFormat:@"Removing package %@...", [self identifier]]);
+    NSLog(@"Removing package %@...", [self identifier]);
     NSLog(stdout);
     return 0;
 }
 
 - (int)install {
+    NSLog(@"Trying to install %@", self.identifier);
     NVSCommandWrapper *cmdWrapper = [NVSCommandWrapper sharedInstance];
-    NSArray *output = [cmdWrapper runAsRoot:[NSString stringWithFormat:@"apt-get -yqf -oquiet::NoStatistic=true -oquiet::NoUpdate=true -oquiet::NoProgress=true -oApt::Get::HideAutoRemove=true --allow-remove-essential --allow-downgrades --reinstall install %@", [self identifier]]];
-    
-    if(output == NULL) {
-        NSLog([NSString stringWithFormat:@"Error getting root while installing package: %@", [self identifier]]);
-        return -1;
+    NSData *deb = [NSData dataWithContentsOfURL:[NSURL URLWithString:self.debURL]];
+    if (deb) {
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString  *documentsDirectory = [paths objectAtIndex:0];
+        
+        NSString  *filePath = [NSString stringWithFormat:@"%@/Novus/debs/%@", documentsDirectory, [NSString stringWithFormat:@"%@-%@.deb", self.identifier, self.version]];
+        BOOL isDir;
+        if (![[NSFileManager defaultManager] fileExistsAtPath:[NSString stringWithFormat:@"%@/Novus/debs/", documentsDirectory] isDirectory:&isDir]) {
+            NSError *error;
+            [[NSFileManager defaultManager] createDirectoryAtPath:[NSString stringWithFormat:@"%@/Novus/debs/", documentsDirectory] withIntermediateDirectories:YES attributes:nil error:&error];
+            if (error) {
+                NSLog(@"%@", error);
+            }
+        }
+        [deb writeToFile:filePath atomically:YES];
+        NSLog(@"Successfully downloaded deb to %@", filePath);
+        if ([[NSFileManager defaultManager] fileExistsAtPath:filePath]) {
+            NSArray *output = [cmdWrapper runAsRoot:[NSString stringWithFormat:@"/usr/local/bin/dpkg -i %@", filePath]];
+            
+            if(output == NULL) {
+                NSLog(@"Error getting root while installing package: %@", [self identifier]);
+                return -1;
+            }
+            
+            NSString *stdout = [output objectAtIndex:0];
+            
+            NSLog(@"Successfully installed package %@", [self identifier]);
+            return 0;
+        }
+    } else {
+        NSLog(@"Failed to install %@, couldn't download file: %@", self.identifier, self.debURL);
+        return -3;
     }
-    
-    NSString *stdout = [output objectAtIndex:0];
-    NSString *stderr = [output objectAtIndex:1];
-    
-    if(![stderr isEqualToString:@""]) {
-        NSLog([NSString stringWithFormat:@"APT error while installing package %@\nstderr:%@", [self identifier], stdout]);
-        return -2;
-    }
-    
-    NSLog([NSString stringWithFormat:@"Installing package %@...", [self identifier]]);
-    NSLog(stdout);
-    return 0;
+    return -4;
 }
 
 @end
