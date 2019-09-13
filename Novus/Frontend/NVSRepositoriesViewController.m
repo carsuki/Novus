@@ -46,7 +46,7 @@
 
 - (IBAction)refreshRepos:(id)sender {
     self.titleField.stringValue = @"Refreshing...";
-    [[NVSCommandWrapper sharedInstance] runAsRoot:@"/usr/local/bin/apt update"];
+    [[NVSCommandWrapper sharedInstance] runAsRoot:@"apt update"];
     [self.tableView reloadData];
     self.titleField.stringValue = @"Repositories";
 }

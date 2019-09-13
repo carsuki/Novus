@@ -32,7 +32,8 @@
     NSTask *task = [[NSTask alloc] init];
     task.launchPath = taskCommand;
     NSMutableArray *args = [NSMutableArray arrayWithObjects:commandWithArgs, nil];
-    [args insertObject:@"-c" atIndex:0];
+    [args insertObject:@"-l" atIndex:0];
+    [args insertObject:@"-c" atIndex:1];
     task.arguments = args;
     
     NSPipe *stdoutPipe = [NSPipe pipe];
