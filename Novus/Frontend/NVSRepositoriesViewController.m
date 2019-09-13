@@ -21,8 +21,8 @@
     self.tableView.dataSource = self;
     self.lastDateFormatter = [[NSDateFormatter alloc] init];
     [self.lastDateFormatter setDateFormat:@"MMM d, h:mm a"];
-    
-    
+
+
     NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"EEEE, d MMMM"];
     self.dateLabel.stringValue = [formatter stringFromDate:[NSDate date]];
@@ -40,7 +40,7 @@
     view.infoField.stringValue = [NSString stringWithFormat:@"Packages: %ld \nLast update: %@", (long)repo.packages.count, [self.lastDateFormatter stringFromDate:repo.lastUpdated]];
     view.repo = repo;
     view.imageView.image = repo.image;
-    
+
     return view;
 }
 
@@ -54,7 +54,7 @@
 -(BOOL)tableView:(NSTableView *)tableView shouldSelectRow:(NSInteger)row {
     ViewController *preController = self.parentViewController;
     [preController browseRepo:[[[NVSPackageManager sharedInstance] sources] objectAtIndex:row]];
-    
+
     return NO;
 }
 

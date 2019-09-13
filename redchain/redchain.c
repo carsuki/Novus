@@ -61,7 +61,7 @@ int main(int argc, char *argv[]){
         return 0;
     }
     
-    char *args[4] = {"/bin/zsh", "-c", argv[1], NULL};
+    char *args[5] = {"/bin/zsh", "-l", "-c", argv[1], NULL};
     execv(args[0], args);
     return EX_UNAVAILABLE;
 }
