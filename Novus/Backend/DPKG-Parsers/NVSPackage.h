@@ -24,6 +24,7 @@
 @property (nonatomic, strong) NSString *size;
 @property (nonatomic, strong) NSString *section;
 @property (nonatomic, strong) NSString *filename;
+@property (nonatomic, strong) NSString *debURL;
 @property (nonatomic, strong) NSString *homepage;
 @property (nonatomic, strong) NVSRepo *repository;
 @property (nonatomic, strong) NSString *depictionURL;

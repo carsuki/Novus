@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 +(id)sharedInstance;
 -(id)init;
 -(void)getInstalledPackages;
+-(void)refresh;
 
 @end
 

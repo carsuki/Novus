@@ -150,6 +150,7 @@
         [parser.packages enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NVSPackage *pkg = obj;
             pkg.repository = repo;
+            pkg.debURL = [NSString stringWithFormat:@"%@/%@", repo.repoURL, pkg.filename];
             if ([self.packagesDict objectForKey:pkg.identifier]) {
                 pkg.installed = YES;
             }
@@ -194,6 +195,20 @@
     }];
     NSLog(@"[NVSPackageManager] Installed Packages: %ld", (long)self.installedPackagesDict.count);
     NSLog(@"[NVSPackageManager] Total Packages: %ld", (long)self.packagesDict.count);
+}
+
+-(void)refresh {
+    [[NVSCommandWrapper sharedInstance] runAsRoot:@"apt-get update"];
+    self.packagesArray = [NSMutableArray new];
+    self.packagesDict = [NSMutableDictionary new];
+    self.installedPackagesArray = [NSMutableArray new];
+    self.installedPackagesDict = [NSMutableDictionary new];
+    self.sources = [[NSMutableArray alloc] init];
+    self.sourcesInList = [[NSMutableArray alloc] init];
+    [self getInstalledPackages];
+    [self grabSourcesInLists];
+    [self grabFilenames];
+    [self parseRepos];
 }
 
 @end
