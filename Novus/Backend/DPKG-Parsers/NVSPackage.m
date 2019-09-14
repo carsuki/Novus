@@ -38,7 +38,7 @@
 - (int)remove {
     NSLog(@"Trying to remove %@", self.identifier);
     NVSCommandWrapper *cmdWrapper = [NVSCommandWrapper sharedInstance];
-    NSArray *output = [cmdWrapper runAsRoot:[NSString stringWithFormat:@"/usr/local/bin/dpkg -r %@", [self identifier]]];
+    NSArray *output = [cmdWrapper runAsRoot:[NSString stringWithFormat:@"sudo /usr/local/bin/dpkg -y remove %@", [self identifier]]];
     
     if(output == NULL) {
         NSLog(@"Error getting root while removing package: %@", [self identifier]);
@@ -53,7 +53,7 @@
         return -2;
     }
     
-    NSLog(@"Successfully removed package %@", [self identifier]);
+    NSLog(@"Removing package %@...", [self identifier]);
     NSLog(stdout);
     return 0;
 }
