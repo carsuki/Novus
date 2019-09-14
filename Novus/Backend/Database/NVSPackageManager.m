@@ -193,6 +193,8 @@
         NVSPackage *pkg = obj;
         [self.installedPackagesArray addObject:pkg];
     }];
+    NSSortDescriptor *sort = [NSSortDescriptor sortDescriptorWithKey:@"name" ascending:YES selector:@selector(caseInsensitiveCompare:)];
+    self.installedPackagesArray = [NSMutableArray arrayWithArray:[[self installedPackagesArray] sortedArrayUsingDescriptors:@[sort]]];
     NSLog(@"[NVSPackageManager] Installed Packages: %ld", (long)self.installedPackagesDict.count);
     NSLog(@"[NVSPackageManager] Total Packages: %ld", (long)self.packagesDict.count);
 }
