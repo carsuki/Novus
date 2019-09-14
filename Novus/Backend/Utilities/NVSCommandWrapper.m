@@ -44,6 +44,8 @@
     NSFileHandle *stdoutFile = stdoutPipe.fileHandleForReading;
     NSFileHandle *stderrFile = stderrPipe.fileHandleForReading;
     
+    NSLog(@"about to run %@ as user", commandWithArgs);
+    
     [task launch];
     
     NSData *stdoutData = [stdoutFile readDataToEndOfFile];
@@ -116,7 +118,12 @@
         NSFileHandle *stdoutFile = stdoutPipe.fileHandleForReading;
         NSFileHandle *stderrFile = stderrPipe.fileHandleForReading;
         
+        NSLog(@"about to run %@ as root", commandWithArgs);
+        
         [task launch];
+        [task waitUntilExit];
+        
+        NSLog(@"reading stdout and stderr data");
         
         NSData *stdoutData = [stdoutFile readDataToEndOfFile];
         [stdoutFile closeFile];

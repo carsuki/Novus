@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14460.31"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -2349,15 +2349,15 @@ Last update: x hour ago</string>
                                             <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <clipView key="contentView" ambiguous="YES" drawsBackground="NO" copiesOnScroll="NO" id="CAY-oT-hBO">
-                                                <rect key="frame" x="0.0" y="0.0" width="937" height="675"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="952" height="675"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
                                                     <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WNz-Kh-tXG">
-                                                        <rect key="frame" x="0.0" y="-1422" width="954" height="1536"/>
+                                                        <rect key="frame" x="0.0" y="-1422" width="969" height="1536"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                         <subviews>
                                                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="19" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="xlB-ot-L7d">
-                                                                <rect key="frame" x="771" y="1426" width="95" height="38"/>
+                                                                <rect key="frame" x="786" y="1426" width="95" height="38"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                 <view key="contentView" ambiguous="YES" id="uMX-1n-hj5">
                                                                     <rect key="frame" x="0.0" y="0.0" width="95" height="38"/>
@@ -2389,7 +2389,7 @@ Last update: x hour ago</string>
                                                                 <color key="fillColor" red="0.52941176470588236" green="0.38823529411764707" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                                             </box>
                                                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="19" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="zEc-hk-a6W">
-                                                                <rect key="frame" x="879" y="1426" width="38" height="38"/>
+                                                                <rect key="frame" x="894" y="1426" width="38" height="38"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                 <view key="contentView" ambiguous="YES" id="PH7-nl-Fug">
                                                                     <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
@@ -2470,27 +2470,27 @@ Last update: x hour ago</string>
                                                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Novus" id="sve-Xg-fBP"/>
                                                             </imageView>
                                                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="dWG-Ck-oU7">
-                                                                <rect key="frame" x="252" y="1374" width="665" height="5"/>
+                                                                <rect key="frame" x="252" y="1374" width="680" height="5"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                             </box>
                                                             <scrollView fixedFrame="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UA0-Hz-oPs">
-                                                                <rect key="frame" x="32" y="857" width="922" height="415"/>
+                                                                <rect key="frame" x="32" y="857" width="937" height="415"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                 <clipView key="contentView" ambiguous="YES" id="t0f-Pf-fNq">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="922" height="400"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="937" height="415"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <view fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T9l-38-xX9">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="1421" height="400"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="1436" height="415"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eTS-zf-7Ka">
-                                                                                    <rect key="frame" x="0.0" y="0.0" width="650" height="400"/>
+                                                                                    <rect key="frame" x="0.0" y="15" width="650" height="400"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ExampleSS1" id="hWp-gD-eEg"/>
                                                                                 </imageView>
                                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ECB-7P-tso">
-                                                                                    <rect key="frame" x="667" y="0.0" width="650" height="400"/>
+                                                                                    <rect key="frame" x="667" y="15" width="650" height="400"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="ExampleSS1" id="FaV-bP-C86"/>
                                                                                     <userDefinedRuntimeAttributes>
@@ -2504,20 +2504,20 @@ Last update: x hour ago</string>
                                                                     </subviews>
                                                                 </clipView>
                                                                 <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="q3Y-D6-TBe" customClass="NVSTransparentScroller">
-                                                                    <rect key="frame" x="0.0" y="400" width="922" height="15"/>
+                                                                    <rect key="frame" x="0.0" y="399" width="937" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </scroller>
-                                                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="BZb-dt-B4I">
+                                                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="BZb-dt-B4I">
                                                                     <rect key="frame" x="-100" y="-100" width="15" height="391"/>
                                                                     <autoresizingMask key="autoresizingMask"/>
                                                                 </scroller>
                                                             </scrollView>
                                                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="njq-0X-Nyl">
-                                                                <rect key="frame" x="31" y="646" width="886" height="119"/>
+                                                                <rect key="frame" x="31" y="646" width="901" height="119"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                 <subviews>
                                                                     <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="xGq-GZ-WWl">
-                                                                        <rect key="frame" x="0.0" y="116" width="886" height="5"/>
+                                                                        <rect key="frame" x="0.0" y="116" width="901" height="5"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     </box>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IDF-ip-Ovx">
@@ -2542,7 +2542,7 @@ Last update: x hour ago</string>
                                                                         </textFieldCell>
                                                                     </textField>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hAg-vy-uVF">
-                                                                        <rect key="frame" x="774" y="20" width="114" height="38"/>
+                                                                        <rect key="frame" x="789" y="20" width="114" height="38"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                         <textFieldCell key="cell" alignment="right" id="3Zj-nm-4Yg">
                                                                             <font key="font" metaFont="system" size="16"/>
@@ -2553,7 +2553,7 @@ Version 1.0</string>
                                                                         </textFieldCell>
                                                                     </textField>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oDg-sA-onf">
-                                                                        <rect key="frame" x="774" y="81" width="114" height="19"/>
+                                                                        <rect key="frame" x="789" y="81" width="114" height="19"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Update History" id="WEh-3q-R4p">
                                                                             <font key="font" metaFont="system" size="16"/>
@@ -2564,11 +2564,11 @@ Version 1.0</string>
                                                                 </subviews>
                                                             </customView>
                                                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQn-os-fUy">
-                                                                <rect key="frame" x="31" y="20" width="886" height="195"/>
+                                                                <rect key="frame" x="31" y="20" width="901" height="195"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                 <subviews>
                                                                     <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="65i-Qn-h5o">
-                                                                        <rect key="frame" x="0.0" y="192" width="886" height="5"/>
+                                                                        <rect key="frame" x="0.0" y="192" width="901" height="5"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     </box>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W7u-zv-y1o">
@@ -2770,11 +2770,11 @@ Version 1.0</string>
                                                                 </subviews>
                                                             </customView>
                                                             <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nxI-NB-cbT">
-                                                                <rect key="frame" x="31" y="236" width="886" height="402"/>
+                                                                <rect key="frame" x="31" y="236" width="901" height="402"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                 <subviews>
                                                                     <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="aMT-Ms-sMY">
-                                                                        <rect key="frame" x="0.0" y="399" width="886" height="5"/>
+                                                                        <rect key="frame" x="0.0" y="399" width="901" height="5"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     </box>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Uls-Ht-PdF">
@@ -2805,12 +2805,12 @@ Version 1.0</string>
                                                                         </textFieldCell>
                                                                     </textField>
                                                                     <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BcN-1z-S0t">
-                                                                        <rect key="frame" x="430" y="288" width="455" height="54"/>
+                                                                        <rect key="frame" x="445" y="288" width="455" height="54"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                         <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="TempRatings" id="6ZE-Bx-xWm"/>
                                                                     </imageView>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fz0-xO-EVo">
-                                                                        <rect key="frame" x="345" y="288" width="75" height="22"/>
+                                                                        <rect key="frame" x="360" y="288" width="75" height="22"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="2 ratings" id="Maq-GD-Ghx">
                                                                             <font key="font" metaFont="system" size="18"/>
@@ -2819,10 +2819,10 @@ Version 1.0</string>
                                                                         </textFieldCell>
                                                                     </textField>
                                                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="10" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="qj8-iB-xLQ">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="435" height="270"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="442" height="270"/>
                                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                         <view key="contentView" ambiguous="YES" id="4nx-pj-wIT">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="435" height="270"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="442" height="270"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vGd-9Q-ajb">
@@ -2835,7 +2835,7 @@ Version 1.0</string>
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lMd-la-bvn">
-                                                                                    <rect key="frame" x="365" y="236" width="52" height="19"/>
+                                                                                    <rect key="frame" x="372" y="236" width="52" height="19"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="15 aug" id="Tze-Wn-Tpj">
                                                                                         <font key="font" metaFont="system" size="16"/>
@@ -2862,7 +2862,7 @@ Ketchup</string>
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nzw-Ge-ZwR">
-                                                                                    <rect key="frame" x="351" y="210" width="66" height="19"/>
+                                                                                    <rect key="frame" x="358" y="210" width="66" height="19"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="acryllect" id="0tJ-ac-v3C">
                                                                                         <font key="font" metaFont="system" size="16"/>
@@ -2875,10 +2875,10 @@ Ketchup</string>
                                                                         <color key="fillColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                                                     </box>
                                                                     <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="10" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="bmg-ct-n5v">
-                                                                        <rect key="frame" x="451" y="0.0" width="435" height="270"/>
+                                                                        <rect key="frame" x="458" y="0.0" width="443" height="270"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                                                         <view key="contentView" ambiguous="YES" id="ggk-1B-fSC">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="435" height="270"/>
+                                                                            <rect key="frame" x="0.0" y="0.0" width="443" height="270"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIX-Ge-4RL">
@@ -2909,7 +2909,7 @@ Ketchup</string>
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fJM-Ob-c85">
-                                                                                    <rect key="frame" x="365" y="236" width="52" height="19"/>
+                                                                                    <rect key="frame" x="373" y="236" width="52" height="19"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="15 aug" id="0et-lj-1Br">
                                                                                         <font key="font" metaFont="system" size="16"/>
@@ -2918,7 +2918,7 @@ Ketchup</string>
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QNW-dS-BTt">
-                                                                                    <rect key="frame" x="351" y="210" width="66" height="19"/>
+                                                                                    <rect key="frame" x="359" y="210" width="66" height="19"/>
                                                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="acryllect" id="Vua-lp-xOr">
                                                                                         <font key="font" metaFont="system" size="16"/>
@@ -2931,7 +2931,7 @@ Ketchup</string>
                                                                         <color key="fillColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                                                     </box>
                                                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KFS-6R-ofF">
-                                                                        <rect key="frame" x="836" y="364" width="52" height="19"/>
+                                                                        <rect key="frame" x="851" y="364" width="52" height="19"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                                                         <textFieldCell key="cell" lineBreakMode="clipping" title="See all" id="RaQ-dC-OK5">
                                                                             <font key="font" metaFont="system" size="16"/>
@@ -2942,7 +2942,7 @@ Ketchup</string>
                                                                 </subviews>
                                                             </customView>
                                                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROz-fK-pdb">
-                                                                <rect key="frame" x="29" y="783" width="890" height="66"/>
+                                                                <rect key="frame" x="29" y="783" width="905" height="66"/>
                                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                 <textFieldCell key="cell" id="k0Q-Jb-MpS">
                                                                     <font key="font" metaFont="system" size="16"/>
@@ -2960,8 +2960,8 @@ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wh
                                                 <rect key="frame" x="-100" y="-100" width="952" height="15"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <scroller key="verticalScroller" verticalHuggingPriority="750" horizontal="NO" id="C56-73-pgl" customClass="NVSTransparentScroller">
-                                                <rect key="frame" x="937" y="0.0" width="15" height="675"/>
+                                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="C56-73-pgl" customClass="NVSTransparentScroller">
+                                                <rect key="frame" x="936" y="0.0" width="16" height="675"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
                                         </scrollView>
