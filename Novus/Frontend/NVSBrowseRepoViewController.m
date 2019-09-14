@@ -21,9 +21,6 @@
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
     
-    NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"EEEE, d MMMM"];
-    self.dateLabel.stringValue = [formatter stringFromDate:[NSDate date]];
     
     self.box.frame = CGRectOffset(self.box.frame, self.view.frame.size.width, 0);
     [NSAnimationContext runAnimationGroup:^(NSAnimationContext * _Nonnull context) {

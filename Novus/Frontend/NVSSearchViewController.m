@@ -22,7 +22,7 @@
     NSPredicate *authorPredicate = [NSPredicate predicateWithFormat:@"author contains [cd] %@", self.searchQuery];
     NSPredicate *namePredicate = [NSPredicate predicateWithFormat:@"name contains [cd] %@", self.searchQuery];
     self.results = [NSMutableArray arrayWithArray:[[[NVSPackageManager sharedInstance] packagesArray] filteredArrayUsingPredicate:[NSCompoundPredicate orPredicateWithSubpredicates:[NSArray arrayWithObjects:identifierPredicate, maintainerPredicate, authorPredicate, namePredicate, nil]]]];
-    self.titleField.stringValue = self.searchQuery;
+    self.titleField.stringValue = [NSString stringWithFormat:@"Results for \"%@\"", self.searchQuery];;
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
 }

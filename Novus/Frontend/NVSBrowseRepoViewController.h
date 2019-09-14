@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NVSBrowseRepoViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
 @property (nonatomic, retain) NVSRepo *repo;
-@property (strong) IBOutlet NSTextField *dateLabel;
 @property (strong) IBOutlet NSTableView *tableView;
 @property (strong) IBOutlet NSTextField *titleField;
 @property (strong) IBOutlet NSBox *box;
