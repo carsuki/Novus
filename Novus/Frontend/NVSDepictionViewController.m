@@ -29,12 +29,16 @@
         DEBUGLOG("package %@ is installed", self.package.identifier);
         DEBUGLOG("setting button stringValue to GET");
         self.getButtonTitle.stringValue = @"GET";
-        [self.package remove];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [self.package remove];
+        });
     } else {
         DEBUGLOG("package %@ is not installed", self.package.identifier);
         DEBUGLOG("seting button stringValue to REMOVE");
         self.getButtonTitle.stringValue = @"REMOVE";
-        [self.package install];
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            [self.package install];
+        });
     }
 }
 
