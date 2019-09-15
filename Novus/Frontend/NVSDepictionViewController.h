@@ -10,6 +10,7 @@
 #import "../Backend/DPKG-Parsers/NVSPackage.h"
 #import "../Backend/DPKG-Parsers/NVSRepo.h"
 #import "../Backend/Database/NVSPackageManager.h"
+#import "../Backend/Utilities/debug.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

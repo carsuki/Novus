@@ -44,16 +44,20 @@
         return -1;
     }
     
-    NSString *stdout = [output objectAtIndex:0];
-    NSString *stderr = [output objectAtIndex:1];
+    NSString *stdout = [[NSString alloc] initWithData:[output objectAtIndex:0] encoding:NSUTF8StringEncoding];
+    NSString *stderr = [[NSString alloc] initWithData:[output objectAtIndex:1] encoding:NSUTF8StringEncoding];
     
+    /*
     if(![stderr isEqualToString:@""]) {
         NSLog(@"APT error while removing package %@\nstderr:%@", [self identifier], stdout);
         return -2;
     }
+     */
     
     NSLog(@"Removing package %@...", [self identifier]);
     NSLog(stdout);
+    self.installed = NO;
+    //NSLog(@"%@ is installed: %b", self.identifier, self.installed);
     return 0;
 }
 
@@ -66,16 +70,20 @@
         return -1;
     }
     
-    NSString *stdout = [output objectAtIndex:0];
-    NSString *stderr = [output objectAtIndex:1];
+    NSString *stdout = [[NSString alloc] initWithData:[output objectAtIndex:0] encoding:NSUTF8StringEncoding];
+    NSString *stderr = [[NSString alloc] initWithData:[output objectAtIndex:1] encoding:NSUTF8StringEncoding];
     
+    /*
     if(![stderr isEqualToString:@""]) {
         NSLog(@"APT error while installing package %@\nstderr:%@", [self identifier], stdout);
         return -2;
     }
+     */
     
     NSLog(@"Installing package %@...", [self identifier]);
     NSLog(stdout);
+    self.installed = YES;
+    //NSLog(@"%@ is installed: %b", self.identifier, self.installed);
     return 0;
 }
 

@@ -2770,7 +2770,7 @@ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wh
                                                 <rect key="frame" x="-100" y="-100" width="952" height="15"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
-                                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="C56-73-pgl" customClass="NVSTransparentScroller">
+                                            <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.0092915214866434725" horizontal="NO" id="C56-73-pgl" customClass="NVSTransparentScroller">
                                                 <rect key="frame" x="936" y="0.0" width="16" height="675"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                             </scroller>
