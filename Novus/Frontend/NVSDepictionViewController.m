@@ -27,18 +27,18 @@
 - (IBAction)action:(id)sender {
     if (self.package.installed) {
         DEBUGLOG("package %@ is installed", self.package.identifier);
+        ViewController *parent = self.parentViewController;
+        [parent openLogViewAndRunCommand:[NSString stringWithFormat:@"unbuffer apt-get -y remove %@", self.package.identifier]];
         DEBUGLOG("setting button stringValue to GET");
         self.getButtonTitle.stringValue = @"GET";
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            [self.package remove];
-        });
+        self.package.installed = NO;
     } else {
         DEBUGLOG("package %@ is not installed", self.package.identifier);
+        ViewController *parent = self.parentViewController;
+        [parent openLogViewAndRunCommand:[NSString stringWithFormat:@"unbuffer apt-get install %@", self.package.identifier]];
         DEBUGLOG("seting button stringValue to REMOVE");
         self.getButtonTitle.stringValue = @"REMOVE";
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            [self.package install];
-        });
+        self.package.installed = YES;
     }
 }
 
@@ -46,10 +46,14 @@
     [super viewDidLoad];
     
     self.box.frame = CGRectOffset(self.box.frame, self.view.frame.size.width, 0);
-    [NSAnimationContext runAnimationGroup:^(NSAnimationContext * _Nonnull context) {
-        context.duration = 0.3;
-        self.box.animator.frame = CGRectOffset(self.box.frame, -self.view.frame.size.width, 0);
-    }];
+    if (@available(macOS 10.12, *)) {
+        [NSAnimationContext runAnimationGroup:^(NSAnimationContext * _Nonnull context) {
+            context.duration = 0.3;
+            self.box.animator.frame = CGRectOffset(self.box.frame, -self.view.frame.size.width, 0);
+        }];
+    } else {
+        self.box.frame = CGRectOffset(self.box.frame, -self.view.frame.size.width, 0);
+    }
     
     NVSPackage *pkg = self.package;
     if (self.package) {

@@ -14,10 +14,11 @@
 		4D0845F2230DAB7600BDFAAE /* NVSPackageCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0845F1230DAB7600BDFAAE /* NVSPackageCellView.m */; };
 		4D0BA9FA231FF59D000525E4 /* NVSPackageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D0BA9F9231FF59D000525E4 /* NVSPackageManager.m */; };
 		4D26314A2322B65A00A40DC9 /* NVSSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D2631492322B65A00A40DC9 /* NVSSearchViewController.m */; };
+		4D283EC1232EBF7E00010A30 /* NVSLogViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4D283EC0232EBF7E00010A30 /* NVSLogViewController.m */; };
+		4D283EC4232ECBAF00010A30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4D283EC2232ECBAE00010A30 /* Main.storyboard */; };
 		4DA343B122C914500006897E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343B022C914500006897E /* AppDelegate.m */; };
 		4DA343B422C914500006897E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343B322C914500006897E /* ViewController.m */; };
 		4DA343B622C914500006897E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA343B522C914500006897E /* Assets.xcassets */; };
-		4DA343B922C914500006897E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA343B722C914500006897E /* Main.storyboard */; };
 		4DA343BC22C914500006897E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DA343BB22C914500006897E /* main.m */; };
 		4DBE333D232A70CB0094DEC5 /* NVSDepictionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE333C232A70CB0094DEC5 /* NVSDepictionViewController.m */; };
 		4DBE3341232A73FD0094DEC5 /* NVSDepiction.m in Sources */ = {isa = PBXBuildFile; fileRef = 4DBE3340232A73FD0094DEC5 /* NVSDepiction.m */; };
@@ -48,13 +49,15 @@
 		4D0BA9F9231FF59D000525E4 /* NVSPackageManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSPackageManager.m; sourceTree = "<group>"; };
 		4D2631482322B65A00A40DC9 /* NVSSearchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSSearchViewController.h; sourceTree = "<group>"; };
 		4D2631492322B65A00A40DC9 /* NVSSearchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSSearchViewController.m; sourceTree = "<group>"; };
+		4D283EBF232EBF7E00010A30 /* NVSLogViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NVSLogViewController.h; sourceTree = "<group>"; };
+		4D283EC0232EBF7E00010A30 /* NVSLogViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NVSLogViewController.m; sourceTree = "<group>"; };
+		4D283EC3232ECBAE00010A30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DA343AC22C914500006897E /* Novus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Novus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA343AF22C914500006897E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4DA343B022C914500006897E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4DA343B222C914500006897E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		4DA343B322C914500006897E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4DA343B522C914500006897E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4DA343B822C914500006897E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DA343BA22C914500006897E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DA343BB22C914500006897E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4DA343BD22C914500006897E /* Novus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Novus.entitlements; sourceTree = "<group>"; };
@@ -118,6 +121,8 @@
 				4DC5974C231C5953001CE702 /* NVSTodayViewController.m */,
 				4DBE333B232A70CB0094DEC5 /* NVSDepictionViewController.h */,
 				4DBE333C232A70CB0094DEC5 /* NVSDepictionViewController.m */,
+				4D283EBF232EBF7E00010A30 /* NVSLogViewController.h */,
+				4D283EC0232EBF7E00010A30 /* NVSLogViewController.m */,
 			);
 			path = Frontend;
 			sourceTree = "<group>";
@@ -147,10 +152,10 @@
 				706D2AE722C9961100E73777 /* Backend */,
 				4DA343AF22C914500006897E /* AppDelegate.h */,
 				4DA343B022C914500006897E /* AppDelegate.m */,
+				4D283EC2232ECBAE00010A30 /* Main.storyboard */,
 				4DA343B222C914500006897E /* ViewController.h */,
 				4DA343B322C914500006897E /* ViewController.m */,
 				4DA343B522C914500006897E /* Assets.xcassets */,
-				4DA343B722C914500006897E /* Main.storyboard */,
 				4DA343BA22C914500006897E /* Info.plist */,
 				4DA343BB22C914500006897E /* main.m */,
 				4DA343BD22C914500006897E /* Novus.entitlements */,
@@ -202,8 +207,8 @@
 		B15744FE22F12B8B00609760 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				B15744FF22F12BC800609760 /* NVSCommandWrapper.m */,
 				B157450122F12C0F00609760 /* NVSCommandWrapper.h */,
+				B15744FF22F12BC800609760 /* NVSCommandWrapper.m */,
 				B157450222F24D7A00609760 /* debug.h */,
 			);
 			path = Utilities;
@@ -298,9 +303,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D283EC4232ECBAF00010A30 /* Main.storyboard in Resources */,
 				B192504922D2B6A400D0D77B /* novus.db in Resources */,
 				4DA343B622C914500006897E /* Assets.xcassets in Resources */,
-				4DA343B922C914500006897E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +327,7 @@
 				4DCF829C2314149200E9A55D /* NVSRepoCellView.m in Sources */,
 				4DA343B422C914500006897E /* ViewController.m in Sources */,
 				4DA343BC22C914500006897E /* main.m in Sources */,
+				4D283EC1232EBF7E00010A30 /* NVSLogViewController.m in Sources */,
 				4DF7D8AB23158B0B005C6263 /* NVSAddRepositoryViewController.m in Sources */,
 				4DCF82992314137E00E9A55D /* NVSRepositoriesViewController.m in Sources */,
 				4DC5974D231C5953001CE702 /* NVSTodayViewController.m in Sources */,
@@ -337,10 +343,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		4DA343B722C914500006897E /* Main.storyboard */ = {
+		4D283EC2232ECBAE00010A30 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4DA343B822C914500006897E /* Base */,
+				4D283EC3232ECBAE00010A30 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -467,12 +473,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = Alpha;
-				DEVELOPMENT_TEAM = C73T9T9ZD4;
+				DEVELOPMENT_TEAM = 9859KQSN8L;
 				INFOPLIST_FILE = Novus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = org.polarteam.novus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -487,12 +494,13 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = Alpha;
-				DEVELOPMENT_TEAM = C73T9T9ZD4;
+				DEVELOPMENT_TEAM = 9859KQSN8L;
 				INFOPLIST_FILE = Novus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				PRODUCT_BUNDLE_IDENTIFIER = org.polarteam.novus;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";

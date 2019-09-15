@@ -15,10 +15,12 @@
 #import "Backend/Database/NVSPackageManager.h"
 #import "Frontend/NVSSearchViewController.h"
 #import "Frontend/NVSDepictionViewController.h"
+#import "Frontend/NVSLogViewController.h"
 
 @interface ViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
 @property (nonatomic, strong) NVSCommandWrapper *cmdWrapper;
+@property (nonatomic, strong) NSString *tempCommand;
 @property (strong) IBOutlet NSView *containerView;
 
 //
@@ -50,6 +52,7 @@
 -(void)openTab:(NSInteger)index;
 -(void)browseRepo:(NVSRepo *)repo;
 -(void)viewPackage:(NVSPackage *)pkg;
+-(void)openLogViewAndRunCommand:(NSString *)command;
 -(IBAction)search:(id)sender;
 
 @end

@@ -11,6 +11,8 @@
 @implementation NVSTransparentScroller
 
 - (void)drawRect:(NSRect)dirtyRect {
+    [[NSColor clearColor] set];
+    NSRectFill(dirtyRect);
     [self drawKnob];
 }
 

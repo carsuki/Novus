@@ -23,6 +23,9 @@
     [[NVSCommandWrapper sharedInstance] runAsUser:@"whoami"];
     [[NVSCommandWrapper sharedInstance] runAsRoot:@"whoami"];
 }
+- (IBAction)updat:(id)sender {
+    [self openLogViewAndRunCommand:@"apt update"];
+}
 
 -(void)viewWillAppear {
     [super viewWillAppear];
@@ -58,6 +61,11 @@
     controller.view.translatesAutoresizingMaskIntoConstraints = NO;
     [self.containerView addSubview:controller.view];
     [NSLayoutConstraint activateConstraints:@[[controller.view.leadingAnchor constraintEqualToAnchor:self.containerView.leadingAnchor], [controller.view.trailingAnchor constraintEqualToAnchor:self.containerView.trailingAnchor], [controller.view.topAnchor constraintEqualToAnchor:self.containerView.topAnchor], [controller.view.bottomAnchor constraintEqualToAnchor:self.containerView.bottomAnchor]]];
+}
+
+-(void)openLogViewAndRunCommand:(NSString *)command {
+    [[NSUserDefaults standardUserDefaults] setValue:command forKey:@"command"];
+    [self performSegueWithIdentifier:@"log" sender:command];
 }
 
 -(void)openTab:(NSInteger)index {
