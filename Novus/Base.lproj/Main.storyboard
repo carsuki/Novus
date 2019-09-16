@@ -1295,17 +1295,6 @@ Revulate Alex P. (acryllect) Theo Fortin (Topiga)</string>
                                             </subviews>
                                         </view>
                                     </box>
-                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="axB-dy-Hw4">
-                                        <rect key="frame" x="81" y="155" width="63" height="32"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <buttonCell key="cell" type="push" title="Log" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hTV-ej-Etk">
-                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                            <font key="font" metaFont="system"/>
-                                        </buttonCell>
-                                        <connections>
-                                            <action selector="updat:" target="XfG-lQ-9wD" id="Ydf-Nn-7gX"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </visualEffectView>
                             <containerView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z6A-yp-6EW">

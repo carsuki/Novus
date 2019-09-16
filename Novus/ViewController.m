@@ -23,9 +23,6 @@
     [[NVSCommandWrapper sharedInstance] runAsUser:@"whoami"];
     [[NVSCommandWrapper sharedInstance] runAsRoot:@"whoami"];
 }
-- (IBAction)updat:(id)sender {
-    [self openLogViewAndRunCommand:@"apt update"];
-}
 
 -(void)viewWillAppear {
     [super viewWillAppear];

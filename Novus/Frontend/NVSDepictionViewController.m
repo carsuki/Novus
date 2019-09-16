@@ -28,17 +28,17 @@
     if (self.package.installed) {
         DEBUGLOG("package %@ is installed", self.package.identifier);
         ViewController *parent = self.parentViewController;
-        [parent openLogViewAndRunCommand:[NSString stringWithFormat:@"unbuffer apt-get -y remove %@", self.package.identifier]];
         DEBUGLOG("setting button stringValue to GET");
         self.getButtonTitle.stringValue = @"GET";
         self.package.installed = NO;
+        [parent openLogViewAndRunCommand:[NSString stringWithFormat:@"unbuffer apt-get -y remove %@", self.package.identifier]];
     } else {
         DEBUGLOG("package %@ is not installed", self.package.identifier);
         ViewController *parent = self.parentViewController;
-        [parent openLogViewAndRunCommand:[NSString stringWithFormat:@"unbuffer apt-get install %@", self.package.identifier]];
         DEBUGLOG("seting button stringValue to REMOVE");
         self.getButtonTitle.stringValue = @"REMOVE";
         self.package.installed = YES;
+        [parent openLogViewAndRunCommand:[NSString stringWithFormat:@"unbuffer apt-get install %@", self.package.identifier]];
     }
 }
 
