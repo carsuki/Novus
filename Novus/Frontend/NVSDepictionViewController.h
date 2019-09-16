@@ -69,6 +69,10 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong) IBOutlet NSTextField *informationCategory;
 @property (strong) IBOutlet NSTextField *informationIdentifier;
 
+// Buttons
+@property (strong) IBOutlet NSButtonCell *developerSiteButton;
+
+
 @end
 
 NS_ASSUME_NONNULL_END

@@ -2444,9 +2444,12 @@ Version 1.0</string>
                                                                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5k0-9L-Qrl">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="165" height="20"/>
                                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="DeveloperWebsite" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="6a1-Sk-oYg">
+                                                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="DeveloperWebsite" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyUpOrDown" inset="2" id="6a1-Sk-oYg">
                                                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                                                 <font key="font" metaFont="system"/>
+                                                                                                <connections>
+                                                                                                    <action selector="openHomepage:" target="AY9-Zl-vsy" id="8u6-fN-f8V"/>
+                                                                                                </connections>
                                                                                             </buttonCell>
                                                                                         </button>
                                                                                     </subviews>
@@ -2501,7 +2504,7 @@ Version 1.0</string>
                                                                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oai-kq-eKw">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="155" height="20"/>
                                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="MoreByDeveloper" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="84f-gb-EQy">
+                                                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="MoreByDeveloper" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyUpOrDown" inset="2" id="84f-gb-EQy">
                                                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                                                 <font key="font" metaFont="system"/>
                                                                                             </buttonCell>
@@ -2558,7 +2561,7 @@ Version 1.0</string>
                                                                                         <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7bh-xi-sia">
                                                                                             <rect key="frame" x="-1" y="0.0" width="140" height="20"/>
                                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ReportIssue" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="2RQ-3s-pMQ">
+                                                                                            <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="ReportIssue" imagePosition="only" alignment="center" enabled="NO" imageScaling="proportionallyUpOrDown" inset="2" id="2RQ-3s-pMQ">
                                                                                                 <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                                                                                 <font key="font" metaFont="system"/>
                                                                                             </buttonCell>
@@ -2785,6 +2788,7 @@ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wh
                     </view>
                     <connections>
                         <outlet property="box" destination="DI2-D0-uPL" id="YvY-tH-4RS"/>
+                        <outlet property="developerSiteButton" destination="6a1-Sk-oYg" id="PSU-7A-yM7"/>
                         <outlet property="firstReview" destination="qj8-iB-xLQ" id="hFt-oV-vxR"/>
                         <outlet property="firstReviewContent" destination="I3a-U8-alA" id="pqj-zB-YYK"/>
                         <outlet property="firstReviewDate" destination="lMd-la-bvn" id="q3c-35-idf"/>

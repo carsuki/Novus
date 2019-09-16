@@ -42,6 +42,10 @@
     }
 }
 
+- (IBAction)openHomepage:(id)sender {
+    [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:self.package.homepage]];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -62,6 +66,9 @@
             self.getButtonTitle.stringValue = @"REMOVE";
         }
         if (!pkg.depiction) {
+            if (pkg.homepage) {
+                self.developerSiteButton.enabled = YES;
+            }
             if (pkg.name) {
                 self.packageName.stringValue = pkg.name;
             } else {
