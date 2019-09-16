@@ -47,6 +47,9 @@
             }
         }];
         NSString *novusList = [NSString stringWithContentsOfFile:@"/usr/local/etc/apt/sources.list.d/novus.list" encoding:NSUTF8StringEncoding error:nil];
+        if (![[NSFileManager defaultManager] fileExistsAtPath:@"/usr/local/etc/apt/sources.list.d/novus.list"]) {
+            [[NSFileManager defaultManager] createFileAtPath:@"/usr/local/etc/apt/sources.list.d/novus.list" contents:[NSData new] attributes:nil];
+        }
         NSString *newNovusList = [NSString new];
         newNovusList = [novusList stringByAppendingString:[NSString stringWithFormat:@"%@\n", [repositories componentsJoinedByString:@"\n"]]];
         NSError *error;

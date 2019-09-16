@@ -3253,11 +3253,11 @@ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wh
                                                                 <textView ambiguous="YES" editable="NO" drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="Zjl-RL-MVW">
                                                                     <rect key="frame" x="0.0" y="0.0" width="385" height="213"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                     <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
                                                                     <size key="minSize" width="385" height="213"/>
                                                                     <size key="maxSize" width="425" height="10000000"/>
-                                                                    <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                    <color key="insertionPointColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                 </textView>
                                                             </subviews>
                                                             <color key="backgroundColor" name="controlHighlightColor" catalog="System" colorSpace="catalog"/>
