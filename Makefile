@@ -49,7 +49,6 @@ package:: $(NOVUS_APP_DIR) redchain/bin/redchain
 	rm -f ./.build/install/Applications/Novus.app/Contents/PkgInfo
 	gsed -e "s@^\(Version:\).*@\1 $(VERSION)@" Novus.control > ./.build/control
 	echo "Installed-Size: $$(du -sk "./.build/install" | cut -f 1)" >> ./.build/control
-	echo "Depends: serna-apt-extra" >> ./.build/control
 	mkdir -p ./.build/install/DEBIAN
 	mv ./.build/control ./.build/install/DEBIAN
 	find ./.build/install -name '.DS_Store' -type f -delete
