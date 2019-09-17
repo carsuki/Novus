@@ -26,6 +26,8 @@
 - Categories (should be easy with NVSPackageManager)
 - New Sidebar
 - design revamp
+- Package icons
+- Queue
 
 ## 📝 Table of Contents
 - [About](#about)
