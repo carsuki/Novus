@@ -39,7 +39,11 @@
     view.descField.stringValue = repo.desc;
     view.infoField.stringValue = [NSString stringWithFormat:@"Packages: %ld \nLast update: %@", (long)repo.packages.count, [self.lastDateFormatter stringFromDate:repo.lastUpdated]];
     view.repo = repo;
-    view.imageView.image = repo.image;
+    if (repo.image) {
+        view.imageView.image = repo.image;
+    } else {
+        view.imageView.image = [NSImage imageNamed:@"Repositories"];
+    }
 
     return view;
 }
