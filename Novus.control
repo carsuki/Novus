@@ -1,6 +1,6 @@
 Package: novusgui
 Name: Novus
-Depends: apt (>= 1.8.0)
+Depends: apt (>= 1.8.0), serna-apt-extra
 Version:
 Architecture: darwin-amd64
 Description: Novus Package Manager
