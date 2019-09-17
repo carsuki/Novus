@@ -1404,22 +1404,21 @@ Revulate Alex P. (acryllect) Theo Fortin (Topiga)</string>
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                                 </textFieldCell>
                                                                             </textField>
-                                                                            <box fixedFrame="YES" boxType="custom" cornerRadius="30" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="usT-8F-XQi">
+                                                                            <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="usT-8F-XQi">
                                                                                 <rect key="frame" x="3" y="5" width="60" height="60"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <view key="contentView" ambiguous="YES" id="BPV-so-SK4">
-                                                                                    <rect key="frame" x="1" y="1" width="58" height="58"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                     <subviews>
-                                                                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jFW-jw-vCA">
+                                                                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jFW-jw-vCA">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="xD8-lR-EIv"/>
+                                                                                            <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="Utilities" id="xD8-lR-EIv"/>
                                                                                         </imageView>
                                                                                     </subviews>
                                                                                 </view>
                                                                                 <color key="borderColor" white="0.80000000000000004" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <color key="fillColor" red="0.52941176470588236" green="0.38823529411764707" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             </box>
                                                                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="13" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="ZED-o9-lUg">
                                                                                 <rect key="frame" x="762" y="21" width="95" height="27"/>
@@ -2278,7 +2277,7 @@ Last update: x hour ago</string>
                                                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5eX-h4-Eu1">
                                                                 <rect key="frame" x="32" y="1303" width="186" height="186"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Novus" id="sve-Xg-fBP"/>
+                                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="Utilities" id="sve-Xg-fBP"/>
                                                             </imageView>
                                                             <box verticalHuggingPriority="750" fixedFrame="YES" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="dWG-Ck-oU7">
                                                                 <rect key="frame" x="252" y="1374" width="665" height="5"/>
@@ -2904,14 +2903,14 @@ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wh
                                                                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                                 </textFieldCell>
                                                                             </textField>
-                                                                            <box fixedFrame="YES" boxType="custom" cornerRadius="30" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="hiR-Fp-Snh">
+                                                                            <box fixedFrame="YES" boxType="custom" borderWidth="0.0" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="hiR-Fp-Snh">
                                                                                 <rect key="frame" x="3" y="5" width="60" height="60"/>
                                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                 <view key="contentView" ambiguous="YES" id="yx7-jt-8tC">
-                                                                                    <rect key="frame" x="1" y="1" width="58" height="58"/>
+                                                                                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                                     <subviews>
-                                                                                        <imageView hidden="YES" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ONR-7P-iY2">
+                                                                                        <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ONR-7P-iY2">
                                                                                             <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
                                                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                                             <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSActionTemplate" id="1eJ-Ze-gyg"/>
@@ -2919,7 +2918,6 @@ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wh
                                                                                     </subviews>
                                                                                 </view>
                                                                                 <color key="borderColor" white="0.80000000000000004" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                                <color key="fillColor" red="0.52941176470588236" green="0.38823529411764707" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                             </box>
                                                                             <box fixedFrame="YES" boxType="custom" borderWidth="0.0" cornerRadius="13" title="Box" translatesAutoresizingMaskIntoConstraints="NO" id="svc-x0-moZ">
                                                                                 <rect key="frame" x="762" y="21" width="95" height="27"/>
@@ -3298,11 +3296,11 @@ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wh
         <image name="More" width="34" height="8"/>
         <image name="MoreByDeveloper" width="308" height="38"/>
         <image name="NSActionTemplate" width="14" height="14"/>
-        <image name="Novus" width="512" height="512"/>
         <image name="NovusLogo" width="454" height="454"/>
         <image name="ReportIssue" width="276" height="34"/>
         <image name="StoreSelected" width="34" height="34"/>
         <image name="TempRatings" width="1288" height="108"/>
         <image name="ThemeKit" width="238" height="238"/>
+        <image name="Utilities" width="210" height="210"/>
     </resources>
 </document>

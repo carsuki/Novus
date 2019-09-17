@@ -44,6 +44,9 @@
     if (pkg.desc) {
         view.descField.stringValue = pkg.desc;
     }
+    if (pkg.icon) {
+        view.imageView.image = pkg.icon;
+    }
     
     return view;
 }

@@ -44,6 +44,11 @@
     LMPackageParser *parser = [[LMPackageParser alloc] initWithFilePath:@"/usr/local/var/lib/dpkg/status"];
     [parser.packages enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         NVSPackage *pkg = obj;
+        if ([NSImage imageNamed:[pkg.section stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[pkg.section substringToIndex:1] uppercaseString]]]) {
+            pkg.icon = [NSImage imageNamed:[pkg.section stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[pkg.section substringToIndex:1] uppercaseString]]];
+        } else {
+            pkg.icon = [NSImage imageNamed:@"Unknown"];
+        }
         [self.installedPackagesDict setObject:pkg forKey:pkg.identifier];
         [self.packagesDict setObject:pkg forKey:pkg.identifier];
     }];
@@ -150,6 +155,11 @@
         [parser.packages enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
             NVSPackage *pkg = obj;
             pkg.repository = repo;
+            if ([NSImage imageNamed:[pkg.section stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[pkg.section substringToIndex:1] uppercaseString]]]) {
+                pkg.icon = [NSImage imageNamed:[pkg.section stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[pkg.section substringToIndex:1] uppercaseString]]];
+            } else {
+                pkg.icon = [NSImage imageNamed:@"Unknown"];
+            }
             pkg.debURL = [NSString stringWithFormat:@"%@/%@", repo.repoURL, pkg.filename];
             if ([self.packagesDict objectForKey:pkg.identifier]) {
                 pkg.installed = YES;

@@ -29,6 +29,7 @@
 @property (nonatomic, strong) NVSRepo *repository;
 @property (nonatomic, strong) NSString *depictionURL;
 @property (nonatomic, strong) NVSDepiction *depiction;
+@property (nonatomic, strong) NSImage *icon;
 @property (nonatomic) BOOL installed;
 
 - (int)remove;

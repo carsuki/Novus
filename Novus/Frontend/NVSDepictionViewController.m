@@ -117,6 +117,9 @@
             if (pkg.section) {
                 self.informationCategory.stringValue = [pkg.section stringByReplacingCharactersInRange:NSMakeRange(0, 1) withString:[[pkg.section substringToIndex:1] uppercaseString]];
             }
+            if (pkg.icon) {
+                self.packageIcon.image = pkg.icon;
+            }
             if (pkg.identifier) {
                 self.informationIdentifier.stringValue = pkg.identifier;
             }

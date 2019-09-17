@@ -46,6 +46,7 @@
 -(NSView*)tableView:(NSTableView *)tableView viewForTableColumn:(NSTableColumn *)tableColumn row:(NSInteger)row {
     NVSPackageCellView *view = [tableView makeViewWithIdentifier:@"PackageCell" owner:self];
     NVSPackage *pkg = [self.repo.packages objectAtIndex:row];
+    //NVSPackage *pkg = [[[NVSPackageManager sharedInstance] packagesDict] objectForKey:tempPKG.identifier];
     if (pkg.name) {
         view.textField.stringValue = pkg.name;
     } else {
@@ -57,6 +58,9 @@
     }
     if (pkg.desc) {
         view.descField.stringValue = pkg.desc;
+    }
+    if (pkg.icon) {
+        view.imageView.image = pkg.icon;
     }
     
     return view;
