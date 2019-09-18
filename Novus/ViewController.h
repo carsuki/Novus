@@ -16,6 +16,7 @@
 #import "Frontend/NVSSearchViewController.h"
 #import "Frontend/NVSDepictionViewController.h"
 #import "Frontend/NVSLogViewController.h"
+#import "Backend/Database/NVSQueue.h"
 
 @interface ViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 

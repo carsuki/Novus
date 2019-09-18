@@ -28,6 +28,7 @@
     [super viewWillAppear];
     
     [NVSPackageManager sharedInstance];
+    [NVSQueue sharedInstance];
 }
 
 -(IBAction)search:(id)sender {
