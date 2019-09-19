@@ -29,11 +29,42 @@
         // Remove
         NVSQueueAction *action = [[NVSQueueAction alloc] initWithPackage:self.package action:1];
         [[NVSQueue sharedInstance] addQueueAction:action];
+        [self showQueuePopup:action];
     } else {
         // Install
         NVSQueueAction *action = [[NVSQueueAction alloc] initWithPackage:self.package action:0];
         [[NVSQueue sharedInstance] addQueueAction:action];
+        [self showQueuePopup:action];
     }
+}
+
+-(void)showQueuePopup:(NVSQueueAction*)action {
+    NSView *view = [[NSView alloc] initWithFrame:CGRectMake(self.view.frame.size.width, self.view.frame.size.height - 46, 280, 30)];
+    view.wantsLayer = YES;
+    view.layer.backgroundColor = [NSColor colorWithRed:0.48 green:0.93 blue:0.62 alpha:1].CGColor;
+    view.layer.cornerRadius = 6;
+    NSTextField *label = [[NSTextField alloc] initWithFrame:CGRectMake(7, 4, 266, 20)];
+    [label setStringValue:[NSString stringWithFormat:@"✓  Successfully added %@ to the queue", action.package.identifier]];
+    [label setTextColor:[NSColor whiteColor]];
+    [label setFont:[NSFont boldSystemFontOfSize:label.font.pointSize]];
+    [label setBezeled:NO];
+    [label setDrawsBackground:NO];
+    [label setEditable:NO];
+    [label setSelectable:NO];
+    [view addSubview:label];
+    [self.view addSubview:view];
+    [NSAnimationContext runAnimationGroup:^(NSAnimationContext * _Nonnull context) {
+        context.duration = 0.1;
+        view.animator.frame = CGRectMake(self.view.frame.size.width - 296, self.view.frame.size.height - 46, 280, 30);
+    }];
+    double delayInSeconds = 2.0;
+    dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
+    dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
+        [NSAnimationContext runAnimationGroup:^(NSAnimationContext * _Nonnull context) {
+            context.duration = 0.1;
+            view.animator.frame = CGRectMake(self.view.frame.size.width, self.view.frame.size.height - 46, 200, 30);
+        }];
+    });
 }
 
 - (IBAction)openHomepage:(id)sender {
