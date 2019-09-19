@@ -63,6 +63,8 @@
         [NSAnimationContext runAnimationGroup:^(NSAnimationContext * _Nonnull context) {
             context.duration = 0.1;
             view.animator.frame = CGRectMake(self.view.frame.size.width, self.view.frame.size.height - 46, 200, 30);
+        } completionHandler:^{
+            [view removeFromSuperview];
         }];
     });
 }
