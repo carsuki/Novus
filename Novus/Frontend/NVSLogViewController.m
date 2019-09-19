@@ -30,6 +30,7 @@
     
     task.terminationHandler = ^(NSTask *task){
         self.logView.string = [self.logView.string stringByAppendingString:@"\nDone."];
+        [[NVSQueue sharedInstance] clear];
     };
     
     NSMutableDictionary *defaultEnv = [[NSMutableDictionary alloc] initWithDictionary:[[NSProcessInfo processInfo] environment]];

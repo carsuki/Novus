@@ -20,6 +20,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(id)init;
 -(NSMutableArray*)queueActions;
 -(void)clear;
+-(void)addQueueAction:(NVSQueueAction *)action;
 
 @end
 

@@ -27,12 +27,33 @@
 }
 
 - (IBAction)next:(id)sender {
-    [self performSegueWithIdentifier:@"nextQueue" sender:self];
+    if ([[[NVSQueue sharedInstance] queueActions] count] > 0) {
+        [self performSegueWithIdentifier:@"nextQueue" sender:self];
+    }
 }
 
 -(void)prepareForSegue:(NSStoryboardSegue *)segue sender:(id)sender {
-    NVSLogViewController *controller = segue.destinationController;
-    controller.command = @"apt update";
+    NSMutableArray *install = [NSMutableArray new];
+    NSMutableArray *remove = [NSMutableArray new];
+    [[[NVSQueue sharedInstance] queueActions] enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        NVSQueueAction *action = obj;
+        if (action.action == 0) {
+            [install addObject:action.package.identifier];
+        } else if (action.action == 1) {
+            [remove addObject:action.package.identifier];
+        }
+    }];
+    NSString *installCmd = [NSString stringWithFormat:@"unbuffer apt-get -y install %@", [install componentsJoinedByString:@" "]];
+    NSString *removeCmd = [NSString stringWithFormat:@"unbuffer apt-get -y remove %@", [remove componentsJoinedByString:@" "]];
+    NSString *cmd = [NSString new];
+    if (install.count > 0 && remove.count > 0) {
+        cmd = [NSString stringWithFormat:@"%@ && %@", installCmd, removeCmd];
+    } else if (install.count > 0 && remove.count < 1) {
+        cmd = installCmd;
+    } else if (install.count < 1 && remove.count > 0) {
+        cmd = removeCmd;
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:cmd forKey:@"command"];
 }
 
 -(NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {

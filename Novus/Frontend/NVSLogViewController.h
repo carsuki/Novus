@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "../Backend/Database/NVSQueue.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

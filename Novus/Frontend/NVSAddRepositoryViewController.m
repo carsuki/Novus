@@ -37,31 +37,21 @@
                         newLine = [NSString stringWithFormat:@"https://%@", newLine];
                     }
                 }
-                NSArray *distros = [newLine componentsSeparatedByString:@" "];
-                if (distros.count > 1) {
-                    newLine = [NSString stringWithFormat:@"deb %@", newLine];
-                } else {
-                    newLine = [NSString stringWithFormat:@"deb %@ ./", newLine];
-                }
                 [repositories addObject:newLine];
             }
         }];
-        NSString *novusList = [NSString stringWithContentsOfFile:@"/usr/local/etc/apt/sources.list.d/novus.list" encoding:NSUTF8StringEncoding error:nil];
-        if (![[NSFileManager defaultManager] fileExistsAtPath:@"/usr/local/etc/apt/sources.list.d/novus.list"]) {
-            [[NSFileManager defaultManager] createFileAtPath:@"/usr/local/etc/apt/sources.list.d/novus.list" contents:[NSData new] attributes:nil];
-        }
-        NSString *newNovusList = [NSString new];
-        newNovusList = [novusList stringByAppendingString:[NSString stringWithFormat:@"%@\n", [repositories componentsJoinedByString:@"\n"]]];
-        NSError *error;
-        [newNovusList writeToFile:@"/usr/local/etc/apt/sources.list.d/novus.list" atomically:YES encoding:NSUTF8StringEncoding error:&error];
-        if (error) {
-            self.secondTitleField.stringValue = [NSString stringWithFormat:@"%@", error];
-            self.secondTitleField.textColor = [NSColor systemRedColor];
-        } else {
-            [self.view.window.windowController close];
-        }
         
-        NSLog(@"add-source %@", [repositories componentsJoinedByString:@" "]);
+        [repositories enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+            NSString *repo = obj;
+            NSArray *distros = [repo componentsSeparatedByString:@" "];
+            if (distros.count > 2) {
+                [[NVSCommandWrapper sharedInstance] runAsRoot:[NSString stringWithFormat:@"nvs add-repositories -a %@", repo]];
+            } else {
+                [[NVSCommandWrapper sharedInstance] runAsRoot:[NSString stringWithFormat:@"nvs add-repositories %@", repo]];
+            }
+        }];
+        
+        [self.view.window.windowController close];
     } else {
         self.secondTitleField.stringValue = @"Please enter one or more repositories.";
         self.secondTitleField.textColor = [NSColor systemRedColor];

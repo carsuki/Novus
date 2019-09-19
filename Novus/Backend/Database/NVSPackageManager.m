@@ -90,6 +90,9 @@
         repo.repoDirectory = repoDirectory;
         repo.repoURL = repoURL;
         if(![repoDirectory isEqualToString:@"./"]) {
+            if ([[repoURL substringFromIndex:[repoURL length] - 1] isEqualToString:@"/"]) {
+                repoURL = [repoURL substringToIndex:repoURL.length - 1];
+            }
             NSArray *repoComponents = [repoDirectory componentsSeparatedByString:@" "];
             repo.repoComponents = repoComponents;
             NSString *releaseURL = [NSString stringWithFormat:@"%@/dists/%@/Release",repoURL,[repoComponents objectAtIndex:0]];

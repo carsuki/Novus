@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "../Backend/Utilities/NVSCommandWrapper.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
