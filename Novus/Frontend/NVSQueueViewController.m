@@ -19,7 +19,7 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
-    if (![[NVSQueue sharedInstance] queueActions].count > 0) {
+    if (!([[NVSQueue sharedInstance] queueActions].count > 0)) {
         self.button.enabled = NO;
         self.buttonLabel.textColor = [NSColor secondaryLabelColor];
     }
