@@ -17,6 +17,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface NVSQueueViewController : NSViewController <NSTableViewDelegate, NSTableViewDataSource>
 
 @property (strong) IBOutlet NSTableView *tableView;
+@property (strong) IBOutlet NSButton *button;
+@property (strong) IBOutlet NSTextField *buttonLabel;
 
 @end
 

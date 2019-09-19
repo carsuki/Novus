@@ -19,6 +19,10 @@
     
     self.tableView.delegate = self;
     self.tableView.dataSource = self;
+    if (![[NVSQueue sharedInstance] queueActions].count > 0) {
+        self.button.enabled = NO;
+        self.buttonLabel.textColor = [NSColor secondaryLabelColor];
+    }
 }
 
 - (IBAction)clear:(id)sender {
@@ -27,9 +31,7 @@
 }
 
 - (IBAction)next:(id)sender {
-    if ([[[NVSQueue sharedInstance] queueActions] count] > 0) {
-        [self performSegueWithIdentifier:@"nextQueue" sender:self];
-    }
+    [self performSegueWithIdentifier:@"nextQueue" sender:self];
 }
 
 -(void)prepareForSegue:(NSStoryboardSegue *)segue sender:(id)sender {

@@ -3493,6 +3493,8 @@ Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, wh
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="button" destination="YtD-qq-ABX" id="bBA-YQ-g00"/>
+                        <outlet property="buttonLabel" destination="EL4-7U-EFm" id="fFQ-DJ-Gzs"/>
                         <outlet property="tableView" destination="X8B-1V-exM" id="0Vq-JC-knD"/>
                     </connections>
                 </viewController>
